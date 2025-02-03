@@ -1,0 +1,39 @@
+{% load static %}
+{% load i18n %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOFTmsg {% trans "for management systems" %}</title>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/pages/base.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% comment %} <script src="https://kit.fontawesome.com/69a53501fd.js" crossorigin="anonymous"></script> {% endcomment %}
+  </head>
+  <body >
+
+    {% include "parts/navbar.html" %}
+    {% block sheri %}
+    {% endblock sheri %}
+    {% include "parts/footer.html" %}
+
+    <div class="toast-container start-0 p-3" style="position: fixed; bottom: 40px;" id="toast-box">
+    </div>
+    <script>
+      const default_img_profile = `{% static 'img/profile_default/default-profile-img-2.png' %}`
+    </script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/pages/base.js' %}"></script>
+    <script>
+
+      $(document).ready(function() {
+        {% for message in messages %}
+        showToast(randomGen(), 'نظام', '{{message|safe}}', '')
+        {% endfor %}
+      })
+    </script>
+  </body>
+</html>
