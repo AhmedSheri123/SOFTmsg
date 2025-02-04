@@ -355,9 +355,10 @@ def AddPatientManagementSettings(request, id):
             post_data['subscription_scope'] = user_service.plan_scope
 
             res = requests.post(f'{PatientManagementURL}/en/accounts/AddHospitalsByAPI', data=post_data)
+            messages.error(res, res.text)
             if res.status_code == 200:
                 res_data = res.json()
-                messages.error(res_data)
+                
                 if res_data.get('status'):
                     service_user_id = res_data.get('user_id')
                     user_service.service_user_id=service_user_id
