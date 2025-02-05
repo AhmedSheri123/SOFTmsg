@@ -1954,7 +1954,7 @@ msgstr "تسجيل الخروج"
 
 #: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:61
 msgid "Contact us"
-msgstr "اتصل بنا"
+msgstr "تواصل معنا"
 
 #: .\templates\parts\footer.html:11
 msgid "Privacy Policy"
