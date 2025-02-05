@@ -1974,7 +1974,7 @@ msgstr "هضم شهريًا لما هو جديد ومثير منا."
 
 #: .\templates\parts\footer.html:21
 msgid "Subscribe"
-msgstr "يشترك"
+msgstr "اشترك"
 
 #: .\templates\parts\navbar.html:12
 msgid "Browse"

@@ -409,12 +409,21 @@
 <div class="bg-dark">
     <div class="container  py-5" style="max-width: 568px;">
         <h2 class="text-center text-light py-4">{% trans "Do you want to develop a custom program that <span class='text-primary'>meets your specific needs?" %}</span></h2>
-        
+
         <form method="post" action="{% url 'Contact' %}" class="bg-body-tertiary p-3 p-sm-5 rounded-4 shadow-sm border border-1 mx-auto mb-5 text-primary needs-validation" novalidate>
             {% csrf_token %}
+
             <h3 class="mb-3 text-dark-emphasis text-center">{% trans "Contact Form" %}</h3>
+            <hr>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
+                <a href="https://wa.me/963980606953" target="_blank" class="btn btn-success btn-lg px-4">
+                    {% trans "Contact us" %}
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
         <p class="text-dark">{% trans "Fill out the contact form now, and our dedicated team is ready to provide you with the support you need and turn your dreams into reality. Take the first step towards success!" %}</p>
             <hr>
+
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     <i class="fa-solid fa-user"></i>
