@@ -14,6 +14,9 @@ class UserProfile(models.Model):
     @property
     def get_full_name(self):
         return f'{self.user.first_name} {self.user.last_name}'
+    
+    def __str__(self):
+        return f'{self.user.id} - {self.user.username} - {self.get_full_name}' 
 
 class NotificationsModel(models.Model):
     sender = models.ForeignKey(User, related_name='noti_sender', on_delete=models.CASCADE)
