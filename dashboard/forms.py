@@ -53,3 +53,13 @@ class SchoolManagementProfile(forms.Form):
     academic_year = forms.IntegerField(widget=forms.NumberInput({'class':'form-control', "min":"0", "placeholder":"2025"}))
     lang = forms.ChoiceField(choices=SchoolManagementLANGUAGES, widget=forms.Select({'class':'form-select'}))
     country = forms.ChoiceField(choices=CountrysChoices, widget=forms.Select({'class':'form-select'}))
+
+class HRManagementProfile(forms.Form):
+    first_name = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
+    last_name = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
+    username = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
+    email = forms.EmailField(widget=forms.TextInput({'class':'form-control'}))
+    password = forms.CharField(label='password', max_length=254, widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Password'}))
+    organization_name = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
+    number = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
+    lang = forms.ChoiceField(choices=SchoolManagementLANGUAGES, widget=forms.Select({'class':'form-select'}))

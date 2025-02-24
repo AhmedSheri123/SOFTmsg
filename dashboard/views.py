@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.urls import reverse
-from .forms import (AddUserServiceModelForm, PatientManagementHospital, SchoolManagementProfile)
+from .forms import (AddUserServiceModelForm, PatientManagementHospital, SchoolManagementProfile, HRManagementProfile)
 from .models import (ServicesModel, UserServiceModel, ServicePaymentOrderModel)
 from django.contrib import messages
 from django.conf import settings
@@ -16,7 +16,7 @@ from decimal import Decimal
 # Create your views here.
 PatientManagementURL = settings.PATIENT_MANAGEMENT_WEB_SERVER_URL
 SchoolManagementURL = settings.SCHOOL_MANAGEMENT_WEB_SERVER_URL
-
+HRManagementURL = settings.HR_MANAGEMENT_WEB_SERVER_URL
 PAYPAL_RECIVVER_EMAIL = settings.PAYPAL_RECIVVER_EMAIL
 
 def Home(request):
@@ -36,7 +36,7 @@ def Home(request):
     return render(request, 'dashboard/home.html', context)
 
 def MyServices(request):
-    user_services = UserServiceModel.objects.filter(user=request.user)
+    user_services = UserServiceModel.objects.filter(user=request.user).order_by('-id')
     return render(request, 'dashboard/services/MyServices.html', {'user_services':user_services})
 
 def DeletePatientManagementService(request, id):
@@ -65,6 +65,19 @@ def DeleteSchoolManagementService(request, id):
     else:user_services.delete()
     return redirect('MyServices')
 
+def DeleteHRManagementService(request, id):
+    user_services = UserServiceModel.objects.get(id=id)
+    service_user_id = user_services.service_user_id
+    if service_user_id:
+        res = requests.get(f'{HRManagementURL}/api/base/DeleteHRManagementAPI/{service_user_id}')
+
+        if res.status_code == 200:
+            data = res.json()
+            if data.get('status'):
+                user_services.delete()
+    else:user_services.delete()
+    return redirect('MyServices')
+
 def DeleteService(request, id):
     user_services = UserServiceModel.objects.get(id=id)
     service_user_id = user_services.service_user_id
@@ -74,6 +87,8 @@ def DeleteService(request, id):
             return DeletePatientManagementService(request, id)
         elif selected_service == '2':
             return DeleteSchoolManagementService(request, id)
+        elif selected_service == '3':
+            return DeleteHRManagementService(request, id)
     else:
         user_services.delete()
         return redirect('MyServices')
@@ -96,6 +111,8 @@ def ResetPasswordService(request, id):
                     res = requests.post(f'{PatientManagementURL}/en/accounts/ResetPasswordAPI/{service_user_id}', data=data)
                 elif selected_service == '2':
                     res = requests.post(f'{SchoolManagementURL}/en/ResetPasswordAPI/{service_user_id}', data=data)
+                elif selected_service == '3':
+                    res = requests.post(f'{HRManagementURL}/api/base/ResetPasswordAPI/{service_user_id}', data=data)
 
                 if res.status_code == 200:
                     data = res.json()
@@ -116,7 +133,8 @@ def UserServiceCreationProgress(request, id):
             return redirect('AddPatientManagementSettings', id)
         elif user_service.service.service == '2':
             return redirect('AddSchoolManagementSettings', id)
-        
+        elif user_service.service.service == '3':
+            return redirect('AddHRManagementSettings', id)
     elif progress == '4':
         return redirect('ViewService', id)
     return redirect('MyServices')
@@ -147,6 +165,11 @@ def ServicePlans(request, id):
 
     elif selected_service == '2':
         res = requests.get(f'{SchoolManagementURL}/en/GetSubscriptionsPlanInfoAPI')
+        if res.status_code == 200:
+            plans_data = res.json()
+
+    elif selected_service == '3':
+        res = requests.get(f'{HRManagementURL}/api/base/GetSubscriptionsPlanInfoAPI')
         if res.status_code == 200:
             plans_data = res.json()
 
@@ -248,11 +271,13 @@ def ServicePayment(request, orderID):
 def UpgradeOrRenewServiceSubscription(request, orderID):
     order = ServicePaymentOrderModel.objects.get(orderID=orderID)
     user_service = UserServiceModel.objects.get(id=order.user_service.id)
-
+    print(user_service.service.service)
     if user_service.service.service == '1':
         return PatientManagementRenewSubscription(request, orderID)
     elif user_service.service.service == '2':
         return SchoolManagementRenewSubscription(request, orderID)
+    elif user_service.service.service == '3':
+        return HRManagementRenewSubscription(request, orderID)
     
 
 def EnableServiceSubscription(request, orderID):
@@ -338,6 +363,33 @@ def SchoolManagementRenewSubscription(request, orderID):
                     messages.error(request, msg)
     return
 
+
+def HRManagementRenewSubscription(request, orderID):
+    order = ServicePaymentOrderModel.objects.get(orderID=orderID)
+    user_service = UserServiceModel.objects.get(id=order.user_service.id)
+    post_data = {}
+    post_data['subscription_id'] = order.subscription_id
+    post_data['subscription_scope'] = order.progress_paid_plan_scope
+
+    res = requests.post(f'{HRManagementURL}/api/base/RenewSubscription/{user_service.service_user_id}', data=post_data)
+
+    if res.status_code == 200:
+        res_data = res.json()
+        if res_data.get('status'):
+            user_service.service_subscription_id = order.subscription_id
+            user_service.plan_scope = order.progress_paid_plan_scope
+            order.progress = '3'
+            user_service.save()
+            order.save()
+            messages.success(request, 'تم تجديد الاشتراك بنجاح')
+            return redirect('UserServiceCreationProgress', user_service.id)
+        else:
+            error_msgs = res_data.get('msgs')
+            if error_msgs:
+                for msg in error_msgs:
+                    messages.error(request, msg)
+    return
+
 def AddPatientManagementSettings(request, id):
     user = request.user
     user_service = UserServiceModel.objects.get(id=id)
@@ -380,6 +432,7 @@ def AddSchoolManagementSettings(request, id):
     form.initial['last_name'] = user.last_name
     form.initial['number'] = user.userprofile.phone_number
 
+
     if request.method == 'POST':
         form = SchoolManagementProfile(data=request.POST)
         if form.is_valid():
@@ -402,6 +455,40 @@ def AddSchoolManagementSettings(request, id):
                         for msg in error_msgs:
                             messages.error(request, msg)
     return render(request, 'dashboard/services/AddServiceSettings/AddSchoolManagementSettings.html', {'form':form})
+
+
+def AddHRManagementSettings(request, id):
+    user = request.user
+    user_service = UserServiceModel.objects.get(id=id)
+    
+    form = HRManagementProfile()
+    form.initial['first_name'] = user.first_name
+    form.initial['last_name'] = user.last_name
+    form.initial['number'] = user.userprofile.phone_number
+    form.initial['email'] = user.email
+
+    if request.method == 'POST':
+        form = HRManagementProfile(data=request.POST)
+        if form.is_valid():
+            post_data = form.cleaned_data
+            post_data['subscription_id'] = user_service.service_subscription_id
+            post_data['subscription_scope'] = user_service.plan_scope
+
+            res = requests.post(f'{HRManagementURL}/api/base/AddHRByAPI', data=post_data)
+            if res.status_code == 200:
+                res_data = res.json()
+                if res_data.get('status'):
+                    service_user_id = res_data.get('user_id')
+                    user_service.service_user_id=service_user_id
+                    user_service.progress = '4'
+                    user_service.save()
+                    return redirect('UserServiceCreationProgress', user_service.id)
+                else:
+                    error_msgs = res_data.get('msgs')
+                    if error_msgs:
+                        for msg in error_msgs:
+                            messages.error(request, msg)
+    return render(request, 'dashboard/services/AddServiceSettings/AddHRManagementSettings.html', {'form':form})
 
 def ViewPatientManagementService(request, id):
     user_service = UserServiceModel.objects.get(id=id)
@@ -433,6 +520,21 @@ def ViewSchoolManagementService(request, id):
     return redirect('MyServices')
 
 
+def ViewHRManagementService(request, id):
+    user_service = UserServiceModel.objects.get(id=id)
+    plans_data = []
+    res = requests.get(f'{HRManagementURL}/api/base/GetHRManagementInfo/{user_service.service_user_id}')
+    plans_res = requests.get(f'{HRManagementURL}/api/base/GetSubscriptionsPlanInfoAPI?id={user_service.service_subscription_id}')
+    if plans_res.status_code == 200:
+        plans_data = plans_res.json()
+    if res.status_code == 200:
+        data = res.json()
+        if data:
+            data['user_service'] = user_service
+            return render(request, 'dashboard/services/viewService/ViewHRManagementService.html', {'data':data, 'plans_data':plans_data, 'HRManagementURL':HRManagementURL})
+    return redirect('MyServices')
+
+
 def ViewService(request, id):
     
     user_service = UserServiceModel.objects.get(id=id)
@@ -440,6 +542,8 @@ def ViewService(request, id):
         return ViewPatientManagementService(request, id)
     elif user_service.service.service == '2':
         return ViewSchoolManagementService(request, id)
+    elif user_service.service.service == '3':
+        return ViewHRManagementService(request, id)
 
 def GetServiceInfo(request):
     id = request.GET.get('id')

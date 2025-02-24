@@ -18,7 +18,8 @@ def payOrderSecretCodeGen():
 
 services_choices = [
     ('1', _('Patient Management')),
-    ('2', _('School Management'))
+    ('2', _('School Management')),
+    ('3', _('HR Management')),
 ]
 
 plan_scope_choices = [

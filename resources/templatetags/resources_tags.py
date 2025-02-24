@@ -8,12 +8,12 @@ register = template.Library()
 @register.simple_tag
 @stringfilter
 def get_contents_by_section(section_id):
-    contents = SectionContentsModel.objects.filter(section__id=section_id).order_by('ordering')
+    contents = SectionContentsModel.objects.filter(section__id=section_id)
     return contents
 
 
 @register.simple_tag
 @stringfilter
 def get_doc_services(section_id):
-    doc_services = DocsServicesModel.objects.filter().order_by('ordering')
+    doc_services = DocsServicesModel.objects.filter()
     return doc_services

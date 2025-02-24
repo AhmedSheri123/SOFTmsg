@@ -12,6 +12,9 @@ class DocsServicesModel(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['ordering']
+
 class DocsServiceSectionsModel(models.Model):
     name = models.CharField("Section Name", max_length=254)
     desc = models.TextField("Section Description")
@@ -35,3 +38,6 @@ class SectionContentsModel(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.section.name} - {self.section.service.name}'
+    
+    class Meta:
+        ordering = ['ordering']

@@ -29,7 +29,7 @@ def correct_fuzzy_entries(language_code):
     for entry in po_file:
         
         # إذا كان المدخل يحتوي على العلامة fuzzy
-        if 'fuzzy' in entry.flags or (entry.msgstr == '' and '.\\\\accounts' in str(entry.occurrences)):
+        if 'fuzzy' in entry.flags :#or (entry.msgstr == '' and '.\\\\accounts' in str(entry.occurrences)):
             
             print(f"Translating fuzzy entry: {entry.msgid}")
             

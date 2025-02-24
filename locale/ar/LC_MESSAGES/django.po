@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-03 23:12+0300\n"
+"POT-Creation-Date: 2025-02-24 20:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: .\accounts\forms.py:13
-#| msgid "write your name..."
 msgid "your name..."
 msgstr "اسمك ..."
 
 #: .\accounts\forms.py:14
-#| msgid "write your name..."
 msgid "your last name..."
 msgstr "اسمك الأخير ..."
 
@@ -34,86 +33,91 @@ msgid "name@example.com"
 msgstr "name@example.com"
 
 #: .\accounts\forms.py:24
-#| msgid "Phone number"
 msgid "phone number"
 msgstr "رقم التليفون"
 
 #: .\accounts\forms.py:25
-#| msgid "Please fill your company name."
 msgid "your company name..."
 msgstr "اسم شركتك ..."
 
 #: .\accounts\forms.py:30 .\templates\accounts\login.html:27
 #: .\templates\accounts\signup.html:57
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:76
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:63
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:63
 msgid "Password"
 msgstr "كلمة المرور"
 
-#: .\dashboard\models.py:20 .\templates\parts\navbar.html:34
+#: .\dashboard\models.py:20 .\templates\parts\navbar.html:35
 msgid "Patient Management"
 msgstr "إدارة المرضى"
 
-#: .\dashboard\models.py:21 .\templates\parts\navbar.html:35
+#: .\dashboard\models.py:21 .\templates\parts\navbar.html:36
 msgid "School Management"
 msgstr "إدارة المدارس"
 
-#: .\dashboard\models.py:25
-#: .\templates\dashboard\services\ServicePlans.html:23
+#: .\dashboard\models.py:22 .\templates\parts\navbar.html:34
+msgid "HR Management"
+msgstr "إدارة الموارد البشرية"
+
+#: .\dashboard\models.py:26 .\templates\dashboard\services\ServicePlans.html:23
 msgid "Monthly"
 msgstr "شهريا"
 
-#: .\dashboard\models.py:26
+#: .\dashboard\models.py:27
 msgid "Yearly"
 msgstr "سنوي"
 
-#: .\dashboard\models.py:30
+#: .\dashboard\models.py:31
 msgid "Pending"
 msgstr ""
 
-#: .\dashboard\models.py:31
+#: .\dashboard\models.py:32
 msgid "Paid"
 msgstr ""
 
-#: .\dashboard\models.py:32 .\dashboard\models.py:40
+#: .\dashboard\models.py:33 .\dashboard\models.py:41
 msgid "Complited"
 msgstr "مكتمل"
 
-#: .\dashboard\models.py:33
+#: .\dashboard\models.py:34
 msgid "Cancelled"
 msgstr ""
 
-#: .\dashboard\models.py:37 .\templates\dashboard\services\AddService.html:13
+#: .\dashboard\models.py:38 .\templates\dashboard\services\AddService.html:13
 #: .\templates\dashboard\services\AddService.html:64
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:140
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:138
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:164
 #: .\templates\dashboard\services\ServicePlans.html:92
 msgid "Create Project"
 msgstr "إنشاء مشروع"
 
-#: .\dashboard\models.py:38 .\templates\dashboard\services\AddService.html:72
+#: .\dashboard\models.py:39 .\templates\dashboard\services\AddService.html:72
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:148
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:146
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:172
 #: .\templates\dashboard\services\ServicePlans.html:100
 msgid "Choose Plan"
 msgstr "اختر الخطة"
 
-#: .\dashboard\models.py:39 .\templates\dashboard\services\AddService.html:80
+#: .\dashboard\models.py:40 .\templates\dashboard\services\AddService.html:80
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:156
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:154
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:180
 #: .\templates\dashboard\services\ServicePlans.html:108
 msgid "Project Settings"
 msgstr "إعدادات المشروع"
 
-#: .\dashboard\models.py:44
+#: .\dashboard\models.py:45
 msgid "Service Title"
 msgstr "عنوان الخدمة"
 
-#: .\dashboard\models.py:45
+#: .\dashboard\models.py:46
 msgid "Subtitle"
 msgstr "الترجمة"
 
-#: .\dashboard\models.py:46 .\dashboard\models.py:61
+#: .\dashboard\models.py:47 .\dashboard\models.py:62
 #: .\templates\dashboard\home.html:60
 #: .\templates\dashboard\orders\MyOrders.html:22
 #: .\templates\dashboard\services\AddService.html:34
@@ -121,97 +125,98 @@ msgstr "الترجمة"
 msgid "Service"
 msgstr "خدمة"
 
-#: .\dashboard\models.py:48 .\dashboard\models.py:69 .\dashboard\models.py:95
+#: .\dashboard\models.py:49 .\dashboard\models.py:70 .\dashboard\models.py:96
 msgid "Creation Date"
 msgstr "تاريخ الخلق"
 
-#: .\dashboard\models.py:51
+#: .\dashboard\models.py:52
 msgid "Service Model"
 msgstr "نموذج الخدمة"
 
-#: .\dashboard\models.py:52
+#: .\dashboard\models.py:53
 msgid "Service Models"
 msgstr "نماذج الخدمة"
 
-#: .\dashboard\models.py:59
+#: .\dashboard\models.py:60
 #: .\venv\Lib\site-packages\grappelli\templates\admin\object_history.html:27
 #: .\venv\Lib\site-packages\grappelli\templates\reversion\object_history.html:14
 msgid "User"
 msgstr "مستخدم"
 
-#: .\dashboard\models.py:60 .\templates\dashboard\services\AddService.html:21
+#: .\dashboard\models.py:61 .\templates\dashboard\services\AddService.html:21
 msgid "Project Name"
 msgstr "اسم المشروع"
 
-#: .\dashboard\models.py:62 .\templates\dashboard\services\AddService.html:56
+#: .\dashboard\models.py:63 .\templates\dashboard\services\AddService.html:56
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:132
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:130
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:156
 #: .\templates\dashboard\services\ServicePlans.html:84
 msgid "Progress"
 msgstr "تقدم"
 
-#: .\dashboard\models.py:64
+#: .\dashboard\models.py:65
 msgid "Service Subscription ID"
 msgstr "معرف الاشتراك في الخدمة"
 
-#: .\dashboard\models.py:65
+#: .\dashboard\models.py:66
 msgid "Service User ID"
 msgstr "معرف مستخدم الخدمة"
 
-#: .\dashboard\models.py:66
+#: .\dashboard\models.py:67
 msgid "Service Subscription Date"
 msgstr "تاريخ اشتراك الخدمة"
 
-#: .\dashboard\models.py:67
+#: .\dashboard\models.py:68
 msgid "Plan Scope"
 msgstr "نطاق خطة"
 
-#: .\dashboard\models.py:72
+#: .\dashboard\models.py:73
 msgid "User Service Model"
 msgstr "نموذج خدمة المستخدم"
 
-#: .\dashboard\models.py:73
+#: .\dashboard\models.py:74
 msgid "User Service Models"
 msgstr "نماذج خدمة المستخدم"
 
-#: .\dashboard\models.py:87
+#: .\dashboard\models.py:88
 msgid "User Service"
 msgstr "خدمة المستخدم"
 
-#: .\dashboard\models.py:88 .\pages\models.py:7
-#: .\templates\pages\index.html:417
+#: .\dashboard\models.py:89 .\pages\models.py:7
+#: .\templates\pages\index.html:430
 msgid "Full Name"
 msgstr "الاسم الكامل"
 
-#: .\dashboard\models.py:89
+#: .\dashboard\models.py:90
 msgid "Subscription ID"
 msgstr "معرف الاشتراك"
 
-#: .\dashboard\models.py:90
+#: .\dashboard\models.py:91
 msgid "Paid Plan Scope"
 msgstr "نطاق الخطة المدفوع"
 
-#: .\dashboard\models.py:91
+#: .\dashboard\models.py:92
 msgid "Order ID"
 msgstr "معرف الطلب"
 
-#: .\dashboard\models.py:92
+#: .\dashboard\models.py:93
 msgid "Order Secret Code"
 msgstr "طلب الرمز السري"
 
-#: .\dashboard\models.py:93
+#: .\dashboard\models.py:94
 msgid "Transaction Number"
 msgstr "رقم المعاملة"
 
-#: .\dashboard\models.py:94
+#: .\dashboard\models.py:95
 msgid "Order Progress"
 msgstr "ترتيب التقدم"
 
-#: .\dashboard\models.py:98
+#: .\dashboard\models.py:99
 msgid "Service Payment Order Model"
 msgstr ""
 
-#: .\dashboard\models.py:99
+#: .\dashboard\models.py:100
 msgid "Service Payment Order Models"
 msgstr ""
 
@@ -231,14 +236,14 @@ msgstr "كيف يمكن لفريقنا مساعدتك؟"
 msgid "https://example.com"
 msgstr "https://example.com"
 
-#: .\pages\views.py:25
+#: .\pages\views.py:29
 msgid "Your has been subscribed successfully."
 msgstr "لقد تم الاشتراك الخاص بك بنجاح."
 
-#: .\pages\views.py:34
+#: .\pages\views.py:38
 msgid ""
-"Your message has been sent successfully. You will be replied after reviewing"
-" the details."
+"Your message has been sent successfully. You will be replied after reviewing "
+"the details."
 msgstr "تم إرسال رسالتك بنجاح. سيتم الرد عليك بعد مراجعة التفاصيل."
 
 #: .\templates\accounts\login.html:14 .\templates\accounts\signup.html:14
@@ -249,7 +254,7 @@ msgstr "إنشاء حساب"
 msgid "Email Address"
 msgstr "عنوان البريد الإلكتروني"
 
-#: .\templates\accounts\login.html:34 .\templates\parts\navbar.html:71
+#: .\templates\accounts\login.html:34 .\templates\parts\navbar.html:91
 #: .\venv\Lib\site-packages\grappelli\templates\admin\login.html:26
 #: .\venv\Lib\site-packages\grappelli\templates\admin\login.html:67
 #: .\venv\Lib\site-packages\grappelli\templates\registration\password_reset_complete.html:17
@@ -265,6 +270,7 @@ msgid "Upload profile image"
 msgstr "تحميل صورة الملف الشخصي"
 
 #: .\templates\accounts\profile\EditProfile.html:47
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:24
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:24
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:24
 msgid "First name"
@@ -277,6 +283,14 @@ msgstr "الاسم الأول"
 #: .\templates\accounts\profile\EditProfile.html:105
 #: .\templates\dashboard\services\AddService.html:25
 #: .\templates\dashboard\services\AddService.html:38
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:28
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:41
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:54
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:67
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:80
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:93
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:106
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:120
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:28
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:41
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:54
@@ -303,6 +317,7 @@ msgid "Please fill your first name."
 msgstr "يرجى ملء اسمك الأول."
 
 #: .\templates\accounts\profile\EditProfile.html:60
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:37
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:37
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:37
 msgid "Last name"
@@ -313,6 +328,7 @@ msgid "Please fill your last name."
 msgstr "يرجى ملء اسمك الأخير."
 
 #: .\templates\accounts\profile\EditProfile.html:74
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:63
 msgid "Email"
 msgstr "بريد إلكتروني"
 
@@ -321,6 +337,7 @@ msgid "Please fill your email."
 msgstr "يرجى ملء بريدك الإلكتروني."
 
 #: .\templates\accounts\profile\EditProfile.html:88
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:102
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:89
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:89
 msgid "Phone number"
@@ -459,6 +476,7 @@ msgstr "أوامر الأخيرة"
 
 #: .\templates\dashboard\home.html:59
 #: .\templates\dashboard\orders\MyOrders.html:21
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:119
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:117
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:117
 msgid "Project name"
@@ -503,6 +521,8 @@ msgstr "استخدم"
 #: .\templates\dashboard\home.html:85
 #: .\templates\dashboard\orders\MyOrders.html:47
 #: .\templates\dashboard\services\MyServices.html:39
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:8
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:147
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:7
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:144
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:7
@@ -537,6 +557,7 @@ msgid "Service Description"
 msgstr "وصف الخدمة"
 
 #: .\templates\dashboard\services\AddService.html:88
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:164
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:162
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:188
 #: .\templates\dashboard\services\ServicePlans.html:116
@@ -544,45 +565,92 @@ msgid "Done"
 msgstr "منتهي"
 
 #: .\templates\dashboard\services\AddService.html:95
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:171
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:169
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:195
-#: .\templates\pages\services\PatientManagement.html:355
-#: .\templates\pages\services\SchoolManagement.html:410
+#: .\templates\pages\services\HRManagement.html:782
+#: .\templates\pages\services\PatientManagement.html:359
+#: .\templates\pages\services\SchoolManagement.html:414
 msgid "Next"
 msgstr "التالي"
 
-#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:16
-msgid "Hospital Settings"
-msgstr "إعدادات المستشفى"
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:16
+#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:16
+msgid "School Settings"
+msgstr "إعدادات المدرسة"
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:31
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:31
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:31
 msgid "Please fill a first name."
 msgstr "يرجى ملء الاسم الأول."
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:44
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:44
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:44
 msgid "Please fill a last name."
 msgstr "يرجى ملء الاسم الأخير."
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:50
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:50
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:50
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:112
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:110
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:110
 msgid "Username"
 msgstr "اسم المستخدم"
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:57
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:57
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:57
 msgid "Please fill a username."
 msgstr "يرجى ملء اسم المستخدم."
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:70
+msgid "Please fill a Email."
+msgstr "يرجى ملء بريد إلكتروني."
+
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:83
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:70
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:70
 msgid "Please fill a password."
 msgstr "يرجى ملء كلمة المرور."
 
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:89
+msgid "Organization Name"
+msgstr "اسم المنظمة"
+
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:96
+msgid "Please fill a Organization name."
+msgstr "يرجى ملء اسم المنظمة."
+
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:109
+#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:96
+#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:96
+msgid "Please fill a phone number."
+msgstr "يرجى ملء رقم الهاتف."
+
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:116
+#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:115
+#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:128
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:133
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:131
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:131
+msgid "Language"
+msgstr "لغة"
+
+#: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:123
+#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:122
+#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:135
+msgid "Please select a language."
+msgstr "الرجاء تحديد لغة."
+
+#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:16
+msgid "Hospital Settings"
+msgstr "إعدادات المستشفى"
+
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:76
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:126
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:124
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:124
 msgid "Hospital name"
@@ -592,11 +660,6 @@ msgstr "اسم المستشفى او العيادة"
 msgid "Please fill a hospital name."
 msgstr "يرجى ملء اسم المستشفى."
 
-#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:96
-#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:96
-msgid "Please fill a phone number."
-msgstr "يرجى ملء رقم الهاتف."
-
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:102
 msgid "Hospital address"
 msgstr "عنوان المستشفى"
@@ -604,22 +667,6 @@ msgstr "عنوان المستشفى"
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:109
 msgid "Please fill a hospital address."
 msgstr "يرجى ملء عنوان المستشفى."
-
-#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:115
-#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:128
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:131
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:131
-msgid "Language"
-msgstr "لغة"
-
-#: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:122
-#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:135
-msgid "Please select a language."
-msgstr "الرجاء تحديد لغة."
-
-#: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:16
-msgid "School Settings"
-msgstr "إعدادات المدرسة"
 
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:76
 msgid "School name"
@@ -671,24 +718,28 @@ msgid "View"
 msgstr "عرض"
 
 #: .\templates\dashboard\services\MyServices.html:56
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:264
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:261
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:261
 msgid "Delete this service?"
 msgstr "حذف هذه الخدمة؟"
 
 #: .\templates\dashboard\services\MyServices.html:57
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:265
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:262
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:262
 msgid "after deleting this service you can't restore again."
 msgstr "بعد حذف هذه الخدمة ، لا يمكنك استعادة مرة أخرى."
 
 #: .\templates\dashboard\services\MyServices.html:60
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:268
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:265
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:265
 msgid "Yes, delete"
 msgstr "نعم ، حذف"
 
 #: .\templates\dashboard\services\MyServices.html:61
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:269
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:266
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:266
 msgid "No thanks"
@@ -735,16 +786,16 @@ msgstr "خطط متعددة"
 msgid ""
 "Choose from subscription plans designed to meet your needs and benefit from "
 "powerful features that simplify your operations and help you get the most "
-"out of our integrated system. Whether you manage a small business or a large"
-" organization, you'll find the perfect plan that offers the best value for "
+"out of our integrated system. Whether you manage a small business or a large "
+"organization, you'll find the perfect plan that offers the best value for "
 "your investment. Start today and be confident that you're investing in a "
 "service that enhances your efficiency and ensures a smooth experience for "
 "your team."
 msgstr ""
 "اختر من بين خطط الاشتراك المصممة لتلبية احتياجاتك والاستفادة من الميزات "
 "القوية التي تبسط عملياتك وتساعدك على الحصول على أقصى استفادة من نظامنا "
-"المتكامل. سواء كنت تدير شركة صغيرة أو مؤسسة كبيرة ، ستجد الخطة المثالية التي"
-" توفر أفضل قيمة لاستثمارك. ابدأ اليوم وكن واثقًا من أنك تستثمر في خدمة تعزز "
+"المتكامل. سواء كنت تدير شركة صغيرة أو مؤسسة كبيرة ، ستجد الخطة المثالية التي "
+"توفر أفضل قيمة لاستثمارك. ابدأ اليوم وكن واثقًا من أنك تستثمر في خدمة تعزز "
 "كفاءتك وتضمن تجربة سلسة لفريقك."
 
 #: .\templates\dashboard\services\payment\pay.html:25
@@ -763,6 +814,8 @@ msgstr "أكمل عملية الدفع"
 msgid "All payments are made securely."
 msgstr "يتم إجراء جميع المدفوعات بشكل آمن."
 
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:5
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:144
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:5
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:142
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:5
@@ -770,10 +823,129 @@ msgstr "يتم إجراء جميع المدفوعات بشكل آمن."
 msgid "Go To Dashboard"
 msgstr "اذهب إلى لوحة القيادة"
 
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:6
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:6
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:6
 msgid "Reset Password"
 msgstr "إعادة تعيين كلمة المرور"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:7
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:146
+#: .\templates\parts\navbar.html:50
+msgid "Documentations"
+msgstr "الوثائق"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:141
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:139
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:139
+msgid "Login Tools"
+msgstr "أدوات تسجيل الدخول"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:145
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:143
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:143
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:156
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:153
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:153
+msgid "Subscription Info"
+msgstr "معلومات الاشتراك"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:162
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:159
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:159
+msgid "title"
+msgstr "عنوان"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:169
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:166
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:166
+msgid "Plan scope"
+msgstr "نطاق خطة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:176
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:173
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:173
+msgid "Subscription status"
+msgstr "حالة الاشتراك"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:183
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:180
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:180
+msgid "Subscription date"
+msgstr "تاريخ الاشتراك"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:190
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:187
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:187
+msgid "Subscription end date"
+msgstr "تاريخ نهاية الاشتراك"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:197
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:194
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:194
+msgid "Actions"
+msgstr "الإجراءات"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:204
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:201
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:201
+msgid "Renew plan"
+msgstr "تجديد الخطة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:207
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:204
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:204
+msgid "Upgrade plan"
+msgstr "ترقية الخطة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:219
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:216
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:216
+msgid "Plan Info"
+msgstr "معلومات الخطة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:282
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:279
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:279
+msgid "Reset Project Password"
+msgstr "إعادة تعيين كلمة مرور المشروع"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:290
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:291
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:287
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:288
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:287
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:288
+msgid "New Password"
+msgstr "كلمة المرور الجديدة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:294
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:295
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:291
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:292
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:291
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:292
+msgid "repeat new password"
+msgstr "كرر كلمة المرور الجديدة"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:297
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:294
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:294
+#: .\venv\Lib\site-packages\grappelli\templates\admin\change_list_filter_confirm.html:196
+#: .\venv\Lib\site-packages\grappelli\templates\admin\change_list_filter_confirm_sidebar.html:180
+msgid "Reset"
+msgstr "إعادة ضبط"
+
+#: .\templates\dashboard\services\viewService\ViewHRManagementService.html:298
+#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:295
+#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:295
+msgid "By clicking Reset, you will change the project dashboard password."
+msgstr ""
+"من خلال النقر فوق إعادة التعيين ، سوف تقوم بتغيير كلمة مرور لوحة معلومات "
+"المشروع."
 
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:12
 msgid "Project analytics"
@@ -806,12 +978,12 @@ msgid "visits"
 msgstr "زيارات"
 
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:50
-#: .\templates\pages\services\PatientManagement.html:93
+#: .\templates\pages\services\PatientManagement.html:97
 msgid "Local visits"
 msgstr "الزيارات المحلية"
 
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:60
-#: .\templates\pages\services\PatientManagement.html:99
+#: .\templates\pages\services\PatientManagement.html:103
 msgid "Home visits"
 msgstr "زيارات المنزل"
 
@@ -834,99 +1006,6 @@ msgstr "المال لزيارات المنزل"
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:104
 msgid "Project Info"
 msgstr "معلومات المشروع"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:139
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:139
-msgid "Login Tools"
-msgstr "أدوات تسجيل الدخول"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:143
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:143
-msgid "Change Password"
-msgstr "تغيير كلمة المرور"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:153
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:153
-msgid "Subscription Info"
-msgstr "معلومات الاشتراك"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:159
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:159
-msgid "title"
-msgstr "عنوان"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:166
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:166
-msgid "Plan scope"
-msgstr "نطاق خطة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:173
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:173
-msgid "Subscription status"
-msgstr "حالة الاشتراك"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:180
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:180
-msgid "Subscription date"
-msgstr "تاريخ الاشتراك"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:187
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:187
-msgid "Subscription end date"
-msgstr "تاريخ نهاية الاشتراك"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:194
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:194
-msgid "Actions"
-msgstr "الإجراءات"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:201
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:201
-msgid "Renew plan"
-msgstr "تجديد الخطة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:204
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:204
-msgid "Upgrade plan"
-msgstr "ترقية الخطة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:216
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:216
-msgid "Plan Info"
-msgstr "معلومات الخطة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:279
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:279
-msgid "Reset Project Password"
-msgstr "إعادة تعيين كلمة مرور المشروع"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:287
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:288
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:287
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:288
-msgid "New Password"
-msgstr "كلمة المرور الجديدة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:291
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:292
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:291
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:292
-msgid "repeat new password"
-msgstr "كرر كلمة المرور الجديدة"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:294
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:294
-#: .\venv\Lib\site-packages\grappelli\templates\admin\change_list_filter_confirm.html:196
-#: .\venv\Lib\site-packages\grappelli\templates\admin\change_list_filter_confirm_sidebar.html:180
-msgid "Reset"
-msgstr "إعادة ضبط"
-
-#: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:295
-#: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:295
-msgid "By clicking Reset, you will change the project dashboard password."
-msgstr ""
-"من خلال النقر فوق إعادة التعيين ، سوف تقوم بتغيير كلمة مرور لوحة معلومات "
-"المشروع."
 
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:17
 msgid "total Students"
@@ -976,10 +1055,11 @@ msgstr "الراتب الكلي"
 msgid "Total Income"
 msgstr "إجمالي الدخل"
 
-#: .\templates\dashboard_base.html:9 .\templates\pages\index.html:152
-#: .\templates\pages\services\PatientManagement.html:214
-#: .\templates\pages\services\SchoolManagement.html:244
-#: .\templates\parts\navbar.html:68
+#: .\templates\dashboard_base.html:9 .\templates\pages\index.html:156
+#: .\templates\pages\services\HRManagement.html:274
+#: .\templates\pages\services\PatientManagement.html:218
+#: .\templates\pages\services\SchoolManagement.html:248
+#: .\templates\parts\navbar.html:88
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:87
 msgid "Dashboard"
 msgstr "لوحة القيادة"
@@ -1022,83 +1102,99 @@ msgstr ""
 "تبسيط الأنظمة المعقدة إلى بيئات عمل فعالة."
 
 #: .\templates\pages\index.html:18
+#: .\templates\pages\services\HRManagement.html:17
+#: .\templates\pages\services\HRManagement.html:795
 #: .\templates\pages\services\PatientManagement.html:18
-#: .\templates\pages\services\PatientManagement.html:366
+#: .\templates\pages\services\PatientManagement.html:370
 #: .\templates\pages\services\SchoolManagement.html:17
-#: .\templates\pages\services\SchoolManagement.html:421
-#: .\templates\parts\navbar.html:73
+#: .\templates\pages\services\SchoolManagement.html:425
 msgid "Get started for free"
 msgstr "ابدأ مجانًا"
 
-#: .\templates\pages\index.html:30
-#: .\templates\pages\services\PatientManagement.html:30
-#: .\templates\pages\services\SchoolManagement.html:29
+#: .\templates\pages\index.html:22 .\templates\pages\index.html:420
+#: .\templates\pages\services\HRManagement.html:21
+#: .\templates\pages\services\HRManagement.html:799
+#: .\templates\pages\services\PatientManagement.html:22
+#: .\templates\pages\services\PatientManagement.html:374
+#: .\templates\pages\services\SchoolManagement.html:21
+#: .\templates\pages\services\SchoolManagement.html:429
+#: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:62
+msgid "Contact us"
+msgstr "تواصل معنا"
+
+#: .\templates\pages\index.html:34
+#: .\templates\pages\services\HRManagement.html:33
+#: .\templates\pages\services\PatientManagement.html:34
+#: .\templates\pages\services\SchoolManagement.html:33
 msgid "Trusted by industry leaders"
 msgstr "يثق به قادة الصناعة"
 
-#: .\templates\pages\index.html:68
+#: .\templates\pages\index.html:72
 msgid ""
-"Solutions that actually <span class='text-success'>solve <br> your "
-"problems</span>"
+"Solutions that actually <span class='text-success'>solve <br> your problems</"
+"span>"
 msgstr ""
 "الحلول التي في الواقع <span class = 'text-spansess'> حل <br> مشاكلك </span>"
 
-#: .\templates\pages\index.html:76
+#: .\templates\pages\index.html:80
 msgid "IT tickets"
 msgstr "تذاكر"
 
-#: .\templates\pages\index.html:82
+#: .\templates\pages\index.html:86
 msgid "Tasks"
 msgstr "المهام"
 
-#: .\templates\pages\index.html:88
+#: .\templates\pages\index.html:92
 msgid "Sales pipeline"
-msgstr "خط أنابيب المبيعات"
+msgstr "خط المبيعات"
 
-#: .\templates\pages\index.html:94
+#: .\templates\pages\index.html:98
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
-#: .\templates\pages\index.html:100
-#: .\templates\pages\services\PatientManagement.html:123
+#: .\templates\pages\index.html:104
+#: .\templates\pages\services\PatientManagement.html:127
 msgid "Appointments"
 msgstr "المواعيد"
 
-#: .\templates\pages\index.html:106
+#: .\templates\pages\index.html:110
 msgid "Roadmap planning"
 msgstr "تخطيط خريطة الطريق"
 
-#: .\templates\pages\index.html:112
+#: .\templates\pages\index.html:116
 msgid "Recruitment"
 msgstr "توظيف"
 
-#: .\templates\pages\index.html:118
+#: .\templates\pages\index.html:122
 msgid "Resource management"
 msgstr "إدارة الموارد"
 
-#: .\templates\pages\index.html:124
+#: .\templates\pages\index.html:128
 msgid "Reporting"
 msgstr "الإبلاغ"
 
-#: .\templates\pages\index.html:130
-#: .\templates\pages\services\PatientManagement.html:154
-#: .\templates\pages\services\SchoolManagement.html:189
+#: .\templates\pages\index.html:134
+#: .\templates\pages\services\HRManagement.html:219
+#: .\templates\pages\services\PatientManagement.html:158
+#: .\templates\pages\services\SchoolManagement.html:193
 msgid "Exporting"
 msgstr "التصدير"
 
-#: .\templates\pages\index.html:146
+#: .\templates\pages\index.html:150
 msgid "Services Features"
 msgstr "ميزات الخدمات"
 
-#: .\templates\pages\index.html:153
-#: .\templates\pages\services\PatientManagement.html:215
-#: .\templates\pages\services\SchoolManagement.html:245
+#: .\templates\pages\index.html:157
+#: .\templates\pages\services\HRManagement.html:275
+#: .\templates\pages\services\PatientManagement.html:219
+#: .\templates\pages\services\SchoolManagement.html:249
 msgid "User-friendly dashboard"
 msgstr "لوحة معلومات سهلة الاستخدام"
 
-#: .\templates\pages\index.html:154
-#: .\templates\pages\services\PatientManagement.html:216
-#: .\templates\pages\services\SchoolManagement.html:246
+#: .\templates\pages\index.html:158
+#: .\templates\pages\services\HRManagement.html:276
+#: .\templates\pages\services\PatientManagement.html:220
+#: .\templates\pages\services\SchoolManagement.html:250
 msgid ""
 "A simple and intuitive interface that allows you to manage all your "
 "operations easily, even for non-technical users."
@@ -1106,21 +1202,24 @@ msgstr ""
 "واجهة بسيطة وبديهية تتيح لك إدارة جميع عملياتك بسهولة ، حتى بالنسبة "
 "للمستخدمين غير التقنيين."
 
-#: .\templates\pages\index.html:162
-#: .\templates\pages\services\PatientManagement.html:224
-#: .\templates\pages\services\SchoolManagement.html:254
+#: .\templates\pages\index.html:166
+#: .\templates\pages\services\HRManagement.html:284
+#: .\templates\pages\services\PatientManagement.html:228
+#: .\templates\pages\services\SchoolManagement.html:258
 msgid "Security"
 msgstr "حماية"
 
-#: .\templates\pages\index.html:163
-#: .\templates\pages\services\PatientManagement.html:225
-#: .\templates\pages\services\SchoolManagement.html:255
+#: .\templates\pages\index.html:167
+#: .\templates\pages\services\HRManagement.html:285
+#: .\templates\pages\services\PatientManagement.html:229
+#: .\templates\pages\services\SchoolManagement.html:259
 msgid "Protected from security vulnerabilities"
 msgstr "محمية من نقاط الضعف الأمنية"
 
-#: .\templates\pages\index.html:164
-#: .\templates\pages\services\PatientManagement.html:226
-#: .\templates\pages\services\SchoolManagement.html:256
+#: .\templates\pages\index.html:168
+#: .\templates\pages\services\HRManagement.html:286
+#: .\templates\pages\services\PatientManagement.html:230
+#: .\templates\pages\services\SchoolManagement.html:260
 msgid ""
 "A system equipped with advanced protection technologies to safeguard your "
 "data from threats and cyber-attacks."
@@ -1128,41 +1227,47 @@ msgstr ""
 "نظام مزود بتقنيات الحماية المتقدمة لحماية بياناتك من التهديدات والهجمات "
 "الإلكترونية."
 
-#: .\templates\pages\index.html:172
-#: .\templates\pages\services\PatientManagement.html:234
-#: .\templates\pages\services\SchoolManagement.html:264
+#: .\templates\pages\index.html:176
+#: .\templates\pages\services\HRManagement.html:294
+#: .\templates\pages\services\PatientManagement.html:238
+#: .\templates\pages\services\SchoolManagement.html:268
 msgid "Customize"
 msgstr "تخصيص"
 
-#: .\templates\pages\index.html:173
-#: .\templates\pages\services\PatientManagement.html:235
-#: .\templates\pages\services\SchoolManagement.html:265
+#: .\templates\pages\index.html:177
+#: .\templates\pages\services\HRManagement.html:295
+#: .\templates\pages\services\PatientManagement.html:239
+#: .\templates\pages\services\SchoolManagement.html:269
 msgid "Customizable"
 msgstr "قابل للتخصيص"
 
-#: .\templates\pages\index.html:174
-#: .\templates\pages\services\PatientManagement.html:236
-#: .\templates\pages\services\SchoolManagement.html:266
+#: .\templates\pages\index.html:178
+#: .\templates\pages\services\HRManagement.html:296
+#: .\templates\pages\services\PatientManagement.html:240
+#: .\templates\pages\services\SchoolManagement.html:270
 msgid ""
-"A flexible design that allows you to modify the system to suit your specific"
-" business needs."
+"A flexible design that allows you to modify the system to suit your specific "
+"business needs."
 msgstr "تصميم مرن يسمح لك بتعديل النظام لتناسب احتياجات عملك المحددة."
 
-#: .\templates\pages\index.html:182
-#: .\templates\pages\services\PatientManagement.html:244
-#: .\templates\pages\services\SchoolManagement.html:274
+#: .\templates\pages\index.html:186
+#: .\templates\pages\services\HRManagement.html:304
+#: .\templates\pages\services\PatientManagement.html:248
+#: .\templates\pages\services\SchoolManagement.html:278
 msgid "Responsive"
 msgstr "استجابة"
 
-#: .\templates\pages\index.html:183
-#: .\templates\pages\services\PatientManagement.html:245
-#: .\templates\pages\services\SchoolManagement.html:275
+#: .\templates\pages\index.html:187
+#: .\templates\pages\services\HRManagement.html:305
+#: .\templates\pages\services\PatientManagement.html:249
+#: .\templates\pages\services\SchoolManagement.html:279
 msgid "Multi-device support"
 msgstr "دعم متعدد الأجهزة"
 
-#: .\templates\pages\index.html:184
-#: .\templates\pages\services\PatientManagement.html:246
-#: .\templates\pages\services\SchoolManagement.html:276
+#: .\templates\pages\index.html:188
+#: .\templates\pages\services\HRManagement.html:306
+#: .\templates\pages\services\PatientManagement.html:250
+#: .\templates\pages\services\SchoolManagement.html:280
 msgid ""
 "Access the system across different devices such as computers, smartphones, "
 "or tablets."
@@ -1170,59 +1275,67 @@ msgstr ""
 "الوصول إلى النظام عبر أجهزة مختلفة مثل أجهزة الكمبيوتر أو الهواتف الذكية أو "
 "الأجهزة اللوحية."
 
-#: .\templates\pages\index.html:192
-#: .\templates\pages\services\PatientManagement.html:148
-#: .\templates\pages\services\PatientManagement.html:254
-#: .\templates\pages\services\PatientManagement.html:342
-#: .\templates\pages\services\SchoolManagement.html:183
-#: .\templates\pages\services\SchoolManagement.html:284
-#: .\templates\pages\services\SchoolManagement.html:383
-#: .\templates\pages\services\SchoolManagement.html:397
+#: .\templates\pages\index.html:196
+#: .\templates\pages\services\HRManagement.html:213
+#: .\templates\pages\services\HRManagement.html:314
+#: .\templates\pages\services\PatientManagement.html:152
+#: .\templates\pages\services\PatientManagement.html:258
+#: .\templates\pages\services\PatientManagement.html:346
+#: .\templates\pages\services\SchoolManagement.html:187
+#: .\templates\pages\services\SchoolManagement.html:288
+#: .\templates\pages\services\SchoolManagement.html:387
+#: .\templates\pages\services\SchoolManagement.html:401
 msgid "Permissions"
 msgstr "أذونات"
 
-#: .\templates\pages\index.html:193
-#: .\templates\pages\services\PatientManagement.html:255
-#: .\templates\pages\services\SchoolManagement.html:285
+#: .\templates\pages\index.html:197
+#: .\templates\pages\services\HRManagement.html:315
+#: .\templates\pages\services\PatientManagement.html:259
+#: .\templates\pages\services\SchoolManagement.html:289
 msgid "User management and permissions"
 msgstr "إدارة المستخدمين والأذونات"
 
-#: .\templates\pages\index.html:194
-#: .\templates\pages\services\PatientManagement.html:256
-#: .\templates\pages\services\SchoolManagement.html:286
+#: .\templates\pages\index.html:198
+#: .\templates\pages\services\HRManagement.html:316
+#: .\templates\pages\services\PatientManagement.html:260
+#: .\templates\pages\services\SchoolManagement.html:290
 msgid ""
 "An advanced control system that allows you to assign different roles and "
 "permissions to users within the system."
 msgstr ""
 "نظام تحكم متقدم يسمح لك بتعيين أدوار وأذونات مختلفة للمستخدمين داخل النظام."
 
-#: .\templates\pages\index.html:202
-#: .\templates\pages\services\PatientManagement.html:264
-#: .\templates\pages\services\SchoolManagement.html:294
+#: .\templates\pages\index.html:206
+#: .\templates\pages\services\HRManagement.html:324
+#: .\templates\pages\services\PatientManagement.html:268
+#: .\templates\pages\services\SchoolManagement.html:298
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:165
 msgid "Support"
 msgstr "يدعم"
 
-#: .\templates\pages\index.html:203
-#: .\templates\pages\services\PatientManagement.html:265
-#: .\templates\pages\services\SchoolManagement.html:295
+#: .\templates\pages\index.html:207
+#: .\templates\pages\services\HRManagement.html:325
+#: .\templates\pages\services\PatientManagement.html:269
+#: .\templates\pages\services\SchoolManagement.html:299
 msgid "24/7 technical support"
 msgstr "24/7 الدعم الفني"
 
-#: .\templates\pages\index.html:204
-#: .\templates\pages\services\PatientManagement.html:266
-#: .\templates\pages\services\SchoolManagement.html:296
+#: .\templates\pages\index.html:208
+#: .\templates\pages\services\HRManagement.html:326
+#: .\templates\pages\services\PatientManagement.html:270
+#: .\templates\pages\services\SchoolManagement.html:300
 msgid ""
 "A dedicated support team available around the clock to assist you with any "
 "issues or inquiries."
-msgstr ""
-"فريق دعم مخصص متاح على مدار الساعة لمساعدتك في أي مشكلات أو استفسارات."
+msgstr "فريق دعم مخصص متاح على مدار الساعة لمساعدتك في أي مشكلات أو استفسارات."
 
-#: .\templates\pages\index.html:220
+#: .\templates\pages\index.html:224
+#: .\templates\pages\services\HRManagement.html:341
 msgid "Customer reviews"
 msgstr "مراجعات العملاء"
 
-#: .\templates\pages\index.html:228
+#: .\templates\pages\index.html:232
+#: .\templates\pages\services\HRManagement.html:349
 msgid ""
 "An all-in-one management solution that has significantly improved our "
 "workflow. It's fast, accurate, and incredibly efficient."
@@ -1230,101 +1343,106 @@ msgstr ""
 "حل إدارة متكامل أدى إلى تحسين سير العمل لدينا بشكل كبير. إنه سريع ودقيق "
 "وفعال بشكل لا يصدق."
 
-#: .\templates\pages\index.html:238 .\templates\pages\index.html:304
+#: .\templates\pages\index.html:242 .\templates\pages\index.html:308
+#: .\templates\pages\services\HRManagement.html:359
+#: .\templates\pages\services\HRManagement.html:425
 #: .\venv\Lib\site-packages\paypal\pro\fields.py:285
 msgid "Romania"
 msgstr "رومانيا"
 
-#: .\templates\pages\index.html:261
+#: .\templates\pages\index.html:265
+#: .\templates\pages\services\HRManagement.html:382
 msgid ""
 "A game-changer for our business! The software's versatility and ease of use "
 "have enhanced our productivity like never before."
 msgstr ""
-"لقد أحدث هذا البرنامج تغييرًا جذريًا في أعمالنا! لقد أدى تنوع البرنامج "
-"وسهولة استخدامه إلى تعزيز إنتاجيتنا بشكل لم يحدث من قبل."
+"لقد أحدث هذا البرنامج تغييرًا جذريًا في أعمالنا! لقد أدى تنوع البرنامج وسهولة "
+"استخدامه إلى تعزيز إنتاجيتنا بشكل لم يحدث من قبل."
 
-#: .\templates\pages\index.html:271
+#: .\templates\pages\index.html:275
+#: .\templates\pages\services\HRManagement.html:392
 msgid "German"
 msgstr "الألمانية"
 
-#: .\templates\pages\index.html:294
+#: .\templates\pages\index.html:298
+#: .\templates\pages\services\HRManagement.html:415
 msgid ""
-"We’ve tried several management solutions before, but this one stands out for"
-" its efficiency and ease of use."
+"We’ve tried several management solutions before, but this one stands out for "
+"its efficiency and ease of use."
 msgstr ""
 "لقد جربنا العديد من حلول الإدارة من قبل، لكن هذا الحل يتميز بكفاءته وسهولة "
 "استخدامه."
 
-#: .\templates\pages\index.html:329
+#: .\templates\pages\index.html:333
 msgid "Our Team"
 msgstr "فريقنا"
 
-#: .\templates\pages\index.html:339
+#: .\templates\pages\index.html:343
 msgid "Backend Dev"
 msgstr "الخلفية ديف"
 
-#: .\templates\pages\index.html:343
+#: .\templates\pages\index.html:347
 msgid ""
 "A highly skilled and trusted Backend Developer with deep expertise in "
 "building secure, integrated systems tailored to your business needs. "
 "Specializing in designing robust infrastructures and developing custom "
 "solutions that ensure efficiency, high performance, and data security. Your "
-"ideal partner for creating a flexible and sustainable system that meets your"
-" goals with confidence."
+"ideal partner for creating a flexible and sustainable system that meets your "
+"goals with confidence."
 msgstr ""
 "مطور خلفي ذي مهارة وموثوقة مع خبرة عميقة في بناء أنظمة آمنة ومتكاملة مصممة "
 "لتلبية احتياجات عملك. متخصص في تصميم البنى التحتية القوية وتطوير الحلول "
-"المخصصة التي تضمن الكفاءة والأداء العالي وأمن البيانات. شريكك المثالي لإنشاء"
-" نظام مرن ومستدام يلبي أهدافك بثقة."
+"المخصصة التي تضمن الكفاءة والأداء العالي وأمن البيانات. شريكك المثالي لإنشاء "
+"نظام مرن ومستدام يلبي أهدافك بثقة."
 
-#: .\templates\pages\index.html:355
+#: .\templates\pages\index.html:359
 msgid "UI/UX Designer"
 msgstr "مصمم UI/UX"
 
-#: .\templates\pages\index.html:359
+#: .\templates\pages\index.html:363
 msgid ""
 "A highly skilled UI/UX Designer with expertise in creating innovative user "
 "interfaces and seamless user experiences. Focused on achieving a balance "
 "between functional aesthetics and ease of use, ensuring an engaging and "
 "effective interactive experience for users. Always striving to transform "
-"ideas into exceptional designs that contribute to the success of the project"
-" and deliver an unparalleled user experience."
+"ideas into exceptional designs that contribute to the success of the project "
+"and deliver an unparalleled user experience."
 msgstr ""
-"مصمم UI/UX ذوي المهارات العالية مع خبرة في إنشاء واجهات مستخدم مبتكرة وخبرات"
-" مستخدم سلسة. ركز على تحقيق التوازن بين الجماليات الوظيفية وسهولة الاستخدام "
-"، مع ضمان تجربة تفاعلية جذابة وفعالة للمستخدمين. سعي دائمًا لتحويل الأفكار "
-"إلى تصميمات استثنائية تساهم في نجاح المشروع وتقديم تجربة مستخدم لا مثيل لها."
+"مصمم UI/UX ذوي المهارات العالية مع خبرة في إنشاء واجهات مستخدم مبتكرة وخبرات "
+"مستخدم سلسة. ركز على تحقيق التوازن بين الجماليات الوظيفية وسهولة الاستخدام ، "
+"مع ضمان تجربة تفاعلية جذابة وفعالة للمستخدمين. سعي دائمًا لتحويل الأفكار إلى "
+"تصميمات استثنائية تساهم في نجاح المشروع وتقديم تجربة مستخدم لا مثيل لها."
 
-#: .\templates\pages\index.html:371
+#: .\templates\pages\index.html:375
 msgid "Frontend Designer"
 msgstr "مصمم الواجهة"
 
-#: .\templates\pages\index.html:375
+#: .\templates\pages\index.html:379
 msgid ""
 "An exceptional Frontend Developer with expertise in transforming designs "
 "into interactive, user-friendly websites and applications. Focused on "
-"writing clean and efficient code, ensuring a seamless user experience across"
-" all devices and browsers. A trusted partner in bringing your vision to life"
-" with stunning and fully integrated digital interfaces."
+"writing clean and efficient code, ensuring a seamless user experience across "
+"all devices and browsers. A trusted partner in bringing your vision to life "
+"with stunning and fully integrated digital interfaces."
 msgstr ""
 "مطور واجهة استثنائية مع خبرة في تحويل التصميمات إلى مواقع ويب وتطبيقات "
 "تفاعلية سهلة الاستخدام. ركز على كتابة التعليمات البرمجية النظيفة والفعالة ، "
 "وضمان تجربة مستخدم سلسة في جميع الأجهزة والمتصفحات. شريك موثوق به في جلب "
 "رؤيتك إلى الحياة من خلال واجهات رقمية مذهلة ومتكاملة بالكامل."
 
-#: .\templates\pages\index.html:387
+#: .\templates\pages\index.html:391
 msgid "Project Manager"
 msgstr "مدير المشروع"
 
-#: .\templates\pages\index.html:391
+#: .\templates\pages\index.html:395
 msgid ""
 "A professional female Project Manager with extensive experience in "
 "successfully planning and executing projects. She is responsible for "
 "coordinating between different teams, setting objectives and tasks, and "
-"managing resources to ensure project delivery on time and within budget. She"
-" possesses strong leadership skills and problem-solving abilities, making "
-"her a key partner in achieving project success and guiding it toward desired"
-" outcomes."
+"managing resources to ensure project delivery on time and within budget. She "
+"possesses strong leadership skills and problem-solving abilities, making her "
+"a key partner in achieving project success and guiding it toward desired "
+"outcomes."
 msgstr ""
 "مديرة للمشروع المحترف مع خبرة واسعة في التخطيط بنجاح وتنفيذ المشاريع. وهي "
 "مسؤولة عن التنسيق بين الفرق المختلفة ، وتحديد الأهداف والمهام ، وإدارة "
@@ -1332,7 +1450,7 @@ msgstr ""
 "مهارات قيادية قوية وقدرات لحل المشكلات ، مما يجعلها شريكًا رئيسيًا في تحقيق "
 "نجاح المشروع وتوجيهه نحو النتائج المرجوة."
 
-#: .\templates\pages\index.html:407
+#: .\templates\pages\index.html:411
 msgid ""
 "Do you want to develop a custom program that <span class='text-"
 "primary'>meets your specific needs?"
@@ -1340,11 +1458,11 @@ msgstr ""
 "هل ترغب في تطوير برنامج مخصص يفي بـ <span class = 'text-promary'> تلبي "
 "احتياجاتك المحددة؟"
 
-#: .\templates\pages\index.html:411
+#: .\templates\pages\index.html:416
 msgid "Contact Form"
 msgstr "نموذج الاتصال"
 
-#: .\templates\pages\index.html:412
+#: .\templates\pages\index.html:424
 msgid ""
 "Fill out the contact form now, and our dedicated team is ready to provide "
 "you with the support you need and turn your dreams into reality. Take the "
@@ -1353,45 +1471,548 @@ msgstr ""
 "املأ نموذج الاتصال الآن ، وفريقنا المخصص مستعد لتزويدك بالدعم الذي تحتاجه "
 "وتحويل أحلامك إلى حقيقة واقعة. اتخذ الخطوة الأولى نحو النجاح!"
 
-#: .\templates\pages\index.html:424 .\templates\parts\footer.html:19
+#: .\templates\pages\index.html:437 .\templates\parts\footer.html:19
 #: .\templates\parts\footer.html:20
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1845
 msgid "Email address"
 msgstr "عنوان البريد الإلكتروني"
 
-#: .\templates\pages\index.html:431
+#: .\templates\pages\index.html:444
 msgid "Phone Number"
 msgstr "رقم التليفون"
 
-#: .\templates\pages\index.html:448
+#: .\templates\pages\index.html:461
 msgid "Project Description"
 msgstr "وصف المشروع"
 
-#: .\templates\pages\index.html:452
+#: .\templates\pages\index.html:465
 msgid "Enter a detailed description of your project."
 msgstr "أدخل وصفًا مفصلاً لمشروعك."
 
-#: .\templates\pages\index.html:457
+#: .\templates\pages\index.html:470
 msgid "Examples of similar websites"
 msgstr "أمثلة على مواقع الويب المماثلة"
 
-#: .\templates\pages\index.html:461
+#: .\templates\pages\index.html:474
 msgid "Provide examples or links to designs and websites you like."
 msgstr "قدم أمثلة أو روابط للتصميمات والمواقع الإلكترونية التي تريدها."
 
-#: .\templates\pages\index.html:474
+#: .\templates\pages\index.html:487
 msgid ""
-"By sending this form I confirm that I have read and accept the Privacy "
-"Policy"
+"By sending this form I confirm that I have read and accept the Privacy Policy"
 msgstr "عن طريق إرسال هذا النموذج ، أؤكد أنني قرأت وقبول سياسة الخصوصية"
 
-#: .\templates\pages\index.html:476
+#: .\templates\pages\index.html:489
 msgid "You must agree before submitting."
 msgstr "يجب أن توافق قبل تقديمها."
 
-#: .\templates\pages\index.html:480
+#: .\templates\pages\index.html:493
 msgid "Submit"
 msgstr "يُقدِّم"
+
+#: .\templates\pages\services\HRManagement.html:10
+msgid ""
+"Smart Human Resources System <br><span class='text-primary'>Organize your "
+"company and achieve maximum productivity</span>"
+msgstr ""
+"نظام الموارد البشرية الذكية <br> <span class = 'text-primary'> تنظيم شركتك "
+"وتحقيق أقصى قدر من الإنتاجية </span>"
+
+#: .\templates\pages\services\HRManagement.html:14
+msgid ""
+"Save time and effort with an integrated platform to manage employees, "
+"salaries, attendance, evaluations, and much more in one place – for smooth "
+"and efficient management."
+msgstr ""
+"وفر الوقت والجهد من خلال منصة متكاملة لإدارة الموظفين، والرواتب، والحضور، "
+"والتقييمات، والمزيد في مكان واحد – لتحقيق إدارة سلسة وفعالة."
+
+#: .\templates\pages\services\HRManagement.html:70
+msgid "HR Management System <span class='text-success'> <br> Solutions</span>"
+msgstr ""
+"نظام إدارة الموارد البشرية <span class = 'text-success'> <br> الحلول </span>"
+
+#: .\templates\pages\services\HRManagement.html:78
+#: .\templates\pages\services\PatientManagement.html:79
+#: .\templates\pages\services\SchoolManagement.html:78
+msgid "Analytics"
+msgstr "التحليلات"
+
+#: .\templates\pages\services\HRManagement.html:84
+msgid "Manage Recruitment"
+msgstr "إدارة التوظيف"
+
+#: .\templates\pages\services\HRManagement.html:90
+#: .\templates\pages\services\SchoolManagement.html:90
+msgid "Manage Employees"
+msgstr "إدارة الموظفين"
+
+#: .\templates\pages\services\HRManagement.html:96
+msgid "Manage Attendance"
+msgstr "إدارة الحضور"
+
+#: .\templates\pages\services\HRManagement.html:103
+msgid "Manage Leave"
+msgstr "إدارة الإجازات"
+
+#: .\templates\pages\services\HRManagement.html:109
+msgid "Manage Onboarding"
+msgstr "إدارة الالتحاق بالعمل"
+
+#: .\templates\pages\services\HRManagement.html:115
+msgid "PMS"
+msgstr "نظام إدارة الأداء"
+
+#: .\templates\pages\services\HRManagement.html:121
+msgid "Manage Assets"
+msgstr "إدارة الأصول"
+
+#: .\templates\pages\services\HRManagement.html:127
+msgid "Manage Payroll"
+msgstr "إدارة الرواتب"
+
+#: .\templates\pages\services\HRManagement.html:133
+msgid "Manage Offboarding"
+msgstr "إدارة إنهاء العمل"
+
+#: .\templates\pages\services\HRManagement.html:139
+msgid "Manage Help Desk"
+msgstr "إدارة مكتب المساعدة"
+
+#: .\templates\pages\services\HRManagement.html:146
+msgid "Contract Management"
+msgstr "إدارة العقود"
+
+#: .\templates\pages\services\HRManagement.html:152
+msgid "Training & Development"
+msgstr "التدريب والتطوير"
+
+#: .\templates\pages\services\HRManagement.html:158
+msgid "Rewards & Incentives"
+msgstr "المكافآت والحوافز"
+
+#: .\templates\pages\services\HRManagement.html:164
+msgid "Disciplinary Actions"
+msgstr "الإجراءات التأديبية"
+
+#: .\templates\pages\services\HRManagement.html:170
+msgid "Overtime Management"
+msgstr "إدارة العمل الإضافي"
+
+#: .\templates\pages\services\HRManagement.html:176
+msgid "Meetings & Appointments"
+msgstr "الاجتماعات والمواعيد"
+
+#: .\templates\pages\services\HRManagement.html:182
+msgid "Feedback & Complaints System"
+msgstr "نظام الملاحظات والشكاوى"
+
+#: .\templates\pages\services\HRManagement.html:188
+msgid "Ticketing System"
+msgstr "نظام التذاكر"
+
+#: .\templates\pages\services\HRManagement.html:194
+msgid "Digital Document Management"
+msgstr "إدارة المستندات الرقمية"
+
+#: .\templates\pages\services\HRManagement.html:201
+#: .\templates\pages\services\SchoolManagement.html:144
+msgid "Reports"
+msgstr "التقارير"
+
+#: .\templates\pages\services\HRManagement.html:207
+#: .\templates\pages\services\PatientManagement.html:146
+#: .\templates\pages\services\SchoolManagement.html:181
+msgid "Multi Manager"
+msgstr "مدير متعدد"
+
+#: .\templates\pages\services\HRManagement.html:225
+#: .\templates\pages\services\PatientManagement.html:170
+#: .\templates\pages\services\SchoolManagement.html:200
+msgid "Notifications"
+msgstr "الإشعارات"
+
+#: .\templates\pages\services\HRManagement.html:231
+#: .\templates\pages\services\PatientManagement.html:177
+#: .\templates\pages\services\SchoolManagement.html:207
+msgid "Multi Languages"
+msgstr "اللغات المتعددة"
+
+#: .\templates\pages\services\HRManagement.html:237
+#: .\templates\pages\services\PatientManagement.html:183
+#: .\templates\pages\services\SchoolManagement.html:213
+msgid "System Customizing"
+msgstr "تخصيص النظام"
+
+#: .\templates\pages\services\HRManagement.html:243
+#: .\templates\pages\services\PatientManagement.html:189
+#: .\templates\pages\services\SchoolManagement.html:219
+msgid "Protection"
+msgstr "الحماية"
+
+#: .\templates\pages\services\HRManagement.html:249
+#: .\templates\pages\services\PatientManagement.html:196
+#: .\templates\pages\services\SchoolManagement.html:226
+msgid "Updates"
+msgstr "التحديثات"
+
+#: .\templates\pages\services\HRManagement.html:255
+msgid "Technical Support"
+msgstr "الدعم الفني"
+
+#: .\templates\pages\services\HRManagement.html:268
+#: .\templates\pages\services\PatientManagement.html:212
+#: .\templates\pages\services\SchoolManagement.html:242
+msgid "System Features"
+msgstr "ميزات النظام"
+
+#: .\templates\pages\services\HRManagement.html:449
+msgid "Does this sound like your business?"
+msgstr "هل يشبه هذا عملك؟"
+
+#: .\templates\pages\services\HRManagement.html:453
+msgid "You are still using outdated paper-based management"
+msgstr "لا تزال تستخدم إدارة قديمة تعتمد على الورق"
+
+#: .\templates\pages\services\HRManagement.html:457
+msgid "Your business struggles with inefficient workflows and slow processes"
+msgstr "يواجه عملك صعوبة في تدفقات العمل غير الفعّالة والعمليات البطيئة"
+
+#: .\templates\pages\services\HRManagement.html:461
+msgid ""
+"You lack a centralized system to manage employees, clients, and financial "
+"data"
+msgstr "تفتقر إلى نظام مركزي لإدارة الموظفين والعملاء والبيانات المالية"
+
+#: .\templates\pages\services\HRManagement.html:464
+msgid "How would it be if?"
+msgstr "كيف سيكون الحال لو؟"
+
+#: .\templates\pages\services\HRManagement.html:468
+msgid ""
+"You had a fully digital system to automate and streamline all operations"
+msgstr "كان لديك نظام رقمي متكامل لأتمتة وتبسيط جميع العمليات"
+
+#: .\templates\pages\services\HRManagement.html:472
+msgid ""
+"Your business can efficiently manage employees and reports through a single "
+"integrated system"
+msgstr "يمكن لعملك إدارة الموظفين والتقارير بكفاءة من خلال نظام متكامل واحد"
+
+#: .\templates\pages\services\HRManagement.html:476
+msgid "Your business was fully automated and optimized for efficiency"
+msgstr "كان عملك مؤتمت بالكامل ومحسن لتحقيق الكفاءة"
+
+#: .\templates\pages\services\HRManagement.html:483
+msgid "A Comprehensive HR Solution<br>for Your Business"
+msgstr "حل شامل لإدارة الموارد البشرية<br>لعملك"
+
+#: .\templates\pages\services\HRManagement.html:486
+msgid ""
+"Streamline HR processes, enhance productivity, and manage your workforce "
+"efficiently with our all-in-one solution."
+msgstr ""
+"قم بتبسيط عمليات الموارد البشرية، وزيادة الإنتاجية، وإدارة القوى العاملة "
+"بكفاءة باستخدام حلنا الشامل."
+
+#: .\templates\pages\services\HRManagement.html:491
+msgid "Get Started"
+msgstr "ابدأ"
+
+#: .\templates\pages\services\HRManagement.html:502
+msgid "Employee Performance"
+msgstr "أداء الموظف"
+
+#: .\templates\pages\services\HRManagement.html:503
+msgid ""
+"Track and analyze <span class='fw-bold'>employee performance</span> with "
+"real-time insights using our customizable tools."
+msgstr ""
+"تتبع وحلل <span class='fw-bold'>أداء الموظفين</span> باستخدام رؤى فورية من "
+"خلال أدواتنا القابلة للتخصيص."
+
+#: .\templates\pages\services\HRManagement.html:511
+msgid "Goal-based evaluations"
+msgstr "تقييمات قائمة على الأهداف"
+
+#: .\templates\pages\services\HRManagement.html:515
+msgid "Automated performance reports"
+msgstr "تقارير الأداء التلقائية"
+
+#: .\templates\pages\services\HRManagement.html:519
+msgid "Custom KPI tracking"
+msgstr "تتبع مؤشرات الأداء الرئيسية المخصصة"
+
+#: .\templates\pages\services\HRManagement.html:528
+msgid "Employee Engagement"
+msgstr "مشاركة الموظفين"
+
+#: .\templates\pages\services\HRManagement.html:529
+msgid ""
+"Boost morale with <span class='fw-bold'>engagement tools</span> and feedback "
+"systems integrated within our solution."
+msgstr ""
+"عزز معنويات الموظفين باستخدام <span class='fw-bold'>أدوات التفاعل</span> "
+"ونظم التغذية الراجعة المدمجة داخل نظامنا."
+
+#: .\templates\pages\services\HRManagement.html:537
+msgid "Real-time feedback & surveys"
+msgstr "التغذية الراجعة والاستبيانات الفورية"
+
+#: .\templates\pages\services\HRManagement.html:541
+msgid "Employee recognition programs"
+msgstr "برامج تكريم الموظفين"
+
+#: .\templates\pages\services\HRManagement.html:545
+msgid "Workplace social engagement"
+msgstr "التفاعل الاجتماعي في مكان العمل"
+
+#: .\templates\pages\services\HRManagement.html:554
+msgid "HR Process Automation"
+msgstr "أتمتة عمليات إدارة الموارد البشرية"
+
+#: .\templates\pages\services\HRManagement.html:555
+msgid ""
+"Automate manual tasks and streamline HR processes with <span class=\"fw-bold"
+"\">smart HR automation tools</span>."
+msgstr ""
+"أتمتة المهام اليدوية وتبسيط عمليات الموارد البشرية باستخدام <span class=\"fw-"
+"bold\">أدوات أتمتة الموارد البشرية الذكية</span>."
+
+#: .\templates\pages\services\HRManagement.html:563
+msgid "Automated payroll & attendance"
+msgstr "إدارة الرواتب والحضور تلقائيًا"
+
+#: .\templates\pages\services\HRManagement.html:567
+msgid "Self-service employee portal"
+msgstr "بوابة الخدمة الذاتية للموظفين"
+
+#: .\templates\pages\services\HRManagement.html:571
+msgid "HR analytics for data-driven decision-making"
+msgstr "تحليلات الموارد البشرية لدعم اتخاذ القرارات المبنية على البيانات"
+
+#: .\templates\pages\services\HRManagement.html:583
+msgid "Frequently Asked Questions"
+msgstr "الأسئلة الشائعة"
+
+#: .\templates\pages\services\HRManagement.html:590
+msgid "How can I get started with an administrative system for my business?"
+msgstr "كيف يمكنني البدء باستخدام نظام إداري لشركتي؟"
+
+#: .\templates\pages\services\HRManagement.html:595
+msgid ""
+"You can start by creating a free account or by booking a free consultation. "
+"We'll analyze your business needs and recommend the best solution tailored "
+"to your operations."
+msgstr ""
+"يمكنك البدء بإنشاء حساب مجاني أو حجز استشارة مجانية. سنقوم بتحليل احتياجات "
+"عملك ونوصي بأفضل الحلول المصممة خصيصًا لعملياتك."
+
+#: .\templates\pages\services\HRManagement.html:604
+msgid "How much does an administrative system cost?"
+msgstr "كم تبلغ تكلفة النظام الإداري؟"
+
+#: .\templates\pages\services\HRManagement.html:609
+msgid ""
+"Pricing depends on the features and scale of the system. We offer flexible "
+"subscription plans and customized solutions based on your business size and "
+"needs."
+msgstr ""
+"تختلف الأسعار حسب الميزات وحجم النظام. نقدم خطط اشتراك مرنة وحلولًا مخصصة "
+"وفقًا لحجم عملك واحتياجاتك."
+
+#: .\templates\pages\services\HRManagement.html:618
+msgid "How long does it take to implement the system?"
+msgstr "كم من الوقت يستغرق تنفيذ النظام؟"
+
+#: .\templates\pages\services\HRManagement.html:623
+msgid ""
+"You can create an account and get started with the system immediately in a "
+"simple and straightforward manner. There's no complex setup required, "
+"allowing you to begin using the system right away."
+msgstr ""
+"يمكنك إنشاء حساب والبدء في استخدام النظام فورًا بطريقة بسيطة وسهلة. لا يتطلب "
+"الأمر إعدادًا معقدًا، مما يتيح لك البدء في استخدام النظام مباشرة."
+
+#: .\templates\pages\services\HRManagement.html:632
+msgid "Do you provide training and support after setup?"
+msgstr "هل تقدمون التدريب والدعم بعد الإعداد؟"
+
+#: .\templates\pages\services\HRManagement.html:637
+msgid ""
+"Yes, we offer training sessions for your team and ongoing support to ensure "
+"smooth operation of the system. You can always reach out for updates and "
+"troubleshooting."
+msgstr ""
+"نعم، نقدم جلسات تدريبية لفريقك ودعمًا مستمرًا لضمان تشغيل النظام بسلاسة. يمكنك "
+"التواصل معنا دائمًا للحصول على التحديثات وحلول المشكلات."
+
+#: .\templates\pages\services\HRManagement.html:646
+msgid "Can I customize the system based on my business needs?"
+msgstr "هل يمكنني تخصيص النظام وفقًا لاحتياجات عملي؟"
+
+#: .\templates\pages\services\HRManagement.html:651
+msgid ""
+"Absolutely! Our system is modular and can be tailored to match your specific "
+"workflow. We also offer API integrations with existing software you may be "
+"using."
+msgstr ""
+"بالتأكيد! نظامنا مرن ويمكن تخصيصه ليتناسب مع سير العمل الخاص بك. كما نقدم "
+"تكاملات API مع البرامج التي قد تستخدمها."
+
+#: .\templates\pages\services\HRManagement.html:660
+msgid "Is my business data secure?"
+msgstr "هل بيانات عملي آمنة؟"
+
+#: .\templates\pages\services\HRManagement.html:665
+msgid ""
+"Yes! We prioritize security with encrypted data storage, secure cloud "
+"hosting, and regular system updates to ensure the highest level of "
+"protection."
+msgstr ""
+"نعم! نحن نولي أولوية كبيرة للأمان من خلال تخزين البيانات المشفر، واستضافة "
+"البيانات السحابية الآمنة، والتحديثات المنتظمة للنظام لضمان أعلى مستوى من "
+"الحماية."
+
+#: .\templates\pages\services\HRManagement.html:683
+msgid "System Images"
+msgstr "صور النظام"
+
+#: .\templates\pages\services\HRManagement.html:701
+#: .\templates\pages\services\PatientManagement.html:302
+#: .\templates\pages\services\SchoolManagement.html:335
+msgid "Home Page"
+msgstr "الصفحة الرئيسية"
+
+#: .\templates\pages\services\HRManagement.html:702
+msgid ""
+"The home page provides you with a comprehensive overview of everything you "
+"need. You can track performance and analyze data with flexibility and speed."
+msgstr ""
+"توفر لك الصفحة الرئيسية لمحة شاملة عن كل ما تحتاجه. يمكنك تتبع الأداء وتحليل "
+"البيانات بكل مرونة وسرعة."
+
+#: .\templates\pages\services\HRManagement.html:709
+msgid "Employee Management"
+msgstr "إدارة الموظفين"
+
+#: .\templates\pages\services\HRManagement.html:710
+msgid ""
+"Our Employee Management section offers a flexible and professional solution "
+"to manage all aspects of employees. From recruitment and attendance tracking "
+"to payroll and evaluations, our system provides complete control over "
+"employee data."
+msgstr ""
+"يقدم قسم إدارة الموظفين لدينا حلاً مرنًا واحترافيًا لإدارة جميع جوانب الموظفين. "
+"من التوظيف وتتبع الحضور إلى الرواتب والتقييمات، يوفر نظامنا تحكمًا كاملاً في "
+"بيانات الموظفين."
+
+#: .\templates\pages\services\HRManagement.html:718
+msgid "Employment Management"
+msgstr "إدارة التوظيف"
+
+#: .\templates\pages\services\HRManagement.html:719
+msgid ""
+"Our Employment Management section helps you efficiently manage hiring, "
+"onboarding, and tracking of employees. From contract creation to performance "
+"evaluations, we make managing employees easy and streamlined."
+msgstr ""
+"يساعدك قسم إدارة التوظيف لدينا في إدارة التوظيف، والانضمام، وتتبع الموظفين "
+"بكفاءة. من إنشاء العقود إلى تقييمات الأداء، نجعل إدارة الموظفين سهلة ومنظمة."
+
+#: .\templates\pages\services\HRManagement.html:727
+msgid "Asset Management"
+msgstr "إدارة الأصول"
+
+#: .\templates\pages\services\HRManagement.html:728
+msgid ""
+"Our Asset Management system allows you to track and manage the assets "
+"assigned to employees, including equipment, tools, and other company-owned "
+"items. Ensure accountability and efficient asset allocation across your "
+"organization."
+msgstr ""
+"يسمح لك نظام إدارة الأصول لدينا بتتبع وإدارة الأصول المخصصة للموظفين، بما في "
+"ذلك المعدات، والأدوات، والممتلكات الأخرى المملوكة للشركة. يضمن النظام "
+"المساءلة وتوزيع الأصول بكفاءة عبر مؤسستك."
+
+#: .\templates\pages\services\HRManagement.html:738
+msgid "Payroll & Benefits"
+msgstr "الرواتب والمزايا"
+
+#: .\templates\pages\services\HRManagement.html:739
+msgid ""
+"Our Payroll & Benefits system provides a flexible and professional way to "
+"calculate salaries, benefits, bonuses, and employee leave. Generate detailed "
+"reports with ease."
+msgstr ""
+"يوفر نظام الرواتب والمزايا لدينا طريقة مرنة واحترافية لحساب الرواتب، "
+"والمزايا، والمكافآت، وإجازات الموظفين. يمكنك إنشاء تقارير مفصلة بكل سهولة."
+
+#: .\templates\pages\services\HRManagement.html:746
+msgid "Performance Evaluations"
+msgstr "تقييمات الأداء"
+
+#: .\templates\pages\services\HRManagement.html:747
+msgid ""
+"The Performance Evaluation system helps manage and track employee "
+"performance effectively, with regular assessments, manager feedback, and "
+"goal setting for team success."
+msgstr ""
+"يساعد نظام تقييم الأداء في إدارة وتتبع أداء الموظفين بفعالية من خلال "
+"التقييمات الدورية، وتعليقات المديرين، وتحديد الأهداف لضمان نجاح الفريق."
+
+#: .\templates\pages\services\HRManagement.html:754
+msgid "Attendance System"
+msgstr "نظام الحضور"
+
+#: .\templates\pages\services\HRManagement.html:755
+msgid ""
+"Our Attendance system is designed to accurately and flexibly track employee "
+"attendance. Generate detailed reports and set automated notifications for "
+"late arrivals or absences."
+msgstr ""
+"تم تصميم نظام الحضور لدينا لتتبع الحضور بدقة ومرونة. يمكنك إنشاء تقارير "
+"مفصلة وتعيين إشعارات تلقائية للتأخيرات أو الغيابات."
+
+#: .\templates\pages\services\HRManagement.html:762
+msgid "Leave Management"
+msgstr "إدارة الإجازات"
+
+#: .\templates\pages\services\HRManagement.html:763
+msgid ""
+"Leave Management provides you with a flexible tool to handle leave requests "
+"and absences for all employees. Monitor leave balances and ensure smooth "
+"workflow."
+msgstr ""
+"يوفر لك نظام إدارة الإجازات أداة مرنة للتعامل مع طلبات الإجازات والغياب "
+"لجميع الموظفين. يمكنك متابعة أرصدة الإجازات وضمان سير العمل بسلاسة."
+
+#: .\templates\pages\services\HRManagement.html:770
+msgid "Permissions Management"
+msgstr "إدارة الأذونات"
+
+#: .\templates\pages\services\HRManagement.html:771
+msgid ""
+"Our Permissions Management system allows you to define user permissions, "
+"enhancing security and flexibility in managing access to sensitive "
+"information."
+msgstr ""
+"يسمح لك نظام إدارة الأذونات لدينا بتحديد أذونات المستخدمين، مما يعزز الأمان "
+"والمرونة في إدارة الوصول إلى المعلومات الحساسة."
+
+#: .\templates\pages\services\HRManagement.html:778
+#: .\templates\pages\services\PatientManagement.html:355
+#: .\templates\pages\services\SchoolManagement.html:410
+msgid "Previous"
+msgstr "سابق"
+
+#: .\templates\pages\services\HRManagement.html:792
+msgid ""
+"Join the future of HR management with our advanced system and get the first "
+"30 days of free and unique experience!"
+msgstr ""
+"انضم إلى مستقبل إدارة الموارد البشرية مع نظامنا المتقدم واحصل على أول 30 "
+"يومًا مجانًا لتجربة فريدة!"
 
 #: .\templates\pages\services\PatientManagement.html:11
 msgid ""
@@ -1405,116 +2026,70 @@ msgstr ""
 msgid ""
 "Imagine having a powerful tool at your fingertips that simplifies all "
 "aspects of patient management and operates with high efficiency. With our "
-"integrated system, you don't just have to imagine it, you can achieve it "
-"now!"
+"integrated system, you don't just have to imagine it, you can achieve it now!"
 msgstr ""
-"تخيل أن يكون لديك أداة قوية في متناول يدك تبسط جميع جوانب إدارة المرضى وتعمل"
-" بكفاءة عالية. من خلال نظامنا المتكامل ، ليس عليك فقط أن تتخيل ذلك ، يمكنك "
+"تخيل أن يكون لديك أداة قوية في متناول يدك تبسط جميع جوانب إدارة المرضى وتعمل "
+"بكفاءة عالية. من خلال نظامنا المتكامل ، ليس عليك فقط أن تتخيل ذلك ، يمكنك "
 "تحقيقه الآن!"
 
-#: .\templates\pages\services\PatientManagement.html:67
+#: .\templates\pages\services\PatientManagement.html:71
 msgid ""
 "Patient Management System <span class='text-success'> <br> Solutions</span>"
 msgstr "نظام إدارة المرضى <span class = 'text-sccess'> <br> الحلول </span>"
 
-#: .\templates\pages\services\PatientManagement.html:75
-#: .\templates\pages\services\SchoolManagement.html:74
-msgid "Analytics"
-msgstr "التحليلات"
-
-#: .\templates\pages\services\PatientManagement.html:81
+#: .\templates\pages\services\PatientManagement.html:85
 msgid "Manage Patient"
 msgstr "إدارة المرضى"
 
-#: .\templates\pages\services\PatientManagement.html:87
+#: .\templates\pages\services\PatientManagement.html:91
 msgid "Manage visits"
 msgstr "إدارة الزيارات"
 
-#: .\templates\pages\services\PatientManagement.html:105
+#: .\templates\pages\services\PatientManagement.html:109
 msgid "Payment & Fees"
 msgstr "الدفع والرسوم"
 
-#: .\templates\pages\services\PatientManagement.html:111
+#: .\templates\pages\services\PatientManagement.html:115
 msgid "Patient File Manager"
 msgstr "مدير ملفات المريض"
 
-#: .\templates\pages\services\PatientManagement.html:117
+#: .\templates\pages\services\PatientManagement.html:121
 msgid "Medical Reports"
 msgstr "التقارير الطبية"
 
-#: .\templates\pages\services\PatientManagement.html:129
+#: .\templates\pages\services\PatientManagement.html:133
 msgid "Report Customizing"
 msgstr "تقرير تخصيص"
 
-#: .\templates\pages\services\PatientManagement.html:135
+#: .\templates\pages\services\PatientManagement.html:139
 msgid "Medical Tests"
 msgstr "الاختبارات الطبية"
 
-#: .\templates\pages\services\PatientManagement.html:142
-#: .\templates\pages\services\SchoolManagement.html:177
-msgid "Multi Manager"
-msgstr "مدير متعدد"
-
-#: .\templates\pages\services\PatientManagement.html:160
-#: .\templates\pages\services\PatientManagement.html:335
+#: .\templates\pages\services\PatientManagement.html:164
+#: .\templates\pages\services\PatientManagement.html:339
 msgid "Chat System"
 msgstr "نظام الدردشة"
 
-#: .\templates\pages\services\PatientManagement.html:166
-#: .\templates\pages\services\SchoolManagement.html:196
-msgid "Notifications"
-msgstr "إشعارات"
-
-#: .\templates\pages\services\PatientManagement.html:173
-#: .\templates\pages\services\SchoolManagement.html:203
-msgid "Multi Languages"
-msgstr "لغات متعددة"
-
-#: .\templates\pages\services\PatientManagement.html:179
-#: .\templates\pages\services\SchoolManagement.html:209
-msgid "System Customizing"
-msgstr "تخصيص النظام"
-
-#: .\templates\pages\services\PatientManagement.html:185
-#: .\templates\pages\services\SchoolManagement.html:215
-msgid "Protection"
-msgstr "حماية"
-
-#: .\templates\pages\services\PatientManagement.html:192
-#: .\templates\pages\services\SchoolManagement.html:222
-msgid "Updates"
-msgstr "التحديثات"
-
-#: .\templates\pages\services\PatientManagement.html:208
-#: .\templates\pages\services\SchoolManagement.html:238
-msgid "System Features"
-msgstr "ميزات النظام"
-
-#: .\templates\pages\services\PatientManagement.html:282
-#: .\templates\pages\services\SchoolManagement.html:312
+#: .\templates\pages\services\PatientManagement.html:286
+#: .\templates\pages\services\SchoolManagement.html:316
 msgid "Some pictures of the system"
 msgstr "بعض صور النظام"
 
-#: .\templates\pages\services\PatientManagement.html:298
-#: .\templates\pages\services\SchoolManagement.html:331
-msgid "Home Page"
-msgstr "الصفحة الرئيسية"
-
-#: .\templates\pages\services\PatientManagement.html:299
+#: .\templates\pages\services\PatientManagement.html:303
 msgid ""
-"Your main interface provides you with a comprehensive overview of everything"
-" you need to know, from the number of patients to payment details. You can "
+"Your main interface provides you with a comprehensive overview of everything "
+"you need to know, from the number of patients to payment details. You can "
 "track performance and analyze data with flexibility and speed."
 msgstr ""
-"توفر لك الواجهة الرئيسية نظرة عامة شاملة على كل ما تحتاج إلى معرفته ، من عدد"
-" المرضى إلى تفاصيل الدفع. يمكنك تتبع الأداء وتحليل البيانات مع المرونة "
+"توفر لك الواجهة الرئيسية نظرة عامة شاملة على كل ما تحتاج إلى معرفته ، من عدد "
+"المرضى إلى تفاصيل الدفع. يمكنك تتبع الأداء وتحليل البيانات مع المرونة "
 "والسرعة."
 
-#: .\templates\pages\services\PatientManagement.html:306
+#: .\templates\pages\services\PatientManagement.html:310
 msgid "Comprehensive Management"
 msgstr "إدارة شاملة"
 
-#: .\templates\pages\services\PatientManagement.html:307
+#: .\templates\pages\services\PatientManagement.html:311
 msgid ""
 "You can easily add, edit, and delete patient records, with an advanced file "
 "manager to store all important documents and images. Keep your patients' "
@@ -1524,18 +2099,18 @@ msgstr ""
 "لتخزين جميع المستندات والصور المهمة. حافظ على تنظيم بيانات مرضاك ويمكن "
 "الوصول إليها في أي وقت."
 
-#: .\templates\pages\services\PatientManagement.html:314
+#: .\templates\pages\services\PatientManagement.html:318
 msgid "File Manager"
 msgstr "مدير الملف"
 
-#: .\templates\pages\services\PatientManagement.html:315
+#: .\templates\pages\services\PatientManagement.html:319
 msgid ""
 "With the advanced file manager, you'll no longer worry about losing "
 "important documents or having difficulty accessing them. Store all your "
-"patients' files and images in one secure, organized place, and retrieve them"
-" easily when needed. Make patient file management more efficient and faster,"
-" and focus on providing the best medical care to your patients. Start now "
-"and enjoy solutions that save you time and effort."
+"patients' files and images in one secure, organized place, and retrieve them "
+"easily when needed. Make patient file management more efficient and faster, "
+"and focus on providing the best medical care to your patients. Start now and "
+"enjoy solutions that save you time and effort."
 msgstr ""
 "مع مدير الملفات المتقدم ، لم تعد تقلق بشأن فقدان المستندات المهمة أو تواجه "
 "صعوبة في الوصول إليها. قم بتخزين جميع ملفات وصور المرضى في مكان آمن ومنظم ، "
@@ -1543,33 +2118,33 @@ msgstr ""
 "والتركيز على توفير أفضل رعاية طبية لمرضاك. ابدأ الآن واستمتع بالحلول التي "
 "توفر لك الوقت والجهد."
 
-#: .\templates\pages\services\PatientManagement.html:321
+#: .\templates\pages\services\PatientManagement.html:325
 msgid ""
 "Get comprehensive and organized medical reports that include all essential "
 "details"
 msgstr "احصل على تقارير طبية شاملة ومنظمة تتضمن جميع التفاصيل الأساسية"
 
-#: .\templates\pages\services\PatientManagement.html:322
+#: .\templates\pages\services\PatientManagement.html:326
 msgid ""
 "patient and doctor information, reason for the visit, basic measurements "
 "like pulse, blood pressure, oxygen, and sugar levels, clinical examination, "
-"treatment, diagnosis, and recommendations, along with the doctor's stamp and"
-" signature. Our system makes it easy for you to prepare reports quickly and "
-"professionally, enhancing workflow efficiency and saving you time to provide"
-" the best care for your patients. Choose the smart solution for managing "
-"your medical reports."
+"treatment, diagnosis, and recommendations, along with the doctor's stamp and "
+"signature. Our system makes it easy for you to prepare reports quickly and "
+"professionally, enhancing workflow efficiency and saving you time to provide "
+"the best care for your patients. Choose the smart solution for managing your "
+"medical reports."
 msgstr ""
 "معلومات المريض والطبيب ، والسبب للزيارة ، والقياسات الأساسية مثل النبض ، "
-"وضغط الدم ، والأكسجين ، ومستويات السكر ، والفحص السريري ، والعلاج ، والتشخيص"
-" ، والتوصيات ، إلى جانب ختم الطبيب وتوقيعه. يسهل عليك نظامنا إعداد التقارير "
-"بسرعة ومهنية ، مما يعزز كفاءة سير العمل وتوفير الوقت لتوفير أفضل رعاية "
-"لمرضاك. اختر الحل الذكي لإدارة تقاريرك الطبية."
+"وضغط الدم ، والأكسجين ، ومستويات السكر ، والفحص السريري ، والعلاج ، "
+"والتشخيص ، والتوصيات ، إلى جانب ختم الطبيب وتوقيعه. يسهل عليك نظامنا إعداد "
+"التقارير بسرعة ومهنية ، مما يعزز كفاءة سير العمل وتوفير الوقت لتوفير أفضل "
+"رعاية لمرضاك. اختر الحل الذكي لإدارة تقاريرك الطبية."
 
-#: .\templates\pages\services\PatientManagement.html:328
+#: .\templates\pages\services\PatientManagement.html:332
 msgid "Medical Tests Reports"
 msgstr "تقارير الاختبارات الطبية"
 
-#: .\templates\pages\services\PatientManagement.html:329
+#: .\templates\pages\services\PatientManagement.html:333
 msgid ""
 "Gain full control over managing medical tests with our advanced system. You "
 "can enter all necessary details. Enjoy data accuracy and quick access, "
@@ -1582,31 +2157,31 @@ msgstr ""
 "عليك اتخاذ قرارات طبية مستنيرة. استثمر في الحل الذي يعزز كفاءة سير العمل "
 "الخاصة بك ويضمن الرعاية الصحية الممتازة لمرضاك."
 
-#: .\templates\pages\services\PatientManagement.html:336
+#: .\templates\pages\services\PatientManagement.html:340
 msgid ""
 "Enjoy a seamless and effective communication experience with our innovative "
 "chat system! This system is built using the latest technologies to ensure "
 "real-time message delivery, allowing you to open conversations between all "
-"users, whether they are employees, doctors, analysts, secretaries, or report"
-" owners Invest in the solution that enhances your team's communication and "
+"users, whether they are employees, doctors, analysts, secretaries, or report "
+"owners Invest in the solution that enhances your team's communication and "
 "ensures the best service for patients."
 msgstr ""
-"استمتع بتجربة اتصال سلسة وفعالة مع نظام الدردشة المبتكر! تم تصميم هذا النظام"
-" باستخدام أحدث التقنيات لضمان تسليم الرسائل في الوقت الفعلي ، مما يتيح لك "
-"فتح المحادثات بين جميع المستخدمين ، سواء كانوا موظفين أو أطباء أو محللين أو "
+"استمتع بتجربة اتصال سلسة وفعالة مع نظام الدردشة المبتكر! تم تصميم هذا النظام "
+"باستخدام أحدث التقنيات لضمان تسليم الرسائل في الوقت الفعلي ، مما يتيح لك فتح "
+"المحادثات بين جميع المستخدمين ، سواء كانوا موظفين أو أطباء أو محللين أو "
 "أمناء أو مالكي التقارير يستثمرون في الحل الذي يعزز اتصالات فريقك ويضمن أفضل "
 "خدمة للمرضى."
 
-#: .\templates\pages\services\PatientManagement.html:343
-#: .\templates\pages\services\SchoolManagement.html:384
-#: .\templates\pages\services\SchoolManagement.html:398
+#: .\templates\pages\services\PatientManagement.html:347
+#: .\templates\pages\services\SchoolManagement.html:388
+#: .\templates\pages\services\SchoolManagement.html:402
 msgid ""
 "The feature for defining user permissions in our system enhances security "
-"and flexibility in managing information. You have complete control over each"
-" user's permissions based on their needs, ensuring access to sensitive pages"
-" and data is limited to those who require it. This ability to customize "
-"permissions gives you comprehensive control over the system, helping protect"
-" information and ensure efficient workflow. Invest in the solution that "
+"and flexibility in managing information. You have complete control over each "
+"user's permissions based on their needs, ensuring access to sensitive pages "
+"and data is limited to those who require it. This ability to customize "
+"permissions gives you comprehensive control over the system, helping protect "
+"information and ensure efficient workflow. Invest in the solution that "
 "provides you with the security and flexibility needed to manage your team "
 "effectively."
 msgstr ""
@@ -1617,18 +2192,13 @@ msgstr ""
 "حماية المعلومات وضمان سير العمل الفعال. استثمر في الحل الذي يوفر لك الأمان "
 "والمرونة اللازمة لإدارة فريقك بفعالية."
 
-#: .\templates\pages\services\PatientManagement.html:351
-#: .\templates\pages\services\SchoolManagement.html:406
-msgid "Previous"
-msgstr "سابق"
-
-#: .\templates\pages\services\PatientManagement.html:363
+#: .\templates\pages\services\PatientManagement.html:367
 msgid ""
 "Join the future of patient management with our advanced system and get the "
 "first 30 days of free and unique experience!"
 msgstr ""
-"انضم إلى مستقبل إدارة المرضى من خلال نظامنا المتقدم واحصل على أول 30 يومًا "
-"من التجربة الحرة والفريدة!"
+"انضم إلى مستقبل إدارة المرضى من خلال نظامنا المتقدم واحصل على أول 30 يومًا من "
+"التجربة الحرة والفريدة!"
 
 #: .\templates\pages\services\SchoolManagement.html:10
 msgid ""
@@ -1642,107 +2212,99 @@ msgstr ""
 msgid ""
 "Make managing your school easier and more professional with our all-in-one "
 "system. From tracking students and organizing classes to managing exams, "
-"teachers, and staff, everything is available in one user-friendly and secure"
-" platform. Start now and focus on improving education, while we take care of"
-" the rest!"
+"teachers, and staff, everything is available in one user-friendly and secure "
+"platform. Start now and focus on improving education, while we take care of "
+"the rest!"
 msgstr ""
 "اجعل إدارة مدرستك أسهل وأكثر احترافًا من خلال نظامنا الكل في واحد. من تتبع "
 "الطلاب وتنظيم الفصول الدراسية إلى إدارة الامتحانات والمعلمين والموظفين ، كل "
 "شيء متاح في منصة واحدة سهلة الاستخدام وآمنة. ابدأ الآن والتركيز على تحسين "
 "التعليم ، بينما نعتني بالباقي!"
 
-#: .\templates\pages\services\SchoolManagement.html:66
+#: .\templates\pages\services\SchoolManagement.html:70
 msgid ""
 "School Management System <span class='text-success'> <br> Solutions</span>"
 msgstr "نظام إدارة المدارس <span class = 'text-success'> <br> الحلول </span>"
 
-#: .\templates\pages\services\SchoolManagement.html:80
-#: .\templates\pages\services\SchoolManagement.html:347
+#: .\templates\pages\services\SchoolManagement.html:84
+#: .\templates\pages\services\SchoolManagement.html:351
 msgid "Manage Students"
 msgstr "إدارة الطلاب"
 
-#: .\templates\pages\services\SchoolManagement.html:86
-msgid "Manage Employees"
-msgstr "إدارة الموظفين"
-
-#: .\templates\pages\services\SchoolManagement.html:92
+#: .\templates\pages\services\SchoolManagement.html:96
 msgid "Manage Teachers"
 msgstr "إدارة المعلمين"
 
-#: .\templates\pages\services\SchoolManagement.html:98
+#: .\templates\pages\services\SchoolManagement.html:102
 msgid "Manage Guardians"
 msgstr "إدارة الأوصياء"
 
-#: .\templates\pages\services\SchoolManagement.html:104
+#: .\templates\pages\services\SchoolManagement.html:108
 msgid "Manage Librarys"
 msgstr "إدارة المكتبات"
 
-#: .\templates\pages\services\SchoolManagement.html:110
+#: .\templates\pages\services\SchoolManagement.html:114
 msgid "Manage Exams"
 msgstr "إدارة الامتحانات"
 
-#: .\templates\pages\services\SchoolManagement.html:116
+#: .\templates\pages\services\SchoolManagement.html:120
 msgid "Tuition Fees"
 msgstr "رسوم التعليم"
 
-#: .\templates\pages\services\SchoolManagement.html:122
+#: .\templates\pages\services\SchoolManagement.html:126
 msgid "Student Invoice & Fees"
 msgstr "فاتورة ورسوم الطلاب"
 
-#: .\templates\pages\services\SchoolManagement.html:128
+#: .\templates\pages\services\SchoolManagement.html:132
 msgid "Student Loans"
 msgstr "قروض الطلاب"
 
-#: .\templates\pages\services\SchoolManagement.html:134
+#: .\templates\pages\services\SchoolManagement.html:138
 msgid "Teacher Loans"
 msgstr "قروض المعلمين"
 
-#: .\templates\pages\services\SchoolManagement.html:140
-msgid "Reports"
-msgstr "التقارير"
-
-#: .\templates\pages\services\SchoolManagement.html:146
+#: .\templates\pages\services\SchoolManagement.html:150
 msgid "Employee Salarys"
 msgstr "رواتب الموظفين"
 
-#: .\templates\pages\services\SchoolManagement.html:152
+#: .\templates\pages\services\SchoolManagement.html:156
 msgid "Employee Leaves"
 msgstr "أوراق الموظف"
 
-#: .\templates\pages\services\SchoolManagement.html:158
+#: .\templates\pages\services\SchoolManagement.html:162
 msgid "Attendance & Departure"
 msgstr "الحضور والمغادرة"
 
-#: .\templates\pages\services\SchoolManagement.html:164
+#: .\templates\pages\services\SchoolManagement.html:168
 msgid "Financial Affairs"
 msgstr "الشؤون المالية"
 
-#: .\templates\pages\services\SchoolManagement.html:170
+#: .\templates\pages\services\SchoolManagement.html:174
 msgid "Multi Academic Year"
 msgstr "العام الأكاديمي متعدد"
 
-#: .\templates\pages\services\SchoolManagement.html:332
+#: .\templates\pages\services\SchoolManagement.html:336
 msgid ""
-"Your main interface provides you with a comprehensive overview of everything"
-" you need to know, You can track performance and analyze data with "
+"Your main interface provides you with a comprehensive overview of everything "
+"you need to know, You can track performance and analyze data with "
 "flexibility and speed."
 msgstr ""
 "توفر لك الواجهة الرئيسية نظرة عامة شاملة على كل ما تحتاج إلى معرفته ، يمكنك "
 "تتبع الأداء وتحليل البيانات بالمرونة والسرعة."
 
-#: .\templates\pages\services\SchoolManagement.html:339
+#: .\templates\pages\services\SchoolManagement.html:343
 msgid "Financial Affairs Analysis"
 msgstr "تحليل الشؤون المالية"
 
-#: .\templates\pages\services\SchoolManagement.html:340
+#: .\templates\pages\services\SchoolManagement.html:344
 msgid ""
 "Financial Affairs Analysis offers you a comprehensive and flexible solution "
 "for managing your school's finances with ease and precision. Track tuition "
 "payments, generate detailed financial reports, and monitor expenses all in "
 "one place. With advanced features to manage payroll, budget planning, and "
 "financial forecasting, this system ensures you have complete control over "
-"your school's financial health. Our platform adapts to your needs, providing"
-" insightful data to help you make informed decisions, while maintaining the "
+"your school's financial health. Our platform adapts to your needs, providing "
+"insightful data to help you make informed decisions, while maintaining the "
 "highest level of security and efficiency."
 msgstr ""
 "يوفر لك تحليل الشؤون المالية حلاً شاملاً ومرنًا لإدارة أموال مدرستك بسهولة "
@@ -1753,30 +2315,29 @@ msgstr ""
 "لمساعدتك في اتخاذ قرارات مستنيرة ، مع الحفاظ على أعلى مستوى من الأمان "
 "والكفاءة."
 
-#: .\templates\pages\services\SchoolManagement.html:348
+#: .\templates\pages\services\SchoolManagement.html:352
 msgid ""
 "Student Management offers a seamless and professional approach to handling "
 "all aspects of student administration. From enrollment and academic records "
 "to attendance tracking and exam results, our system ensures that every "
 "detail is organized and easily accessible. With powerful tools for "
-"monitoring student performance and generating comprehensive reports, you can"
-" efficiently manage each student’s journey. The system adapts to your "
+"monitoring student performance and generating comprehensive reports, you can "
+"efficiently manage each student’s journey. The system adapts to your "
 "school’s unique needs, providing flexibility and precision to keep your "
-"operations running smoothly, all while maintaining a user-friendly "
-"interface."
+"operations running smoothly, all while maintaining a user-friendly interface."
 msgstr ""
-"تقدم إدارة الطلاب نهجًا سلسًا ومهنيًا للتعامل مع جميع جوانب إدارة الطلاب. من"
-" التسجيل والسجلات الأكاديمية إلى تتبع الحضور ونتائج الامتحانات ، يضمن نظامنا"
-" أن يتم تنظيم كل التفاصيل ويمكن الوصول إليها بسهولة. من خلال الأدوات القوية "
+"تقدم إدارة الطلاب نهجًا سلسًا ومهنيًا للتعامل مع جميع جوانب إدارة الطلاب. من "
+"التسجيل والسجلات الأكاديمية إلى تتبع الحضور ونتائج الامتحانات ، يضمن نظامنا "
+"أن يتم تنظيم كل التفاصيل ويمكن الوصول إليها بسهولة. من خلال الأدوات القوية "
 "لمراقبة أداء الطلاب وتوليد تقارير شاملة ، يمكنك إدارة رحلة كل طالب بكفاءة. "
-"يتكيف النظام مع احتياجات مدرستك الفريدة ، مما يوفر المرونة والدقة للحفاظ على"
-" عملياتك بسلاسة ، كل ذلك مع الحفاظ على واجهة سهلة الاستخدام."
+"يتكيف النظام مع احتياجات مدرستك الفريدة ، مما يوفر المرونة والدقة للحفاظ على "
+"عملياتك بسلاسة ، كل ذلك مع الحفاظ على واجهة سهلة الاستخدام."
 
-#: .\templates\pages\services\SchoolManagement.html:355
+#: .\templates\pages\services\SchoolManagement.html:359
 msgid "Manage Employee"
 msgstr "إدارة الموظف"
 
-#: .\templates\pages\services\SchoolManagement.html:356
+#: .\templates\pages\services\SchoolManagement.html:360
 msgid ""
 "Our Employee Management section offers a streamlined, professional solution "
 "for managing all aspects of your staff, including teachers and "
@@ -1788,25 +2349,24 @@ msgid ""
 "school’s human resources becomes efficient, precise, and adaptable to your "
 "specific needs."
 msgstr ""
-"يقدم قسم إدارة الموظفين لدينا حلًا مهنيًا مبسطًا لإدارة جميع جوانب موظفيك ، "
-"بما في ذلك المعلمين والموظفين الإداريين. من التوظيف والحضور إلى كشوف "
-"المرتبات والأداء ، يوفر نظامنا تحكمًا كاملاً على بيانات الموظفين. تتيح مرونة"
-" النظام الأساسي تتبع العروض الترويجية والأوراق وجداول العمل بسهولة ، مما "
-"يضمن عمليات سلسة. من خلال أدوات الإبلاغ الثاقبة وواجهة سهلة الاستخدام ، تصبح"
-" إدارة الموارد البشرية لمدرستك فعالة ودقيقة وقابلة للتكيف مع احتياجاتك "
-"الخاصة."
+"يقدم قسم إدارة الموظفين لدينا حلًا مهنيًا مبسطًا لإدارة جميع جوانب موظفيك ، بما "
+"في ذلك المعلمين والموظفين الإداريين. من التوظيف والحضور إلى كشوف المرتبات "
+"والأداء ، يوفر نظامنا تحكمًا كاملاً على بيانات الموظفين. تتيح مرونة النظام "
+"الأساسي تتبع العروض الترويجية والأوراق وجداول العمل بسهولة ، مما يضمن عمليات "
+"سلسة. من خلال أدوات الإبلاغ الثاقبة وواجهة سهلة الاستخدام ، تصبح إدارة "
+"الموارد البشرية لمدرستك فعالة ودقيقة وقابلة للتكيف مع احتياجاتك الخاصة."
 
-#: .\templates\pages\services\SchoolManagement.html:362
+#: .\templates\pages\services\SchoolManagement.html:366
 msgid "Attendance & Departure System"
 msgstr "نظام الحضور والمغادرة"
 
-#: .\templates\pages\services\SchoolManagement.html:363
+#: .\templates\pages\services\SchoolManagement.html:367
 msgid ""
 "Our Attendance & Departure system is designed to provide seamless tracking "
 "of both student and employee attendance. With its professional and flexible "
 "interface, it allows you to monitor daily attendance records, generate "
-"detailed reports, and set automated notifications for absences or tardiness."
-" The system also integrates easily with other modules, offering a "
+"detailed reports, and set automated notifications for absences or tardiness. "
+"The system also integrates easily with other modules, offering a "
 "comprehensive view of attendance trends. Additionally, it sends real-time "
 "notifications to parents when a student arrives or departs, keeping them "
 "informed and engaged. Whether you need to track attendance for payroll or "
@@ -1819,14 +2379,14 @@ msgstr ""
 "يتكامل النظام أيضًا بسهولة مع الوحدات النمطية الأخرى ، مما يوفر رؤية شاملة "
 "لاتجاهات الحضور. بالإضافة إلى ذلك ، يرسل إشعارات في الوقت الفعلي إلى أولياء "
 "الأمور عندما يصل الطالب أو يغادر ، مما يجعلهم على اطلاع ومشاركة. سواء كنت "
-"بحاجة إلى تتبع حضور كشوف المرتبات أو أداء الطالب ، فإن هذه الأداة تضمن الدقة"
-" والكفاءة ، المصممة خصيصًا للمتطلبات الفريدة لمؤسستك."
+"بحاجة إلى تتبع حضور كشوف المرتبات أو أداء الطالب ، فإن هذه الأداة تضمن الدقة "
+"والكفاءة ، المصممة خصيصًا للمتطلبات الفريدة لمؤسستك."
 
-#: .\templates\pages\services\SchoolManagement.html:369
+#: .\templates\pages\services\SchoolManagement.html:373
 msgid "Student Invoices"
 msgstr "فواتير الطلاب"
 
-#: .\templates\pages\services\SchoolManagement.html:370
+#: .\templates\pages\services\SchoolManagement.html:374
 msgid ""
 "we offer you a Students Invoice section that allows you to manage invoices "
 "easily and professionally. You can issue customized invoices for each "
@@ -1841,11 +2401,11 @@ msgstr ""
 "إضافة شعار مؤسستك وتعزيز الهوية المرئية للفواتير. انضم إلينا اليوم واستمتع "
 "بالمرونة في إدارة حسابات طلابك."
 
-#: .\templates\pages\services\SchoolManagement.html:376
+#: .\templates\pages\services\SchoolManagement.html:380
 msgid "Library"
 msgstr "مكتبة"
 
-#: .\templates\pages\services\SchoolManagement.html:377
+#: .\templates\pages\services\SchoolManagement.html:381
 msgid ""
 "our Library section offers you a comprehensive solution for efficiently and "
 "professionally managing library resources. You can easily add books, "
@@ -1862,18 +2422,18 @@ msgstr ""
 "المعلومات التي تحتاجها فقط ببضع نقرات. انضم إلينا اليوم واستمتع بإدارة "
 "مكتبتك بأقصى قدر من الاحتراف."
 
-#: .\templates\pages\services\SchoolManagement.html:390
+#: .\templates\pages\services\SchoolManagement.html:394
 msgid "Export Report"
 msgstr "تقرير التصدير"
 
-#: .\templates\pages\services\SchoolManagement.html:391
+#: .\templates\pages\services\SchoolManagement.html:395
 msgid ""
 "we offer you the ability to generate comprehensive reports with ease and "
 "professionalism. You can customize the format of the reports according to "
 "your needs, allowing you to present data in a way that highlights important "
 "information. With our flexible interface, you can choose different formats "
-"and details to include, making it easier for you to make informed decisions."
-" Join us today and enjoy managing your data efficiently and professionally."
+"and details to include, making it easier for you to make informed decisions. "
+"Join us today and enjoy managing your data efficiently and professionally."
 msgstr ""
 "نحن نقدم لك القدرة على توليد تقارير شاملة بكل سهولة والكفاءة المهنية. يمكنك "
 "تخصيص تنسيق التقارير وفقًا لاحتياجاتك ، مما يسمح لك بتقديم البيانات بطريقة "
@@ -1881,7 +2441,7 @@ msgstr ""
 "وتفاصيل مختلفة لتضمينها ، مما يسهل عليك اتخاذ قرارات مستنيرة. انضم إلينا "
 "اليوم واستمتع بإدارة بياناتك بكفاءة ومهنية."
 
-#: .\templates\pages\services\SchoolManagement.html:418
+#: .\templates\pages\services\SchoolManagement.html:422
 msgid ""
 "Join the future of school management with our advanced system and get the "
 "first 30 days of free and unique experience!"
@@ -1952,10 +2512,6 @@ msgstr "حساب تعريفي"
 msgid "Sign out"
 msgstr "تسجيل الخروج"
 
-#: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:61
-msgid "Contact us"
-msgstr "تواصل معنا"
-
 #: .\templates\parts\footer.html:11
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
@@ -1980,19 +2536,19 @@ msgstr "اشترك"
 msgid "Browse"
 msgstr "تصفح"
 
-#: .\templates\parts\navbar.html:36
-msgid "Employee Management (Coming Soon)"
-msgstr "إدارة الموظفين (قريبا)"
+#: .\templates\parts\navbar.html:37
+msgid "Inventory Management (Coming Soon)"
+msgstr ""
 
-#: .\templates\parts\navbar.html:49
-msgid "Resources"
-msgstr "موارد"
-
-#: .\templates\parts\navbar.html:67
+#: .\templates\parts\navbar.html:87
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:137
 #: .\venv\Lib\site-packages\grappelli\templates\admin\base.html:110
 msgid "Log out"
 msgstr "تسجيل الخروج"
+
+#: .\templates\parts\navbar.html:93
+msgid "Sign Up"
+msgstr "اشتراك"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"
@@ -2053,8 +2609,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:267
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
-" hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:279
@@ -2274,15 +2830,15 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1489
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1497
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1502
@@ -2301,8 +2857,8 @@ msgstr "عدد عشري"
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1789
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1793
@@ -2457,8 +3013,7 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the
-#. label
+#. characters will prevent the default label_suffix to be appended to the label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:184
 msgid ":?.!"
 msgstr ""
@@ -2508,8 +3063,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:625
 #, python-format
-msgid ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -2625,8 +3179,7 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1429
-msgid ""
-"Select a valid choice. That choice is not one of the available choices."
+msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1568
@@ -3110,11 +3663,11 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
-" including the “Referrer-Policy: no-referrer” header, please remove them. "
-"The CSRF protection requires the “Referer” header to do strict referer "
-"checking. If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:136
@@ -3165,8 +3718,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
@@ -3222,10 +3775,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 #, python-format
 msgid ""
-"You are seeing this page because <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
-"and you have not configured any URLs."
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229
@@ -3342,8 +3895,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\500.html:20
 msgid ""
-"There's been an error. It's been reported to the site administrators via "
-"e-mail and should be fixed shortly. Thanks for your patience."
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
 msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\actions.html:4
@@ -3544,8 +4097,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\grappelli\templates\admin\delete_confirmation.html:37
 #, python-format
 msgid ""
-"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the"
-" following protected related objects:"
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
 msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\delete_confirmation.html:47
@@ -3658,9 +4211,9 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\invalid_setup.html:16
 msgid ""
-"Something's wrong with your database installation. Make sure the appropriate"
-" database tables have been created, and make sure the database is readable "
-"by the appropriate user."
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
 msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\login.html:60
@@ -3684,8 +4237,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\grappelli\templates\admin\object_history.html:42
 #: .\venv\Lib\site-packages\grappelli\templates\reversion\object_history.html:36
 msgid ""
-"This object doesn't have a change history. It probably wasn't added via this"
-" admin site."
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
 msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\admin\pagination.html:9
@@ -3776,10 +4329,14 @@ msgstr ""
 msgid ""
 "\n"
 "            <p>To install bookmarklets, drag the link to your bookmarks\n"
-"    toolbar, or right-click the link and add it to your bookmarks. Now you can\n"
-"    select the bookmarklet from any page in the site.  Note that some of these\n"
-"    bookmarklets require you to be viewing the site from a computer designated\n"
-"    as \"internal\" (talk to your system administrator if you aren't sure if\n"
+"    toolbar, or right-click the link and add it to your bookmarks. Now you "
+"can\n"
+"    select the bookmarklet from any page in the site.  Note that some of "
+"these\n"
+"    bookmarklets require you to be viewing the site from a computer "
+"designated\n"
+"    as \"internal\" (talk to your system administrator if you aren't sure "
+"if\n"
 "    your computer is \"internal\").</p>\n"
 "        "
 msgstr ""
@@ -3838,8 +4395,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\registration\password_change_form.html:18
 msgid ""
-"Please enter your old password, for security's sake, and then enter your new"
-" password twice so we can verify you typed it in correctly."
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
 msgstr ""
 
 #: .\venv\Lib\site-packages\grappelli\templates\registration\password_change_form.html:23
@@ -4013,6 +4570,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\grappelli\views\related.py:127
 #: .\venv\Lib\site-packages\grappelli\views\related.py:157
 msgid "?"
+msgstr ""
+
+#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
 msgstr ""
 
 #: .\venv\Lib\site-packages\paypal\pro\fields.py:110
@@ -5000,17 +5561,20 @@ msgstr "رمز أمان البطاقة"
 msgid "Invalid date format %(value)s: %(e)s"
 msgstr ""
 
+#~ msgid "Resources"
+#~ msgstr "موارد"
+
 #~ msgid ""
-#~ "You turned my digital vision into reality! The website you designed for me "
-#~ "is not only attractive but also user-friendly and significantly enhances my "
-#~ "experience with customers."
+#~ "You turned my digital vision into reality! The website you designed for "
+#~ "me is not only attractive but also user-friendly and significantly "
+#~ "enhances my experience with customers."
 #~ msgstr ""
 #~ "لقد حولت رؤيتي الرقمية إلى واقع! موقع الويب الذي صممته من أجلي ليس فقط "
 #~ "جذابًا ولكن أيضًا سهل الاستخدام ويعزز تجربتي بشكل كبير مع العملاء."
 
 #~ msgid ""
-#~ "Since the launch of the new website, we’ve noticed a significant increase in"
-#~ " engagement and sales. Thank you for a website that reflects the "
+#~ "Since the launch of the new website, we’ve noticed a significant increase "
+#~ "in engagement and sales. Thank you for a website that reflects the "
 #~ "professionalism of our business."
 #~ msgstr ""
 #~ "منذ إطلاق موقع الويب الجديد ، لاحظنا زيادة كبيرة في المشاركة والمبيعات. "
@@ -5021,8 +5585,8 @@ msgstr ""
 #~ "Exceptional service and continuous support even after the website is "
 #~ "delivered."
 #~ msgstr ""
-#~ "إذا كنت تبحث عن تصميم موقع لا ينسى ، فهذا هو المكان! خدمة استثنائية والدعم "
-#~ "المستمر حتى بعد تسليم الموقع."
+#~ "إذا كنت تبحث عن تصميم موقع لا ينسى ، فهذا هو المكان! خدمة استثنائية "
+#~ "والدعم المستمر حتى بعد تسليم الموقع."
 
 #~ msgid "Start your website"
 #~ msgstr "ابدأ موقع الويب الخاص بك"
