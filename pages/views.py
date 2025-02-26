@@ -40,9 +40,12 @@ def Contact(request):
         
 def change_language(request):
     if request.method == 'POST':
+            user_language = translation.get_language()
             language = request.POST['language']
             translation.activate(language)  # تفعيل اللغة المختارة
             # request.session[translation.LANGUAGE_SESSION_KEY] = language  # تخزين اللغة في الجلسة
-            return redirect('index')
+            referer = request.META.get('HTTP_REFERER', '/').replace(f'/{user_language}/', f'/{language}/')
+            print(user_language, language, referer)
+            return redirect(referer)
     else:
         return redirect('index')

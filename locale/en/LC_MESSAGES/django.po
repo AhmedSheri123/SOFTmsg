@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-24 19:03+0300\n"
+"POT-Creation-Date: 2025-02-27 00:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgid "User Service"
 msgstr ""
 
 #: .\dashboard\models.py:89 .\pages\models.py:7
-#: .\templates\pages\index.html:430
+#: .\templates\pages\index.html:434
 msgid "Full Name"
 msgstr ""
 
@@ -253,7 +253,7 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
-#: .\templates\accounts\login.html:34 .\templates\parts\navbar.html:91
+#: .\templates\accounts\login.html:34 .\templates\parts\navbar.html:93
 #: .\venv\Lib\site-packages\grappelli\templates\admin\login.html:26
 #: .\venv\Lib\site-packages\grappelli\templates\admin\login.html:67
 #: .\venv\Lib\site-packages\grappelli\templates\registration\password_reset_complete.html:17
@@ -402,7 +402,7 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
-#: .\templates\base.html:9
+#: .\templates\base.html:7
 msgid "for management systems"
 msgstr ""
 
@@ -567,9 +567,9 @@ msgstr ""
 #: .\templates\dashboard\services\AddServiceSettings\AddHRManagementSettings.html:171
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:169
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:195
-#: .\templates\pages\services\HRManagement.html:782
-#: .\templates\pages\services\PatientManagement.html:359
-#: .\templates\pages\services\SchoolManagement.html:414
+#: .\templates\pages\services\HRManagement.html:803
+#: .\templates\pages\services\PatientManagement.html:362
+#: .\templates\pages\services\SchoolManagement.html:418
 msgid "Next"
 msgstr ""
 
@@ -635,6 +635,7 @@ msgstr ""
 #: .\templates\dashboard\services\viewService\ViewHRManagementService.html:133
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:131
 #: .\templates\dashboard\services\viewService\ViewSchoolManagementService.html:131
+#: .\templates\parts\navbar.html:73
 msgid "Language"
 msgstr ""
 
@@ -970,12 +971,12 @@ msgid "visits"
 msgstr ""
 
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:50
-#: .\templates\pages\services\PatientManagement.html:97
+#: .\templates\pages\services\PatientManagement.html:100
 msgid "Local visits"
 msgstr ""
 
 #: .\templates\dashboard\services\viewService\ViewPatientManagementService.html:60
-#: .\templates\pages\services\PatientManagement.html:103
+#: .\templates\pages\services\PatientManagement.html:106
 msgid "Home visits"
 msgstr ""
 
@@ -1047,11 +1048,11 @@ msgstr ""
 msgid "Total Income"
 msgstr ""
 
-#: .\templates\dashboard_base.html:9 .\templates\pages\index.html:156
-#: .\templates\pages\services\HRManagement.html:274
-#: .\templates\pages\services\PatientManagement.html:218
-#: .\templates\pages\services\SchoolManagement.html:248
-#: .\templates\parts\navbar.html:88
+#: .\templates\dashboard_base.html:9 .\templates\pages\index.html:160
+#: .\templates\pages\services\HRManagement.html:279
+#: .\templates\pages\services\PatientManagement.html:221
+#: .\templates\pages\services\SchoolManagement.html:252
+#: .\templates\parts\navbar.html:90
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:87
 msgid "Dashboard"
 msgstr ""
@@ -1075,285 +1076,285 @@ msgid ""
 "help you get information quickly and easily."
 msgstr ""
 
-#: .\templates\pages\index.html:10
-msgid ""
-"Management systems in one place for <br><span class='text-primary'> faster, "
-"precise results"
-msgstr ""
-
-#: .\templates\pages\index.html:14
+#: .\templates\pages\index.html:6 .\templates\pages\index.html:18
 msgid ""
 "A versatile software suite transforming businesses of all sizes by "
 "simplifying complex systems into efficient work environments."
 msgstr ""
 
-#: .\templates\pages\index.html:18
-#: .\templates\pages\services\HRManagement.html:17
-#: .\templates\pages\services\HRManagement.html:795
-#: .\templates\pages\services\PatientManagement.html:18
-#: .\templates\pages\services\PatientManagement.html:370
-#: .\templates\pages\services\SchoolManagement.html:17
-#: .\templates\pages\services\SchoolManagement.html:425
+#: .\templates\pages\index.html:14
+msgid ""
+"Management systems in one place for <br><span class='text-primary'> faster, "
+"precise results"
+msgstr ""
+
+#: .\templates\pages\index.html:22
+#: .\templates\pages\services\HRManagement.html:22
+#: .\templates\pages\services\HRManagement.html:816
+#: .\templates\pages\services\PatientManagement.html:21
+#: .\templates\pages\services\PatientManagement.html:373
+#: .\templates\pages\services\SchoolManagement.html:21
+#: .\templates\pages\services\SchoolManagement.html:429
 msgid "Get started for free"
 msgstr ""
 
-#: .\templates\pages\index.html:22 .\templates\pages\index.html:420
-#: .\templates\pages\services\HRManagement.html:21
-#: .\templates\pages\services\HRManagement.html:799
-#: .\templates\pages\services\PatientManagement.html:22
-#: .\templates\pages\services\PatientManagement.html:374
-#: .\templates\pages\services\SchoolManagement.html:21
-#: .\templates\pages\services\SchoolManagement.html:429
+#: .\templates\pages\index.html:26 .\templates\pages\index.html:424
+#: .\templates\pages\services\HRManagement.html:26
+#: .\templates\pages\services\HRManagement.html:820
+#: .\templates\pages\services\PatientManagement.html:25
+#: .\templates\pages\services\PatientManagement.html:377
+#: .\templates\pages\services\SchoolManagement.html:25
+#: .\templates\pages\services\SchoolManagement.html:433
 #: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:62
 msgid "Contact us"
 msgstr ""
 
-#: .\templates\pages\index.html:34
-#: .\templates\pages\services\HRManagement.html:33
-#: .\templates\pages\services\PatientManagement.html:34
-#: .\templates\pages\services\SchoolManagement.html:33
+#: .\templates\pages\index.html:38
+#: .\templates\pages\services\HRManagement.html:38
+#: .\templates\pages\services\PatientManagement.html:37
+#: .\templates\pages\services\SchoolManagement.html:37
 msgid "Trusted by industry leaders"
 msgstr ""
 
-#: .\templates\pages\index.html:72
+#: .\templates\pages\index.html:76
 msgid ""
 "Solutions that actually <span class='text-success'>solve <br> your problems</"
 "span>"
 msgstr ""
 
-#: .\templates\pages\index.html:80
+#: .\templates\pages\index.html:84
 msgid "IT tickets"
 msgstr ""
 
-#: .\templates\pages\index.html:86
+#: .\templates\pages\index.html:90
 msgid "Tasks"
 msgstr ""
 
-#: .\templates\pages\index.html:92
+#: .\templates\pages\index.html:96
 msgid "Sales pipeline"
 msgstr ""
 
-#: .\templates\pages\index.html:98
+#: .\templates\pages\index.html:102
 msgid "Contacts"
 msgstr ""
 
-#: .\templates\pages\index.html:104
-#: .\templates\pages\services\PatientManagement.html:127
+#: .\templates\pages\index.html:108
+#: .\templates\pages\services\PatientManagement.html:130
 msgid "Appointments"
 msgstr ""
 
-#: .\templates\pages\index.html:110
+#: .\templates\pages\index.html:114
 msgid "Roadmap planning"
 msgstr ""
 
-#: .\templates\pages\index.html:116
+#: .\templates\pages\index.html:120
 msgid "Recruitment"
 msgstr ""
 
-#: .\templates\pages\index.html:122
+#: .\templates\pages\index.html:126
 msgid "Resource management"
 msgstr ""
 
-#: .\templates\pages\index.html:128
+#: .\templates\pages\index.html:132
 msgid "Reporting"
 msgstr ""
 
-#: .\templates\pages\index.html:134
-#: .\templates\pages\services\HRManagement.html:219
-#: .\templates\pages\services\PatientManagement.html:158
-#: .\templates\pages\services\SchoolManagement.html:193
+#: .\templates\pages\index.html:138
+#: .\templates\pages\services\HRManagement.html:224
+#: .\templates\pages\services\PatientManagement.html:161
+#: .\templates\pages\services\SchoolManagement.html:197
 msgid "Exporting"
 msgstr ""
 
-#: .\templates\pages\index.html:150
+#: .\templates\pages\index.html:154
 msgid "Services Features"
 msgstr ""
 
-#: .\templates\pages\index.html:157
-#: .\templates\pages\services\HRManagement.html:275
-#: .\templates\pages\services\PatientManagement.html:219
-#: .\templates\pages\services\SchoolManagement.html:249
+#: .\templates\pages\index.html:161
+#: .\templates\pages\services\HRManagement.html:280
+#: .\templates\pages\services\PatientManagement.html:222
+#: .\templates\pages\services\SchoolManagement.html:253
 msgid "User-friendly dashboard"
 msgstr ""
 
-#: .\templates\pages\index.html:158
-#: .\templates\pages\services\HRManagement.html:276
-#: .\templates\pages\services\PatientManagement.html:220
-#: .\templates\pages\services\SchoolManagement.html:250
+#: .\templates\pages\index.html:162
+#: .\templates\pages\services\HRManagement.html:281
+#: .\templates\pages\services\PatientManagement.html:223
+#: .\templates\pages\services\SchoolManagement.html:254
 msgid ""
 "A simple and intuitive interface that allows you to manage all your "
 "operations easily, even for non-technical users."
 msgstr ""
 
-#: .\templates\pages\index.html:166
-#: .\templates\pages\services\HRManagement.html:284
-#: .\templates\pages\services\PatientManagement.html:228
-#: .\templates\pages\services\SchoolManagement.html:258
+#: .\templates\pages\index.html:170
+#: .\templates\pages\services\HRManagement.html:289
+#: .\templates\pages\services\PatientManagement.html:231
+#: .\templates\pages\services\SchoolManagement.html:262
 msgid "Security"
 msgstr ""
 
-#: .\templates\pages\index.html:167
-#: .\templates\pages\services\HRManagement.html:285
-#: .\templates\pages\services\PatientManagement.html:229
-#: .\templates\pages\services\SchoolManagement.html:259
+#: .\templates\pages\index.html:171
+#: .\templates\pages\services\HRManagement.html:290
+#: .\templates\pages\services\PatientManagement.html:232
+#: .\templates\pages\services\SchoolManagement.html:263
 msgid "Protected from security vulnerabilities"
 msgstr ""
 
-#: .\templates\pages\index.html:168
-#: .\templates\pages\services\HRManagement.html:286
-#: .\templates\pages\services\PatientManagement.html:230
-#: .\templates\pages\services\SchoolManagement.html:260
+#: .\templates\pages\index.html:172
+#: .\templates\pages\services\HRManagement.html:291
+#: .\templates\pages\services\PatientManagement.html:233
+#: .\templates\pages\services\SchoolManagement.html:264
 msgid ""
 "A system equipped with advanced protection technologies to safeguard your "
 "data from threats and cyber-attacks."
 msgstr ""
 
-#: .\templates\pages\index.html:176
-#: .\templates\pages\services\HRManagement.html:294
-#: .\templates\pages\services\PatientManagement.html:238
-#: .\templates\pages\services\SchoolManagement.html:268
+#: .\templates\pages\index.html:180
+#: .\templates\pages\services\HRManagement.html:299
+#: .\templates\pages\services\PatientManagement.html:241
+#: .\templates\pages\services\SchoolManagement.html:272
 msgid "Customize"
 msgstr ""
 
-#: .\templates\pages\index.html:177
-#: .\templates\pages\services\HRManagement.html:295
-#: .\templates\pages\services\PatientManagement.html:239
-#: .\templates\pages\services\SchoolManagement.html:269
+#: .\templates\pages\index.html:181
+#: .\templates\pages\services\HRManagement.html:300
+#: .\templates\pages\services\PatientManagement.html:242
+#: .\templates\pages\services\SchoolManagement.html:273
 msgid "Customizable"
 msgstr ""
 
-#: .\templates\pages\index.html:178
-#: .\templates\pages\services\HRManagement.html:296
-#: .\templates\pages\services\PatientManagement.html:240
-#: .\templates\pages\services\SchoolManagement.html:270
+#: .\templates\pages\index.html:182
+#: .\templates\pages\services\HRManagement.html:301
+#: .\templates\pages\services\PatientManagement.html:243
+#: .\templates\pages\services\SchoolManagement.html:274
 msgid ""
 "A flexible design that allows you to modify the system to suit your specific "
 "business needs."
 msgstr ""
 
-#: .\templates\pages\index.html:186
-#: .\templates\pages\services\HRManagement.html:304
-#: .\templates\pages\services\PatientManagement.html:248
-#: .\templates\pages\services\SchoolManagement.html:278
+#: .\templates\pages\index.html:190
+#: .\templates\pages\services\HRManagement.html:309
+#: .\templates\pages\services\PatientManagement.html:251
+#: .\templates\pages\services\SchoolManagement.html:282
 msgid "Responsive"
 msgstr ""
 
-#: .\templates\pages\index.html:187
-#: .\templates\pages\services\HRManagement.html:305
-#: .\templates\pages\services\PatientManagement.html:249
-#: .\templates\pages\services\SchoolManagement.html:279
+#: .\templates\pages\index.html:191
+#: .\templates\pages\services\HRManagement.html:310
+#: .\templates\pages\services\PatientManagement.html:252
+#: .\templates\pages\services\SchoolManagement.html:283
 msgid "Multi-device support"
 msgstr ""
 
-#: .\templates\pages\index.html:188
-#: .\templates\pages\services\HRManagement.html:306
-#: .\templates\pages\services\PatientManagement.html:250
-#: .\templates\pages\services\SchoolManagement.html:280
+#: .\templates\pages\index.html:192
+#: .\templates\pages\services\HRManagement.html:311
+#: .\templates\pages\services\PatientManagement.html:253
+#: .\templates\pages\services\SchoolManagement.html:284
 msgid ""
 "Access the system across different devices such as computers, smartphones, "
 "or tablets."
 msgstr ""
 
-#: .\templates\pages\index.html:196
-#: .\templates\pages\services\HRManagement.html:213
-#: .\templates\pages\services\HRManagement.html:314
-#: .\templates\pages\services\PatientManagement.html:152
-#: .\templates\pages\services\PatientManagement.html:258
-#: .\templates\pages\services\PatientManagement.html:346
-#: .\templates\pages\services\SchoolManagement.html:187
-#: .\templates\pages\services\SchoolManagement.html:288
-#: .\templates\pages\services\SchoolManagement.html:387
-#: .\templates\pages\services\SchoolManagement.html:401
+#: .\templates\pages\index.html:200
+#: .\templates\pages\services\HRManagement.html:218
+#: .\templates\pages\services\HRManagement.html:319
+#: .\templates\pages\services\PatientManagement.html:155
+#: .\templates\pages\services\PatientManagement.html:261
+#: .\templates\pages\services\PatientManagement.html:349
+#: .\templates\pages\services\SchoolManagement.html:191
+#: .\templates\pages\services\SchoolManagement.html:292
+#: .\templates\pages\services\SchoolManagement.html:391
+#: .\templates\pages\services\SchoolManagement.html:405
 msgid "Permissions"
 msgstr ""
 
-#: .\templates\pages\index.html:197
-#: .\templates\pages\services\HRManagement.html:315
-#: .\templates\pages\services\PatientManagement.html:259
-#: .\templates\pages\services\SchoolManagement.html:289
+#: .\templates\pages\index.html:201
+#: .\templates\pages\services\HRManagement.html:320
+#: .\templates\pages\services\PatientManagement.html:262
+#: .\templates\pages\services\SchoolManagement.html:293
 msgid "User management and permissions"
 msgstr ""
 
-#: .\templates\pages\index.html:198
-#: .\templates\pages\services\HRManagement.html:316
-#: .\templates\pages\services\PatientManagement.html:260
-#: .\templates\pages\services\SchoolManagement.html:290
+#: .\templates\pages\index.html:202
+#: .\templates\pages\services\HRManagement.html:321
+#: .\templates\pages\services\PatientManagement.html:263
+#: .\templates\pages\services\SchoolManagement.html:294
 msgid ""
 "An advanced control system that allows you to assign different roles and "
 "permissions to users within the system."
 msgstr ""
 
-#: .\templates\pages\index.html:206
-#: .\templates\pages\services\HRManagement.html:324
-#: .\templates\pages\services\PatientManagement.html:268
-#: .\templates\pages\services\SchoolManagement.html:298
+#: .\templates\pages\index.html:210
+#: .\templates\pages\services\HRManagement.html:329
+#: .\templates\pages\services\PatientManagement.html:271
+#: .\templates\pages\services\SchoolManagement.html:302
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:165
 msgid "Support"
 msgstr ""
 
-#: .\templates\pages\index.html:207
-#: .\templates\pages\services\HRManagement.html:325
-#: .\templates\pages\services\PatientManagement.html:269
-#: .\templates\pages\services\SchoolManagement.html:299
+#: .\templates\pages\index.html:211
+#: .\templates\pages\services\HRManagement.html:330
+#: .\templates\pages\services\PatientManagement.html:272
+#: .\templates\pages\services\SchoolManagement.html:303
 msgid "24/7 technical support"
 msgstr ""
 
-#: .\templates\pages\index.html:208
-#: .\templates\pages\services\HRManagement.html:326
-#: .\templates\pages\services\PatientManagement.html:270
-#: .\templates\pages\services\SchoolManagement.html:300
+#: .\templates\pages\index.html:212
+#: .\templates\pages\services\HRManagement.html:331
+#: .\templates\pages\services\PatientManagement.html:273
+#: .\templates\pages\services\SchoolManagement.html:304
 msgid ""
 "A dedicated support team available around the clock to assist you with any "
 "issues or inquiries."
 msgstr ""
 
-#: .\templates\pages\index.html:224
-#: .\templates\pages\services\HRManagement.html:341
+#: .\templates\pages\index.html:228
+#: .\templates\pages\services\HRManagement.html:356
 msgid "Customer reviews"
 msgstr ""
 
-#: .\templates\pages\index.html:232
-#: .\templates\pages\services\HRManagement.html:349
+#: .\templates\pages\index.html:236
+#: .\templates\pages\services\HRManagement.html:364
 msgid ""
 "An all-in-one management solution that has significantly improved our "
 "workflow. It's fast, accurate, and incredibly efficient."
 msgstr ""
 
-#: .\templates\pages\index.html:242 .\templates\pages\index.html:308
-#: .\templates\pages\services\HRManagement.html:359
-#: .\templates\pages\services\HRManagement.html:425
+#: .\templates\pages\index.html:246 .\templates\pages\index.html:312
+#: .\templates\pages\services\HRManagement.html:374
+#: .\templates\pages\services\HRManagement.html:439
 #: .\venv\Lib\site-packages\paypal\pro\fields.py:285
 msgid "Romania"
 msgstr ""
 
-#: .\templates\pages\index.html:265
-#: .\templates\pages\services\HRManagement.html:382
+#: .\templates\pages\index.html:269
+#: .\templates\pages\services\HRManagement.html:397
 msgid ""
 "A game-changer for our business! The software's versatility and ease of use "
 "have enhanced our productivity like never before."
 msgstr ""
 
-#: .\templates\pages\index.html:275
-#: .\templates\pages\services\HRManagement.html:392
+#: .\templates\pages\index.html:279
+#: .\templates\pages\services\HRManagement.html:407
 msgid "German"
 msgstr ""
 
-#: .\templates\pages\index.html:298
-#: .\templates\pages\services\HRManagement.html:415
+#: .\templates\pages\index.html:302
+#: .\templates\pages\services\HRManagement.html:429
 msgid ""
 "We’ve tried several management solutions before, but this one stands out for "
 "its efficiency and ease of use."
 msgstr ""
 
-#: .\templates\pages\index.html:333
+#: .\templates\pages\index.html:337
 msgid "Our Team"
 msgstr ""
 
-#: .\templates\pages\index.html:343
+#: .\templates\pages\index.html:347
 msgid "Backend Dev"
 msgstr ""
 
-#: .\templates\pages\index.html:347
+#: .\templates\pages\index.html:351
 msgid ""
 "A highly skilled and trusted Backend Developer with deep expertise in "
 "building secure, integrated systems tailored to your business needs. "
@@ -1363,11 +1364,11 @@ msgid ""
 "goals with confidence."
 msgstr ""
 
-#: .\templates\pages\index.html:359
+#: .\templates\pages\index.html:363
 msgid "UI/UX Designer"
 msgstr ""
 
-#: .\templates\pages\index.html:363
+#: .\templates\pages\index.html:367
 msgid ""
 "A highly skilled UI/UX Designer with expertise in creating innovative user "
 "interfaces and seamless user experiences. Focused on achieving a balance "
@@ -1377,11 +1378,11 @@ msgid ""
 "and deliver an unparalleled user experience."
 msgstr ""
 
-#: .\templates\pages\index.html:375
+#: .\templates\pages\index.html:379
 msgid "Frontend Designer"
 msgstr ""
 
-#: .\templates\pages\index.html:379
+#: .\templates\pages\index.html:383
 msgid ""
 "An exceptional Frontend Developer with expertise in transforming designs "
 "into interactive, user-friendly websites and applications. Focused on "
@@ -1390,11 +1391,11 @@ msgid ""
 "with stunning and fully integrated digital interfaces."
 msgstr ""
 
-#: .\templates\pages\index.html:391
+#: .\templates\pages\index.html:395
 msgid "Project Manager"
 msgstr ""
 
-#: .\templates\pages\index.html:395
+#: .\templates\pages\index.html:399
 msgid ""
 "A professional female Project Manager with extensive experience in "
 "successfully planning and executing projects. She is responsible for "
@@ -1405,421 +1406,426 @@ msgid ""
 "outcomes."
 msgstr ""
 
-#: .\templates\pages\index.html:411
+#: .\templates\pages\index.html:415
 msgid ""
 "Do you want to develop a custom program that <span class='text-"
 "primary'>meets your specific needs?"
 msgstr ""
 
-#: .\templates\pages\index.html:416
+#: .\templates\pages\index.html:420
 msgid "Contact Form"
 msgstr ""
 
-#: .\templates\pages\index.html:424
+#: .\templates\pages\index.html:428
 msgid ""
 "Fill out the contact form now, and our dedicated team is ready to provide "
 "you with the support you need and turn your dreams into reality. Take the "
 "first step towards success!"
 msgstr ""
 
-#: .\templates\pages\index.html:437 .\templates\parts\footer.html:19
+#: .\templates\pages\index.html:441 .\templates\parts\footer.html:19
 #: .\templates\parts\footer.html:20
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1845
 msgid "Email address"
 msgstr ""
 
-#: .\templates\pages\index.html:444
+#: .\templates\pages\index.html:448
 msgid "Phone Number"
 msgstr ""
 
-#: .\templates\pages\index.html:461
+#: .\templates\pages\index.html:465
 msgid "Project Description"
 msgstr ""
 
-#: .\templates\pages\index.html:465
+#: .\templates\pages\index.html:469
 msgid "Enter a detailed description of your project."
 msgstr ""
 
-#: .\templates\pages\index.html:470
+#: .\templates\pages\index.html:474
 msgid "Examples of similar websites"
 msgstr ""
 
-#: .\templates\pages\index.html:474
+#: .\templates\pages\index.html:478
 msgid "Provide examples or links to designs and websites you like."
 msgstr ""
 
-#: .\templates\pages\index.html:487
+#: .\templates\pages\index.html:491
 msgid ""
 "By sending this form I confirm that I have read and accept the Privacy Policy"
 msgstr ""
 
-#: .\templates\pages\index.html:489
+#: .\templates\pages\index.html:493
 msgid "You must agree before submitting."
 msgstr ""
 
-#: .\templates\pages\index.html:493
+#: .\templates\pages\index.html:497
 msgid "Submit"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:10
-msgid ""
-"Smart Human Resources System <br><span class='text-primary'>Organize your "
-"company and achieve maximum productivity</span>"
-msgstr ""
-
-#: .\templates\pages\services\HRManagement.html:14
+#: .\templates\pages\services\HRManagement.html:6
+#: .\templates\pages\services\HRManagement.html:18
 msgid ""
 "Save time and effort with an integrated platform to manage employees, "
 "salaries, attendance, evaluations, and much more in one place – for smooth "
 "and efficient management."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:70
+#: .\templates\pages\services\HRManagement.html:14
+msgid ""
+"Smart Human Resources System <br><span class='text-primary'>Organize your "
+"company and achieve maximum productivity</span>"
+msgstr ""
+
+#: .\templates\pages\services\HRManagement.html:75
 msgid "HR Management System <span class='text-success'> <br> Solutions</span>"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:78
-#: .\templates\pages\services\PatientManagement.html:79
-#: .\templates\pages\services\SchoolManagement.html:78
+#: .\templates\pages\services\HRManagement.html:83
+#: .\templates\pages\services\PatientManagement.html:82
+#: .\templates\pages\services\SchoolManagement.html:82
 msgid "Analytics"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:84
+#: .\templates\pages\services\HRManagement.html:89
 msgid "Manage Recruitment"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:90
-#: .\templates\pages\services\SchoolManagement.html:90
+#: .\templates\pages\services\HRManagement.html:95
+#: .\templates\pages\services\SchoolManagement.html:94
 msgid "Manage Employees"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:96
+#: .\templates\pages\services\HRManagement.html:101
 msgid "Manage Attendance"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:103
+#: .\templates\pages\services\HRManagement.html:108
 msgid "Manage Leave"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:109
+#: .\templates\pages\services\HRManagement.html:114
 msgid "Manage Onboarding"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:115
+#: .\templates\pages\services\HRManagement.html:120
 msgid "PMS"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:121
+#: .\templates\pages\services\HRManagement.html:126
 msgid "Manage Assets"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:127
+#: .\templates\pages\services\HRManagement.html:132
 msgid "Manage Payroll"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:133
+#: .\templates\pages\services\HRManagement.html:138
 msgid "Manage Offboarding"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:139
+#: .\templates\pages\services\HRManagement.html:144
 msgid "Manage Help Desk"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:146
+#: .\templates\pages\services\HRManagement.html:151
 msgid "Contract Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:152
+#: .\templates\pages\services\HRManagement.html:157
 msgid "Training & Development"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:158
+#: .\templates\pages\services\HRManagement.html:163
 msgid "Rewards & Incentives"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:164
+#: .\templates\pages\services\HRManagement.html:169
 msgid "Disciplinary Actions"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:170
+#: .\templates\pages\services\HRManagement.html:175
 msgid "Overtime Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:176
+#: .\templates\pages\services\HRManagement.html:181
 msgid "Meetings & Appointments"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:182
+#: .\templates\pages\services\HRManagement.html:187
 msgid "Feedback & Complaints System"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:188
+#: .\templates\pages\services\HRManagement.html:193
 msgid "Ticketing System"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:194
+#: .\templates\pages\services\HRManagement.html:199
 msgid "Digital Document Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:201
-#: .\templates\pages\services\SchoolManagement.html:144
+#: .\templates\pages\services\HRManagement.html:206
+#: .\templates\pages\services\SchoolManagement.html:148
 msgid "Reports"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:207
-#: .\templates\pages\services\PatientManagement.html:146
-#: .\templates\pages\services\SchoolManagement.html:181
+#: .\templates\pages\services\HRManagement.html:212
+#: .\templates\pages\services\PatientManagement.html:149
+#: .\templates\pages\services\SchoolManagement.html:185
 msgid "Multi Manager"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:225
-#: .\templates\pages\services\PatientManagement.html:170
-#: .\templates\pages\services\SchoolManagement.html:200
+#: .\templates\pages\services\HRManagement.html:230
+#: .\templates\pages\services\PatientManagement.html:173
+#: .\templates\pages\services\SchoolManagement.html:204
 msgid "Notifications"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:231
-#: .\templates\pages\services\PatientManagement.html:177
-#: .\templates\pages\services\SchoolManagement.html:207
+#: .\templates\pages\services\HRManagement.html:236
+#: .\templates\pages\services\PatientManagement.html:180
+#: .\templates\pages\services\SchoolManagement.html:211
 msgid "Multi Languages"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:237
-#: .\templates\pages\services\PatientManagement.html:183
-#: .\templates\pages\services\SchoolManagement.html:213
+#: .\templates\pages\services\HRManagement.html:242
+#: .\templates\pages\services\PatientManagement.html:186
+#: .\templates\pages\services\SchoolManagement.html:217
 msgid "System Customizing"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:243
-#: .\templates\pages\services\PatientManagement.html:189
-#: .\templates\pages\services\SchoolManagement.html:219
+#: .\templates\pages\services\HRManagement.html:248
+#: .\templates\pages\services\PatientManagement.html:192
+#: .\templates\pages\services\SchoolManagement.html:223
 msgid "Protection"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:249
-#: .\templates\pages\services\PatientManagement.html:196
-#: .\templates\pages\services\SchoolManagement.html:226
+#: .\templates\pages\services\HRManagement.html:254
+#: .\templates\pages\services\PatientManagement.html:199
+#: .\templates\pages\services\SchoolManagement.html:230
 msgid "Updates"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:255
+#: .\templates\pages\services\HRManagement.html:260
 msgid "Technical Support"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:268
-#: .\templates\pages\services\PatientManagement.html:212
-#: .\templates\pages\services\SchoolManagement.html:242
+#: .\templates\pages\services\HRManagement.html:273
+#: .\templates\pages\services\PatientManagement.html:215
+#: .\templates\pages\services\SchoolManagement.html:246
 msgid "System Features"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:449
+#: .\templates\pages\services\HRManagement.html:344
+msgid "Quick Guide to the HR Management System"
+msgstr ""
+
+#: .\templates\pages\services\HRManagement.html:463
 msgid "Does this sound like your business?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:453
+#: .\templates\pages\services\HRManagement.html:467
 msgid "You are still using outdated paper-based management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:457
+#: .\templates\pages\services\HRManagement.html:471
 msgid "Your business struggles with inefficient workflows and slow processes"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:461
+#: .\templates\pages\services\HRManagement.html:475
 msgid ""
 "You lack a centralized system to manage employees, clients, and financial "
 "data"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:464
+#: .\templates\pages\services\HRManagement.html:478
 msgid "How would it be if?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:468
+#: .\templates\pages\services\HRManagement.html:482
 msgid ""
 "You had a fully digital system to automate and streamline all operations"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:472
+#: .\templates\pages\services\HRManagement.html:486
 msgid ""
 "Your business can efficiently manage employees and reports through a single "
 "integrated system"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:476
+#: .\templates\pages\services\HRManagement.html:490
 msgid "Your business was fully automated and optimized for efficiency"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:483
+#: .\templates\pages\services\HRManagement.html:497
 msgid "A Comprehensive HR Solution<br>for Your Business"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:486
+#: .\templates\pages\services\HRManagement.html:500
 msgid ""
 "Streamline HR processes, enhance productivity, and manage your workforce "
 "efficiently with our all-in-one solution."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:491
+#: .\templates\pages\services\HRManagement.html:505
 msgid "Get Started"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:502
+#: .\templates\pages\services\HRManagement.html:516
 msgid "Employee Performance"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:503
+#: .\templates\pages\services\HRManagement.html:517
 msgid ""
 "Track and analyze <span class='fw-bold'>employee performance</span> with "
 "real-time insights using our customizable tools."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:511
+#: .\templates\pages\services\HRManagement.html:525
 msgid "Goal-based evaluations"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:515
+#: .\templates\pages\services\HRManagement.html:529
 msgid "Automated performance reports"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:519
+#: .\templates\pages\services\HRManagement.html:533
 msgid "Custom KPI tracking"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:528
+#: .\templates\pages\services\HRManagement.html:542
 msgid "Employee Engagement"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:529
+#: .\templates\pages\services\HRManagement.html:543
 msgid ""
 "Boost morale with <span class='fw-bold'>engagement tools</span> and feedback "
 "systems integrated within our solution."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:537
+#: .\templates\pages\services\HRManagement.html:551
 msgid "Real-time feedback & surveys"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:541
+#: .\templates\pages\services\HRManagement.html:555
 msgid "Employee recognition programs"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:545
+#: .\templates\pages\services\HRManagement.html:559
 msgid "Workplace social engagement"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:554
+#: .\templates\pages\services\HRManagement.html:568
 msgid "HR Process Automation"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:555
+#: .\templates\pages\services\HRManagement.html:569
 msgid ""
 "Automate manual tasks and streamline HR processes with <span class=\"fw-bold"
 "\">smart HR automation tools</span>."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:563
+#: .\templates\pages\services\HRManagement.html:577
 msgid "Automated payroll & attendance"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:567
+#: .\templates\pages\services\HRManagement.html:581
 msgid "Self-service employee portal"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:571
+#: .\templates\pages\services\HRManagement.html:585
 msgid "HR analytics for data-driven decision-making"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:583
+#: .\templates\pages\services\HRManagement.html:597
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:590
+#: .\templates\pages\services\HRManagement.html:604
 msgid "How can I get started with an administrative system for my business?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:595
+#: .\templates\pages\services\HRManagement.html:610
 msgid ""
 "You can start by creating a free account or by booking a free consultation. "
 "We'll analyze your business needs and recommend the best solution tailored "
 "to your operations."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:604
+#: .\templates\pages\services\HRManagement.html:619
 msgid "How much does an administrative system cost?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:609
+#: .\templates\pages\services\HRManagement.html:625
 msgid ""
 "Pricing depends on the features and scale of the system. We offer flexible "
 "subscription plans and customized solutions based on your business size and "
 "needs."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:618
+#: .\templates\pages\services\HRManagement.html:634
 msgid "How long does it take to implement the system?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:623
+#: .\templates\pages\services\HRManagement.html:640
 msgid ""
 "You can create an account and get started with the system immediately in a "
 "simple and straightforward manner. There's no complex setup required, "
 "allowing you to begin using the system right away."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:632
+#: .\templates\pages\services\HRManagement.html:649
 msgid "Do you provide training and support after setup?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:637
+#: .\templates\pages\services\HRManagement.html:655
 msgid ""
 "Yes, we offer training sessions for your team and ongoing support to ensure "
 "smooth operation of the system. You can always reach out for updates and "
 "troubleshooting."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:646
+#: .\templates\pages\services\HRManagement.html:664
 msgid "Can I customize the system based on my business needs?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:651
+#: .\templates\pages\services\HRManagement.html:670
 msgid ""
 "Absolutely! Our system is modular and can be tailored to match your specific "
 "workflow. We also offer API integrations with existing software you may be "
 "using."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:660
+#: .\templates\pages\services\HRManagement.html:679
 msgid "Is my business data secure?"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:665
+#: .\templates\pages\services\HRManagement.html:685
 msgid ""
 "Yes! We prioritize security with encrypted data storage, secure cloud "
 "hosting, and regular system updates to ensure the highest level of "
 "protection."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:683
+#: .\templates\pages\services\HRManagement.html:704
 msgid "System Images"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:701
-#: .\templates\pages\services\PatientManagement.html:302
-#: .\templates\pages\services\SchoolManagement.html:335
+#: .\templates\pages\services\HRManagement.html:722
+#: .\templates\pages\services\PatientManagement.html:305
+#: .\templates\pages\services\SchoolManagement.html:339
 msgid "Home Page"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:702
+#: .\templates\pages\services\HRManagement.html:723
 msgid ""
 "The home page provides you with a comprehensive overview of everything you "
 "need. You can track performance and analyze data with flexibility and speed."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:709
+#: .\templates\pages\services\HRManagement.html:730
 msgid "Employee Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:710
+#: .\templates\pages\services\HRManagement.html:731
 msgid ""
 "Our Employee Management section offers a flexible and professional solution "
 "to manage all aspects of employees. From recruitment and attendance tracking "
@@ -1827,22 +1833,22 @@ msgid ""
 "employee data."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:718
+#: .\templates\pages\services\HRManagement.html:739
 msgid "Employment Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:719
+#: .\templates\pages\services\HRManagement.html:740
 msgid ""
 "Our Employment Management section helps you efficiently manage hiring, "
 "onboarding, and tracking of employees. From contract creation to performance "
 "evaluations, we make managing employees easy and streamlined."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:727
+#: .\templates\pages\services\HRManagement.html:748
 msgid "Asset Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:728
+#: .\templates\pages\services\HRManagement.html:749
 msgid ""
 "Our Asset Management system allows you to track and manage the assets "
 "assigned to employees, including equipment, tools, and other company-owned "
@@ -1850,152 +1856,153 @@ msgid ""
 "organization."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:738
+#: .\templates\pages\services\HRManagement.html:759
 msgid "Payroll & Benefits"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:739
+#: .\templates\pages\services\HRManagement.html:760
 msgid ""
 "Our Payroll & Benefits system provides a flexible and professional way to "
 "calculate salaries, benefits, bonuses, and employee leave. Generate detailed "
 "reports with ease."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:746
+#: .\templates\pages\services\HRManagement.html:767
 msgid "Performance Evaluations"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:747
+#: .\templates\pages\services\HRManagement.html:768
 msgid ""
 "The Performance Evaluation system helps manage and track employee "
 "performance effectively, with regular assessments, manager feedback, and "
 "goal setting for team success."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:754
+#: .\templates\pages\services\HRManagement.html:775
 msgid "Attendance System"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:755
+#: .\templates\pages\services\HRManagement.html:776
 msgid ""
 "Our Attendance system is designed to accurately and flexibly track employee "
 "attendance. Generate detailed reports and set automated notifications for "
 "late arrivals or absences."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:762
+#: .\templates\pages\services\HRManagement.html:783
 msgid "Leave Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:763
+#: .\templates\pages\services\HRManagement.html:784
 msgid ""
 "Leave Management provides you with a flexible tool to handle leave requests "
 "and absences for all employees. Monitor leave balances and ensure smooth "
 "workflow."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:770
+#: .\templates\pages\services\HRManagement.html:791
 msgid "Permissions Management"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:771
+#: .\templates\pages\services\HRManagement.html:792
 msgid ""
 "Our Permissions Management system allows you to define user permissions, "
 "enhancing security and flexibility in managing access to sensitive "
 "information."
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:778
-#: .\templates\pages\services\PatientManagement.html:355
-#: .\templates\pages\services\SchoolManagement.html:410
+#: .\templates\pages\services\HRManagement.html:799
+#: .\templates\pages\services\PatientManagement.html:358
+#: .\templates\pages\services\SchoolManagement.html:414
 msgid "Previous"
 msgstr ""
 
-#: .\templates\pages\services\HRManagement.html:792
+#: .\templates\pages\services\HRManagement.html:813
 msgid ""
 "Join the future of HR management with our advanced system and get the first "
 "30 days of free and unique experience!"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:11
-msgid ""
-"Patient Management System <br><span class='text-primary'>manage all your "
-"operations easily</span>"
-msgstr ""
-
-#: .\templates\pages\services\PatientManagement.html:15
+#: .\templates\pages\services\PatientManagement.html:6
+#: .\templates\pages\services\PatientManagement.html:18
 msgid ""
 "Imagine having a powerful tool at your fingertips that simplifies all "
 "aspects of patient management and operates with high efficiency. With our "
 "integrated system, you don't just have to imagine it, you can achieve it now!"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:71
+#: .\templates\pages\services\PatientManagement.html:14
+msgid ""
+"Patient Management System <br><span class='text-primary'>manage all your "
+"operations easily</span>"
+msgstr ""
+
+#: .\templates\pages\services\PatientManagement.html:74
 msgid ""
 "Patient Management System <span class='text-success'> <br> Solutions</span>"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:85
+#: .\templates\pages\services\PatientManagement.html:88
 msgid "Manage Patient"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:91
+#: .\templates\pages\services\PatientManagement.html:94
 msgid "Manage visits"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:109
+#: .\templates\pages\services\PatientManagement.html:112
 msgid "Payment & Fees"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:115
+#: .\templates\pages\services\PatientManagement.html:118
 msgid "Patient File Manager"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:121
+#: .\templates\pages\services\PatientManagement.html:124
 msgid "Medical Reports"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:133
+#: .\templates\pages\services\PatientManagement.html:136
 msgid "Report Customizing"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:139
+#: .\templates\pages\services\PatientManagement.html:142
 msgid "Medical Tests"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:164
-#: .\templates\pages\services\PatientManagement.html:339
+#: .\templates\pages\services\PatientManagement.html:167
+#: .\templates\pages\services\PatientManagement.html:342
 msgid "Chat System"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:286
-#: .\templates\pages\services\SchoolManagement.html:316
+#: .\templates\pages\services\PatientManagement.html:289
+#: .\templates\pages\services\SchoolManagement.html:320
 msgid "Some pictures of the system"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:303
+#: .\templates\pages\services\PatientManagement.html:306
 msgid ""
 "Your main interface provides you with a comprehensive overview of everything "
 "you need to know, from the number of patients to payment details. You can "
 "track performance and analyze data with flexibility and speed."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:310
+#: .\templates\pages\services\PatientManagement.html:313
 msgid "Comprehensive Management"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:311
+#: .\templates\pages\services\PatientManagement.html:314
 msgid ""
 "You can easily add, edit, and delete patient records, with an advanced file "
 "manager to store all important documents and images. Keep your patients' "
 "data organized and accessible at any time."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:318
+#: .\templates\pages\services\PatientManagement.html:321
 msgid "File Manager"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:319
+#: .\templates\pages\services\PatientManagement.html:322
 msgid ""
 "With the advanced file manager, you'll no longer worry about losing "
 "important documents or having difficulty accessing them. Store all your "
@@ -2005,13 +2012,13 @@ msgid ""
 "enjoy solutions that save you time and effort."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:325
+#: .\templates\pages\services\PatientManagement.html:328
 msgid ""
 "Get comprehensive and organized medical reports that include all essential "
 "details"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:326
+#: .\templates\pages\services\PatientManagement.html:329
 msgid ""
 "patient and doctor information, reason for the visit, basic measurements "
 "like pulse, blood pressure, oxygen, and sugar levels, clinical examination, "
@@ -2022,11 +2029,11 @@ msgid ""
 "medical reports."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:332
+#: .\templates\pages\services\PatientManagement.html:335
 msgid "Medical Tests Reports"
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:333
+#: .\templates\pages\services\PatientManagement.html:336
 msgid ""
 "Gain full control over managing medical tests with our advanced system. You "
 "can enter all necessary details. Enjoy data accuracy and quick access, "
@@ -2035,7 +2042,7 @@ msgid ""
 "healthcare for your patients."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:340
+#: .\templates\pages\services\PatientManagement.html:343
 msgid ""
 "Enjoy a seamless and effective communication experience with our innovative "
 "chat system! This system is built using the latest technologies to ensure "
@@ -2045,9 +2052,9 @@ msgid ""
 "ensures the best service for patients."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:347
-#: .\templates\pages\services\SchoolManagement.html:388
-#: .\templates\pages\services\SchoolManagement.html:402
+#: .\templates\pages\services\PatientManagement.html:350
+#: .\templates\pages\services\SchoolManagement.html:392
+#: .\templates\pages\services\SchoolManagement.html:406
 msgid ""
 "The feature for defining user permissions in our system enhances security "
 "and flexibility in managing information. You have complete control over each "
@@ -2059,19 +2066,14 @@ msgid ""
 "effectively."
 msgstr ""
 
-#: .\templates\pages\services\PatientManagement.html:367
+#: .\templates\pages\services\PatientManagement.html:370
 msgid ""
 "Join the future of patient management with our advanced system and get the "
 "first 30 days of free and unique experience!"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:10
-msgid ""
-"School Management System <br><span class='text-primary'>manage all your "
-"operations easily</span>"
-msgstr ""
-
-#: .\templates\pages\services\SchoolManagement.html:14
+#: .\templates\pages\services\SchoolManagement.html:6
+#: .\templates\pages\services\SchoolManagement.html:18
 msgid ""
 "Make managing your school easier and more professional with our all-in-one "
 "system. From tracking students and organizing classes to managing exams, "
@@ -2080,80 +2082,86 @@ msgid ""
 "the rest!"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:70
+#: .\templates\pages\services\SchoolManagement.html:14
+msgid ""
+"School Management System <br><span class='text-primary'>manage all your "
+"operations easily</span>"
+msgstr ""
+
+#: .\templates\pages\services\SchoolManagement.html:74
 msgid ""
 "School Management System <span class='text-success'> <br> Solutions</span>"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:84
-#: .\templates\pages\services\SchoolManagement.html:351
+#: .\templates\pages\services\SchoolManagement.html:88
+#: .\templates\pages\services\SchoolManagement.html:355
 msgid "Manage Students"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:96
+#: .\templates\pages\services\SchoolManagement.html:100
 msgid "Manage Teachers"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:102
+#: .\templates\pages\services\SchoolManagement.html:106
 msgid "Manage Guardians"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:108
+#: .\templates\pages\services\SchoolManagement.html:112
 msgid "Manage Librarys"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:114
+#: .\templates\pages\services\SchoolManagement.html:118
 msgid "Manage Exams"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:120
+#: .\templates\pages\services\SchoolManagement.html:124
 msgid "Tuition Fees"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:126
+#: .\templates\pages\services\SchoolManagement.html:130
 msgid "Student Invoice & Fees"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:132
+#: .\templates\pages\services\SchoolManagement.html:136
 msgid "Student Loans"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:138
+#: .\templates\pages\services\SchoolManagement.html:142
 msgid "Teacher Loans"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:150
+#: .\templates\pages\services\SchoolManagement.html:154
 msgid "Employee Salarys"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:156
+#: .\templates\pages\services\SchoolManagement.html:160
 msgid "Employee Leaves"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:162
+#: .\templates\pages\services\SchoolManagement.html:166
 msgid "Attendance & Departure"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:168
+#: .\templates\pages\services\SchoolManagement.html:172
 msgid "Financial Affairs"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:174
+#: .\templates\pages\services\SchoolManagement.html:178
 msgid "Multi Academic Year"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:336
+#: .\templates\pages\services\SchoolManagement.html:340
 msgid ""
 "Your main interface provides you with a comprehensive overview of everything "
 "you need to know, You can track performance and analyze data with "
 "flexibility and speed."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:343
+#: .\templates\pages\services\SchoolManagement.html:347
 msgid "Financial Affairs Analysis"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:344
+#: .\templates\pages\services\SchoolManagement.html:348
 msgid ""
 "Financial Affairs Analysis offers you a comprehensive and flexible solution "
 "for managing your school's finances with ease and precision. Track tuition "
@@ -2165,7 +2173,7 @@ msgid ""
 "highest level of security and efficiency."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:352
+#: .\templates\pages\services\SchoolManagement.html:356
 msgid ""
 "Student Management offers a seamless and professional approach to handling "
 "all aspects of student administration. From enrollment and academic records "
@@ -2177,11 +2185,11 @@ msgid ""
 "operations running smoothly, all while maintaining a user-friendly interface."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:359
+#: .\templates\pages\services\SchoolManagement.html:363
 msgid "Manage Employee"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:360
+#: .\templates\pages\services\SchoolManagement.html:364
 msgid ""
 "Our Employee Management section offers a streamlined, professional solution "
 "for managing all aspects of your staff, including teachers and "
@@ -2194,11 +2202,11 @@ msgid ""
 "specific needs."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:366
+#: .\templates\pages\services\SchoolManagement.html:370
 msgid "Attendance & Departure System"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:367
+#: .\templates\pages\services\SchoolManagement.html:371
 msgid ""
 "Our Attendance & Departure system is designed to provide seamless tracking "
 "of both student and employee attendance. With its professional and flexible "
@@ -2212,11 +2220,11 @@ msgid ""
 "the unique requirements of your institution."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:373
+#: .\templates\pages\services\SchoolManagement.html:377
 msgid "Student Invoices"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:374
+#: .\templates\pages\services\SchoolManagement.html:378
 msgid ""
 "we offer you a Students Invoice section that allows you to manage invoices "
 "easily and professionally. You can issue customized invoices for each "
@@ -2226,11 +2234,11 @@ msgid ""
 "today and enjoy flexibility in managing your students' accounts."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:380
+#: .\templates\pages\services\SchoolManagement.html:384
 msgid "Library"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:381
+#: .\templates\pages\services\SchoolManagement.html:385
 msgid ""
 "our Library section offers you a comprehensive solution for efficiently and "
 "professionally managing library resources. You can easily add books, "
@@ -2241,11 +2249,11 @@ msgid ""
 "today and enjoy managing your library with the utmost professionalism."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:394
+#: .\templates\pages\services\SchoolManagement.html:398
 msgid "Export Report"
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:395
+#: .\templates\pages\services\SchoolManagement.html:399
 msgid ""
 "we offer you the ability to generate comprehensive reports with ease and "
 "professionalism. You can customize the format of the reports according to "
@@ -2255,7 +2263,7 @@ msgid ""
 "Join us today and enjoy managing your data efficiently and professionally."
 msgstr ""
 
-#: .\templates\pages\services\SchoolManagement.html:422
+#: .\templates\pages\services\SchoolManagement.html:426
 msgid ""
 "Join the future of school management with our advanced system and get the "
 "first 30 days of free and unique experience!"
@@ -2352,13 +2360,13 @@ msgstr ""
 msgid "Inventory Management (Coming Soon)"
 msgstr ""
 
-#: .\templates\parts\navbar.html:87
+#: .\templates\parts\navbar.html:89
 #: .\venv\Lib\site-packages\grappelli\dashboard\dashboards.py:137
 #: .\venv\Lib\site-packages\grappelli\templates\admin\base.html:110
 msgid "Log out"
 msgstr ""
 
-#: .\templates\parts\navbar.html:93
+#: .\templates\parts\navbar.html:95
 msgid "Sign Up"
 msgstr ""
 
