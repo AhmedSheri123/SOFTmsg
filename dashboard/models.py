@@ -101,4 +101,4 @@ class ServicePaymentOrderModel(models.Model):
 
     def __str__(self):
         ser_name = self.user_service.service if self.user_service else 'None'
-        return f'{self.user_service} - {ser_name} - {self.title} - {self.progress}'
+        return f'{self.user_service} - {ser_name} - {self.title} - {self.get_progress_display()}'
