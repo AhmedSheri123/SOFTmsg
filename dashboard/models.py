@@ -98,3 +98,7 @@ class ServicePaymentOrderModel(models.Model):
     class Meta:
         verbose_name = _("Service Payment Order Model")
         verbose_name_plural = _("Service Payment Order Models")
+
+    def __str__(self):
+        ser_name = self.user_service.service if self.user_service else 'None'
+        return f'{self.user_service} - {ser_name} - {self.title} - {self.progress}'
