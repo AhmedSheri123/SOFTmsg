@@ -13,7 +13,7 @@ class MultiLangContentSitemap(Sitemap):
     def items(self):
         """إرجاع كل عنصر مع اللغات المختلفة كـ tuples (object, language)"""
         items = []
-        for obj in SectionContentsModel.objects.filter(is_enabled=True):
+        for obj in SectionContentsModel.objects.filter(is_enabled=True, is_default_selected=False):
             for lang_code, _ in settings.LANGUAGES:
                 items.append((obj, lang_code))
         return items
