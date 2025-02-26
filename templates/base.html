@@ -4,9 +4,12 @@
 <!doctype html>
 <html lang="{{LANGUAGE_CODE}}" {% if LANGUAGE_CODE == 'ar' or LANGUAGE_CODE == 'he' %}dir="rtl"{% endif %}>
   <head>
+    <title>SOFTmsg {% trans "for management systems" %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SOFTmsg {% trans "for management systems" %}</title>
+    {% block meta %}
+    {% endblock meta %}
+
     {% if LANGUAGE_CODE == 'ar' or LANGUAGE_CODE == 'he' %}
     <link href="{% static 'bootstrap/css/bootstrap.rtl.min.css' %}" rel="stylesheet">
     {% else %}
@@ -15,8 +18,8 @@
     <link href="{% static 'css/pages/base.css' %}" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/softmsg-short-logo.png' %}">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     {% comment %} <script src="https://kit.fontawesome.com/69a53501fd.js" crossorigin="anonymous"></script> {% endcomment %}
   
   

@@ -37,7 +37,11 @@ class SectionContentsModel(models.Model):
     is_default_selected = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.name} - {self.section.name} - {self.section.service.name}'
+        return f'{self.section.name} - {self.name} - {self.section.service.name}'
     
+    @property
+    def get_title(self):
+        return f'{self.name} - {self.section.service.name}'
+
     class Meta:
         ordering = ['ordering']

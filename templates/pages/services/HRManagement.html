@@ -2,6 +2,10 @@
 {% load static %}
 {% load i18n %}
 
+{% block meta %}
+<meta name="description" content="{% trans "Save time and effort with an integrated platform to manage employees, salaries, attendance, evaluations, and much more in one place – for smooth and efficient management." %}">
+{% endblock meta %}
+
 {% block sheri %}
 <!-- header -->
 <div class="text-dark px-4 py-5 text-center">
@@ -12,6 +16,7 @@
       <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4">
             {% trans "Save time and effort with an integrated platform to manage employees, salaries, attendance, evaluations, and much more in one place – for smooth and efficient management." %}
+        </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
           <a href="{% url 'Signup' %}" class="btn btn-primary btn-lg px-4">
             {% trans "Get started for free" %}

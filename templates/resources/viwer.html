@@ -3,6 +3,10 @@
 {% load i18n %}
 {% load resources_tags %}
 
+{% block meta %}
+<meta name="description" content="{{content.desc}}">
+{% endblock meta %}
+
 {% block sheri %}
 
 <div class="container bd-gutter mt-3 my-md-4 bd-layout ">
@@ -41,7 +45,7 @@
     </aside>
     
     <main class="bd-main order-1 pt-4">
-        <h1 class="bd-title mb-0" id="content">{{content.name}}</h1>
+        <h1 class="bd-title mb-0" id="content">{{content.get_title}}</h1>
         <p class="bd-lead mb-5">{{content.desc}}</p>
         {{content.content|safe}}
     </main>
