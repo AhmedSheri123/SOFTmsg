@@ -33,3 +33,9 @@ function showToast(toastID, username, msg, img) {
   $(`#toast${toastID}`).toast('show');
 
 };
+
+// lazyload سيتم تحميل الصورة الخلفية عند ظهور العنصر 
+document.addEventListener('lazybeforeunveil', function(e){
+  var bg = e.target.getAttribute('data-bg');
+  e.target.style.setProperty('--bg', `url(${bg})`);  // تعيين الصورة على عنصر الـ CSS
+});

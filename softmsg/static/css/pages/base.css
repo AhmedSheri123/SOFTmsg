@@ -54,3 +54,14 @@ body {
 .glass-light-dark {
     background: linear-gradient(209.01889947243856deg, rgba(199, 199, 199, 0.16) 0%, rgb(247, 247, 247) 100%);
 }
+
+.lazyload {
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP8=');  /* صورة شفافة placeholder */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.lazyloaded {
+    background-image: var(--bg);  /* سيتم تحميل الصورة الخلفية عند ظهور العنصر */
+}

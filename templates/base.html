@@ -10,7 +10,7 @@
     {% block meta %}
     {% endblock meta %}
     <meta name="referrer" content="no-referrer-when-downgrade">
-    
+
     {% if LANGUAGE_CODE == 'ar' or LANGUAGE_CODE == 'he' %}
     <link href="{% static 'bootstrap/css/bootstrap.rtl.min.css' %}" rel="stylesheet">
     {% else %}
@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
     {% comment %} <script src="https://kit.fontawesome.com/69a53501fd.js" crossorigin="anonymous"></script> {% endcomment %}
   
   
@@ -36,7 +37,6 @@
       gtag('config', 'AW-11509825034');
     </script>
   
-
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMFY34XGS6"></script>
 <script>
@@ -83,5 +83,9 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" async=""></script>
+
+
   </body>
 </html>
