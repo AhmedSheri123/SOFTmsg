@@ -388,16 +388,17 @@
     </div>
 </div>
 <!-- End Customer reviews -->
+{% if LANGUAGE_CODE == 'ar'%}
 
 <!-- vedio -->
 <div class="container py-5">
     <h2 class="text-center py-4 border-top">{% trans "Quick Guide to the Patient Management System" %}</h2>
 
-    {% if LANGUAGE_CODE == 'ar'%}
     <iframe class="w-100 rounded" height="315" src="https://www.youtube.com/embed/pCySOrVlmM4?si=4hyVpXDcI882jSrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    {% else %}
-    {% endif %}
+
 </div>
+{% else %}
+{% endif %}
 <!-- end vedio -->
 
 
