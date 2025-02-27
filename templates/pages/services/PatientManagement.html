@@ -282,6 +282,123 @@
 <!-- End Services Features -->
 
 
+<!-- Customer reviews -->
+<div class="container py-5">
+    <h2 class="text-center py-4 border-top">{% trans "Customer reviews" %}</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col zoom-anim">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload" 
+            data-bg="{% static 'img/reviews/background-diva-26694057.webp' %}">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+
+                    <h3 class="my-4 lh-1 fw-bold">{% trans "An all-in-one management solution that has significantly improved our workflow. It's fast, accurate, and incredibly efficient." %}</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="{% static 'img/reviews/review-0.webp' %}" alt="reviewer person 1" width="32" height="32"
+                                class="rounded-circle border border-white" loading="lazy">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#geo-fill"></use>
+                            </svg>
+                            <small>{% trans "Romania" %}</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#calendar3"></use>
+                            </svg>
+                            <small>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col zoom-anim">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload"
+            data-bg="{% static 'img/reviews/unsplash-photo-3.webp' %}">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="my-4 lh-1 fw-bold">{% trans "A game-changer for our business! The software's versatility and ease of use have enhanced our productivity like never before." %}</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="{% static 'img/reviews/review-2.webp' %}" alt="reviewer person 2" width="32" height="32"
+                                class="rounded-circle border border-white" loading="lazy">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#geo-fill"></use>
+                            </svg>
+                            <small>{% trans "German" %}</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#calendar3"></use>
+                            </svg>
+                            <small>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col zoom-anim">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg lazyload" data-bg="{% static 'img/reviews/background-rccbtn-61760629.webp'%}">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="my-4 lh-1 fw-bold">{% trans "We’ve tried several management solutions before, but this one stands out for its efficiency and ease of use." %}</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="{% static 'img/reviews/review-3.webp' %}" alt="reviewer person 3" width="32" height="32"
+                                class="rounded-circle border border-white" loading="lazy">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#geo-fill"></use>
+                            </svg>
+                            <small>{% trans "Romania" %}</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em">
+                                <use xlink:href="#calendar3"></use>
+                            </svg>
+                            <small>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Customer reviews -->
+
+<!-- vedio -->
+<div class="container py-5">
+    <h2 class="text-center py-4 border-top">{% trans "Quick Guide to the Patient Management System" %}</h2>
+
+    {% if LANGUAGE_CODE == 'ar'%}
+    <iframe class="w-100 rounded" height="315" src="https://www.youtube.com/embed/pCySOrVlmM4?si=4hyVpXDcI882jSrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    {% else %}
+    {% endif %}
+</div>
+<!-- end vedio -->
 
 
 <!-- Discibe System -->
@@ -364,6 +481,98 @@
       </div>
 </div>
 <!-- End Discibe System -->
+
+
+
+<!-- FAQ Section -->
+<div class="py-5 px-2 px-md-4 glass-light-dark">
+    <h2 class="text-center py-4">{% trans "Frequently Asked Questions" %}</h2>
+    <div class="accordion accordion-flush mx-auto" id="accordionFlushExample" style="max-width: 1080px;">
+
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    {% trans "How much does an administrative system cost?" %}
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"
+                role="region" aria-labelledby="flush-headingTwo">
+                <div class="accordion-body">
+                    {% trans "Pricing depends on the features and scale of the system. We offer flexible subscription plans and customized solutions based on your business size and needs." %}
+                </div>
+            </div>
+        </div>
+    
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    {% trans "How long does it take to implement the system?" %}
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"
+                role="region" aria-labelledby="flush-headingThree">
+                <div class="accordion-body">
+                    {% trans "You can create an account and get started with the system immediately in a simple and straightforward manner. There's no complex setup required, allowing you to begin using the system right away." %}
+                </div>
+            </div>
+        </div>
+    
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    {% trans "Do you provide training and support after setup?" %}
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"
+                role="region" aria-labelledby="flush-headingFour">
+                <div class="accordion-body">
+                    {% trans "Yes, we offer training sessions for your team and ongoing support to ensure smooth operation of the system. You can always reach out for updates and troubleshooting." %}
+                </div>
+            </div>
+        </div>
+    
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    {% trans "Can I customize the system based on my business needs?" %}
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"
+                role="region" aria-labelledby="flush-headingFive">
+                <div class="accordion-body">
+                    {% trans "Absolutely! Our system is modular and can be tailored to match your specific workflow. We also offer API integrations with existing software you may be using." %}
+                </div>
+            </div>
+        </div>
+    
+        <div class="accordion-item p-4 rounded-4 mb-3 border-0 shadow">
+            <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    {% trans "Is my business data secure?" %}
+                </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample"
+                role="region" aria-labelledby="flush-headingSix">
+                <div class="accordion-body">
+                    {% trans "Yes! We prioritize security with encrypted data storage, secure cloud hosting, and regular system updates to ensure the highest level of protection." %}
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    {% comment %} <div class="text-center my-4">
+        <a href="" class="">{% trans "Show more questions" %}</a>
+    </div> {% endcomment %}
+</div>
+<!-- End FAQ Section -->
+
 
 <!-- Signup -->
 <div class="container py-5">

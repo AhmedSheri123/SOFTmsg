@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 00:17+0300\n"
+"POT-Creation-Date: 2025-02-27 08:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -570,7 +570,7 @@ msgstr "Erledigt"
 #: .\templates\dashboard\services\AddServiceSettings\AddPatientManagementSettings.html:169
 #: .\templates\dashboard\services\AddServiceSettings\AddSchoolManagementSettings.html:195
 #: .\templates\pages\services\HRManagement.html:803
-#: .\templates\pages\services\PatientManagement.html:362
+#: .\templates\pages\services\PatientManagement.html:479
 #: .\templates\pages\services\SchoolManagement.html:418
 msgid "Next"
 msgstr "Nächste"
@@ -1111,7 +1111,7 @@ msgstr ""
 #: .\templates\pages\services\HRManagement.html:22
 #: .\templates\pages\services\HRManagement.html:816
 #: .\templates\pages\services\PatientManagement.html:21
-#: .\templates\pages\services\PatientManagement.html:373
+#: .\templates\pages\services\PatientManagement.html:583
 #: .\templates\pages\services\SchoolManagement.html:21
 #: .\templates\pages\services\SchoolManagement.html:429
 msgid "Get started for free"
@@ -1121,7 +1121,7 @@ msgstr "KOSTENLOS anfangen"
 #: .\templates\pages\services\HRManagement.html:26
 #: .\templates\pages\services\HRManagement.html:820
 #: .\templates\pages\services\PatientManagement.html:25
-#: .\templates\pages\services\PatientManagement.html:377
+#: .\templates\pages\services\PatientManagement.html:587
 #: .\templates\pages\services\SchoolManagement.html:25
 #: .\templates\pages\services\SchoolManagement.html:433
 #: .\templates\parts\footer.html:10 .\templates\parts\navbar.html:62
@@ -1289,7 +1289,7 @@ msgstr ""
 #: .\templates\pages\services\HRManagement.html:319
 #: .\templates\pages\services\PatientManagement.html:155
 #: .\templates\pages\services\PatientManagement.html:261
-#: .\templates\pages\services\PatientManagement.html:349
+#: .\templates\pages\services\PatientManagement.html:466
 #: .\templates\pages\services\SchoolManagement.html:191
 #: .\templates\pages\services\SchoolManagement.html:292
 #: .\templates\pages\services\SchoolManagement.html:391
@@ -1343,11 +1343,13 @@ msgstr ""
 
 #: .\templates\pages\index.html:228
 #: .\templates\pages\services\HRManagement.html:356
+#: .\templates\pages\services\PatientManagement.html:287
 msgid "Customer reviews"
 msgstr "Kundenbewertungen"
 
 #: .\templates\pages\index.html:236
 #: .\templates\pages\services\HRManagement.html:364
+#: .\templates\pages\services\PatientManagement.html:295
 msgid ""
 "An all-in-one management solution that has significantly improved our "
 "workflow. It's fast, accurate, and incredibly efficient."
@@ -1358,12 +1360,15 @@ msgstr ""
 #: .\templates\pages\index.html:246 .\templates\pages\index.html:312
 #: .\templates\pages\services\HRManagement.html:374
 #: .\templates\pages\services\HRManagement.html:439
+#: .\templates\pages\services\PatientManagement.html:305
+#: .\templates\pages\services\PatientManagement.html:370
 #: .\venv\Lib\site-packages\paypal\pro\fields.py:285
 msgid "Romania"
 msgstr "Rumänien"
 
 #: .\templates\pages\index.html:269
 #: .\templates\pages\services\HRManagement.html:397
+#: .\templates\pages\services\PatientManagement.html:328
 msgid ""
 "A game-changer for our business! The software's versatility and ease of use "
 "have enhanced our productivity like never before."
@@ -1374,11 +1379,13 @@ msgstr ""
 
 #: .\templates\pages\index.html:279
 #: .\templates\pages\services\HRManagement.html:407
+#: .\templates\pages\services\PatientManagement.html:338
 msgid "German"
 msgstr "Deutsch"
 
 #: .\templates\pages\index.html:302
 #: .\templates\pages\services\HRManagement.html:429
+#: .\templates\pages\services\PatientManagement.html:360
 msgid ""
 "We’ve tried several management solutions before, but this one stands out for "
 "its efficiency and ease of use."
@@ -1816,6 +1823,7 @@ msgid "HR analytics for data-driven decision-making"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:597
+#: .\templates\pages\services\PatientManagement.html:489
 msgid "Frequently Asked Questions"
 msgstr ""
 
@@ -1831,10 +1839,12 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:619
+#: .\templates\pages\services\PatientManagement.html:496
 msgid "How much does an administrative system cost?"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:625
+#: .\templates\pages\services\PatientManagement.html:502
 msgid ""
 "Pricing depends on the features and scale of the system. We offer flexible "
 "subscription plans and customized solutions based on your business size and "
@@ -1842,10 +1852,12 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:634
+#: .\templates\pages\services\PatientManagement.html:511
 msgid "How long does it take to implement the system?"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:640
+#: .\templates\pages\services\PatientManagement.html:517
 msgid ""
 "You can create an account and get started with the system immediately in a "
 "simple and straightforward manner. There's no complex setup required, "
@@ -1853,10 +1865,12 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:649
+#: .\templates\pages\services\PatientManagement.html:526
 msgid "Do you provide training and support after setup?"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:655
+#: .\templates\pages\services\PatientManagement.html:532
 msgid ""
 "Yes, we offer training sessions for your team and ongoing support to ensure "
 "smooth operation of the system. You can always reach out for updates and "
@@ -1864,10 +1878,12 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:664
+#: .\templates\pages\services\PatientManagement.html:541
 msgid "Can I customize the system based on my business needs?"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:670
+#: .\templates\pages\services\PatientManagement.html:547
 msgid ""
 "Absolutely! Our system is modular and can be tailored to match your specific "
 "workflow. We also offer API integrations with existing software you may be "
@@ -1875,10 +1891,12 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:679
+#: .\templates\pages\services\PatientManagement.html:556
 msgid "Is my business data secure?"
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:685
+#: .\templates\pages\services\PatientManagement.html:562
 msgid ""
 "Yes! We prioritize security with encrypted data storage, secure cloud "
 "hosting, and regular system updates to ensure the highest level of "
@@ -1890,7 +1908,7 @@ msgid "System Images"
 msgstr "Systembilder"
 
 #: .\templates\pages\services\HRManagement.html:722
-#: .\templates\pages\services\PatientManagement.html:305
+#: .\templates\pages\services\PatientManagement.html:422
 #: .\templates\pages\services\SchoolManagement.html:339
 msgid "Home Page"
 msgstr "Startseite"
@@ -1995,7 +2013,7 @@ msgid ""
 msgstr ""
 
 #: .\templates\pages\services\HRManagement.html:799
-#: .\templates\pages\services\PatientManagement.html:358
+#: .\templates\pages\services\PatientManagement.html:475
 #: .\templates\pages\services\SchoolManagement.html:414
 msgid "Previous"
 msgstr "Vorherige"
@@ -2064,16 +2082,20 @@ msgid "Medical Tests"
 msgstr "Medizinische Tests"
 
 #: .\templates\pages\services\PatientManagement.html:167
-#: .\templates\pages\services\PatientManagement.html:342
+#: .\templates\pages\services\PatientManagement.html:459
 msgid "Chat System"
 msgstr "Chat -System"
 
-#: .\templates\pages\services\PatientManagement.html:289
+#: .\templates\pages\services\PatientManagement.html:394
+msgid "Quick Guide to the Patient Management System"
+msgstr "Kurzanleitung zum Patientenverwaltungssystem"
+
+#: .\templates\pages\services\PatientManagement.html:406
 #: .\templates\pages\services\SchoolManagement.html:320
 msgid "Some pictures of the system"
 msgstr "Einige Bilder des Systems"
 
-#: .\templates\pages\services\PatientManagement.html:306
+#: .\templates\pages\services\PatientManagement.html:423
 msgid ""
 "Your main interface provides you with a comprehensive overview of everything "
 "you need to know, from the number of patients to payment details. You can "
@@ -2084,11 +2106,11 @@ msgstr ""
 "Zahlungsdetails. Sie können die Leistung verfolgen und Daten mit "
 "Flexibilität und Geschwindigkeit analysieren."
 
-#: .\templates\pages\services\PatientManagement.html:313
+#: .\templates\pages\services\PatientManagement.html:430
 msgid "Comprehensive Management"
 msgstr "Umfassendes Management"
 
-#: .\templates\pages\services\PatientManagement.html:314
+#: .\templates\pages\services\PatientManagement.html:431
 msgid ""
 "You can easily add, edit, and delete patient records, with an advanced file "
 "manager to store all important documents and images. Keep your patients' "
@@ -2099,11 +2121,11 @@ msgstr ""
 "Bilder zu speichern. Halten Sie die Daten Ihrer Patienten jederzeit "
 "organisiert und zugänglich."
 
-#: .\templates\pages\services\PatientManagement.html:321
+#: .\templates\pages\services\PatientManagement.html:438
 msgid "File Manager"
 msgstr "Dateimanager"
 
-#: .\templates\pages\services\PatientManagement.html:322
+#: .\templates\pages\services\PatientManagement.html:439
 msgid ""
 "With the advanced file manager, you'll no longer worry about losing "
 "important documents or having difficulty accessing them. Store all your "
@@ -2121,7 +2143,7 @@ msgstr ""
 "Versorgung zu bieten. Beginnen Sie jetzt und genießen Sie Lösungen, die "
 "Ihnen Zeit und Mühe sparen."
 
-#: .\templates\pages\services\PatientManagement.html:328
+#: .\templates\pages\services\PatientManagement.html:445
 msgid ""
 "Get comprehensive and organized medical reports that include all essential "
 "details"
@@ -2129,7 +2151,7 @@ msgstr ""
 "Erhalten Sie umfassende und organisierte medizinische Berichte, die alle "
 "wesentlichen Details enthalten"
 
-#: .\templates\pages\services\PatientManagement.html:329
+#: .\templates\pages\services\PatientManagement.html:446
 msgid ""
 "patient and doctor information, reason for the visit, basic measurements "
 "like pulse, blood pressure, oxygen, and sugar levels, clinical examination, "
@@ -2148,11 +2170,11 @@ msgstr ""
 "bieten. Wählen Sie die intelligente Lösung für die Verwaltung Ihrer "
 "medizinischen Berichte."
 
-#: .\templates\pages\services\PatientManagement.html:335
+#: .\templates\pages\services\PatientManagement.html:452
 msgid "Medical Tests Reports"
 msgstr "Medizinische Tests berichten"
 
-#: .\templates\pages\services\PatientManagement.html:336
+#: .\templates\pages\services\PatientManagement.html:453
 msgid ""
 "Gain full control over managing medical tests with our advanced system. You "
 "can enter all necessary details. Enjoy data accuracy and quick access, "
@@ -2167,7 +2189,7 @@ msgstr ""
 "Investieren Sie in die Lösung, die Ihre Workflow -Effizienz verbessert und "
 "Ihre Patienten eine hervorragende Gesundheitsversorgung gewährleistet."
 
-#: .\templates\pages\services\PatientManagement.html:343
+#: .\templates\pages\services\PatientManagement.html:460
 msgid ""
 "Enjoy a seamless and effective communication experience with our innovative "
 "chat system! This system is built using the latest technologies to ensure "
@@ -2182,7 +2204,7 @@ msgstr ""
 "sodass Sie Gespräche zwischen allen Benutzern eröffnen können, unabhängig "
 "davon Der beste Service für Patienten."
 
-#: .\templates\pages\services\PatientManagement.html:350
+#: .\templates\pages\services\PatientManagement.html:467
 #: .\templates\pages\services\SchoolManagement.html:392
 #: .\templates\pages\services\SchoolManagement.html:406
 msgid ""
@@ -2206,7 +2228,7 @@ msgstr ""
 "Ihnen die Sicherheit und Flexibilität bietet, die für die effektive "
 "Verwaltung Ihres Teams erforderlich ist."
 
-#: .\templates\pages\services\PatientManagement.html:370
+#: .\templates\pages\services\PatientManagement.html:580
 msgid ""
 "Join the future of patient management with our advanced system and get the "
 "first 30 days of free and unique experience!"
