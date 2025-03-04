@@ -135,8 +135,9 @@ def ResetPasswordService(request, id):
 def DeployHRSystem(request, user_service):
     project_name = 'horilla'
     domain = 'softmsg.com'
-    subdomain = user_service.subdomain
-    port = user_service.system_port
+    subdomain = user_service.get_unique_subdomain(user_service.project_name)
+    user_service.subdomain = subdomain
+
     working_dir = os.path.join(HR_MANAGEMENT_SYSTEM_PROJECTS_PATH, subdomain)
     env_dir = HR_MANAGEMENT_SYSTEM_ENV_PATH
     wsgi_module = f'{project_name}.wsgi'
