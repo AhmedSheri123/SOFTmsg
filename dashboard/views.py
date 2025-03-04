@@ -156,7 +156,8 @@ def DeployHRSystem(request, user_service):
         file.close()
 
     #create server for project
-    deploying = deploy.deploy(subdomain, working_dir, env_dir, wsgi_module, static_folder_name, domain)    
+    deploying = deploy.deploy(subdomain, working_dir, env_dir, wsgi_module, static_folder_name, domain)
+    print(copying, creating_database, deploying)
     if copying and creating_database and deploying:
         user_service.system_progress = '3'
         user_service.save()
@@ -165,7 +166,7 @@ def DeployHRSystem(request, user_service):
         user_service.system_progress = '4'
         user_service.save()
         messages.error(request, 'حدث خطاء اثناء بناء النظام')
-        return redirect('MyServices', user_service.id)
+        return redirect('MyServices')
     
     
     
