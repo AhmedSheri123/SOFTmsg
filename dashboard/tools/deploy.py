@@ -81,7 +81,6 @@ def deploy(subdomain, working_directory, env_directory, wsgi_module, static_fold
     domain example = example.softmsg.com
     """
     gunicorn_service_name = f'gunicorn_{subdomain}'
-    set_permissions(working_directory)
     create_gunicorn_service(working_directory, env_directory, wsgi_module, gunicorn_service_name, subdomain)
     create_nginx_config(working_directory, static_folder_name, subdomain, domain, port)
     restart_services(gunicorn_service_name)
