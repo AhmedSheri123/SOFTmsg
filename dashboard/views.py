@@ -151,7 +151,7 @@ def DeployHRSystem(request, user_service):
     
     #create project settings
     proj_settings = hr_setting.get_hr_setting(subdomain, domain, subdomain)
-    with open(os.path.join('working_dir', 'settings.json'), 'w') as file:
+    with open(os.path.join(working_dir, 'settings.json'), 'w') as file:
         file.write(proj_settings)
         file.close()
 
