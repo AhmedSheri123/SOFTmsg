@@ -23,7 +23,9 @@ config = {
     }
 }
 
-def get_hr_setting(subdoamin, domain, db_name):
+def get_hr_setting(subdoamin, domain, db_name, db_user, db_pass):
     config['CSRF_TRUSTED_ORIGINS'] = [f'http://{domain}', f'https://{domain}', f'http://{subdoamin}.{domain}', f'https://{subdoamin}.{domain}']
     config['DB_CONFIG']['NAME'] = db_name
+    config['DB_CONFIG']['USER'] = db_user
+    config['DB_CONFIG']['PASSWORD'] = db_pass
     return json.dumps(config)

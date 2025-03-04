@@ -154,7 +154,7 @@ def DeployHRSystem(request, user_service):
     creating_database = create_data_base.create_database(db_name=subdomain, user=DEFAULT_DB_USER, password=DEFAULT_DB_PASS)
     
     #create project settings
-    proj_settings = hr_setting.get_hr_setting(subdomain, domain, subdomain)
+    proj_settings = hr_setting.get_hr_setting(subdomain, domain, subdomain, DEFAULT_DB_USER, DEFAULT_DB_PASS)
     with open(os.path.join(working_dir, 'settings.json'), 'w') as file:
         file.write(proj_settings)
         file.close()
