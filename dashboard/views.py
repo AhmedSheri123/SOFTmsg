@@ -143,6 +143,9 @@ def DeployHRSystem(request, user_service):
     wsgi_module = f'{project_name}.wsgi'
     static_folder_name = 'staticfiles'
 
+    if not os.path.exists(working_dir):
+        os.makedirs(working_dir)
+
     # extract project src
     copying = copy.copy_folder(HR_MANAGEMENT_SYSTEM_SRC_PATH, working_dir)
 
