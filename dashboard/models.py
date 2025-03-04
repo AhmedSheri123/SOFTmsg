@@ -41,6 +41,13 @@ user_service_progress_choices = [
     ('4', _('Complited'),
 )]
 
+system_progress_choices = [
+    ('1', _('Pending')),
+    ('2', _('Building')),
+    ('3', _('Complited')),
+    ('4', _('Failed'),
+)]
+
 class ServicesModel(models.Model):
     title = models.CharField(max_length=254, verbose_name=_("Service Title"))
     sub_title = models.TextField(verbose_name=_("Subtitle"))
@@ -66,6 +73,10 @@ class UserServiceModel(models.Model):
     service_user_id = models.CharField(max_length=254, null=True, verbose_name=_("Service User ID"))
     service_subscription_date = models.CharField(max_length=254, null=True, verbose_name=_("Service Subscription Date"))
     plan_scope = models.CharField(max_length=254, choices=plan_scope_choices, null=True, verbose_name=_("Plan Scope"))
+    
+    system_port = models.CharField(max_length=254, null=True, blank=True, verbose_name=_("system_port"), unique=True)
+    subdomain = models.CharField(max_length=254, null=True, blank=True, verbose_name=_("Subdomain"))
+    system_progress = models.CharField(max_length=254, default='1', choices=system_progress_choices, null=True, verbose_name=_("System Progress"))
 
     creation_datetime = models.DateTimeField(auto_now_add=True, verbose_name=_("Creation Date"))
 
@@ -75,6 +86,40 @@ class UserServiceModel(models.Model):
 
     def __str__(self):
         return str(self.project_name)
+
+    @property
+    def get_avarible_port(self):
+        """
+        دالة لتوليد منفذ فريد غير مستخدم.
+        """
+        # البحث عن المنافذ المحجوزة
+        reserved_ports = UserServiceModel.objects.exclude(system_port__isnull=True).values_list('system_port', flat=True)
+
+        # البحث عن منفذ متاح
+        for port in range(9000, 65535):
+            port = str(port)
+            if port not in reserved_ports:
+                # إذا كان المنفذ غير محجوز، يتم إرجاعه
+                return port
+
+        # في حال لم يوجد منفذ متاح
+        return None
+
+    def get_unique_subdomain(self, subdomain):
+        """
+        دالة للتحقق مما إذا كان الـ subdomain موجودًا بالفعل في قاعدة البيانات.
+        إذا كان موجودًا، سيتم إرجاع قيمة فريدة بتعديل الاسم.
+        """
+        subdomain = 'panel-' + subdomain.replace(" ", "")
+        original_subdomain = subdomain
+        counter = 1
+
+        # التحقق من وجود الـ subdomain في قاعدة البيانات
+        while UserServiceModel.objects.filter(subdomain=subdomain).exists():
+            subdomain = f"{original_subdomain}-{counter}"  # إضافة رقم لتمييز الـ subdomain
+            counter += 1
+
+        return subdomain
 
     @property
     def remaining_subscription(self):

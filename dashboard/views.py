@@ -12,11 +12,20 @@ from django.urls import reverse
 from django.shortcuts import render
 from paypal.standard.forms import PayPalPaymentsForm
 from decimal import Decimal
+from subscriptions.models import HRSubscriptionsModel
+from .tools import create_data_base, deploy, extract_zip, copy
+from .projects_setting import hr_setting
+import os
 
 # Create your views here.
 PatientManagementURL = settings.PATIENT_MANAGEMENT_WEB_SERVER_URL
 SchoolManagementURL = settings.SCHOOL_MANAGEMENT_WEB_SERVER_URL
 HRManagementURL = settings.HR_MANAGEMENT_WEB_SERVER_URL
+HR_MANAGEMENT_SYSTEM_SRC_PATH = settings.HR_MANAGEMENT_SYSTEM_SRC_PATH
+HR_MANAGEMENT_SYSTEM_PROJECTS_PATH = settings.HR_MANAGEMENT_SYSTEM_PROJECTS_PATH
+HR_MANAGEMENT_SYSTEM_ENV_PATH = settings.HR_MANAGEMENT_SYSTEM_ENV_PATH
+DEFAULT_DB_USER = settings.DEFAULT_DB_USER
+DEFAULT_DB_PASS = settings.DEFAULT_DB_PASS
 PAYPAL_RECIVVER_EMAIL = settings.PAYPAL_RECIVVER_EMAIL
 
 def Home(request):
@@ -123,6 +132,43 @@ def ResetPasswordService(request, id):
         else:messages.error(request, 'new password field and repeat new password field not same')
     return redirect('ViewService', id)
 
+def DeployHRSystem(request, user_service):
+    project_name = 'horilla'
+    domain = 'softmsg.com'
+    subdomain = user_service.subdomain
+    port = user_service.system_port
+    working_dir = os.path.join(HR_MANAGEMENT_SYSTEM_PROJECTS_PATH, subdomain)
+    env_dir = HR_MANAGEMENT_SYSTEM_ENV_PATH
+    wsgi_module = f'{project_name}.wsgi'
+    static_folder_name = 'staticfiles'
+
+    # extract project src
+    copying = copy.copy_folder(HR_MANAGEMENT_SYSTEM_SRC_PATH, working_dir)
+
+    #create database for project
+    creating_database = create_data_base.create_database(db_name=subdomain, user=DEFAULT_DB_USER, password=DEFAULT_DB_PASS)
+    
+    #create project settings
+    proj_settings = hr_setting.get_hr_setting(subdomain, domain, subdomain)
+    with open(os.path.join('working_dir', 'settings.json'), 'w') as file:
+        file.write(proj_settings)
+        file.close()
+
+    #create server for project
+    deploying = deploy.deploy(subdomain, working_dir, env_dir, wsgi_module, static_folder_name, domain)    
+    if copying and creating_database and deploying:
+        user_service.system_progress = '3'
+        user_service.save()
+        return redirect('AddHRManagementSettings', user_service.id)
+    else:
+        user_service.system_progress = '4'
+        user_service.save()
+        messages.error(request, 'حدث خطاء اثناء بناء النظام')
+        return redirect('MyServices', user_service.id)
+    
+    
+    
+
 def UserServiceCreationProgress(request, id):
     user_service = UserServiceModel.objects.get(id=id)
     progress = user_service.progress
@@ -134,7 +180,7 @@ def UserServiceCreationProgress(request, id):
         elif user_service.service.service == '2':
             return redirect('AddSchoolManagementSettings', id)
         elif user_service.service.service == '3':
-            return redirect('AddHRManagementSettings', id)
+            return DeployHRSystem(request, user_service)
     elif progress == '4':
         return redirect('ViewService', id)
     return redirect('MyServices')
@@ -169,9 +215,7 @@ def ServicePlans(request, id):
             plans_data = res.json()
 
     elif selected_service == '3':
-        res = requests.get(f'{HRManagementURL}/api/base/GetSubscriptionsPlanInfoAPI')
-        if res.status_code == 200:
-            plans_data = res.json()
+        plans_data = HRSubscriptionsModel.get_plans_Info()
 
     if request.method == 'POST':
         plan_scope = request.POST.get('plan_scope')
