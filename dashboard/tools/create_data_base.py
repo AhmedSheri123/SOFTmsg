@@ -1,23 +1,26 @@
 import psycopg2
 
 def create_database(db_name, user, password, host='localhost', port='5432'):
-    connection = None  # ✅ تأكد من تعريف connection في البداية
-    cursor = None  # ✅ نفس الشيء مع cursor
+    connection = None
+    cursor = None
 
     try:
-        # الاتصال بخادم PostgreSQL بدون تحديد قاعدة بيانات
+        # الاتصال بخادم PostgreSQL مع قاعدة بيانات موجودة مسبقًا
         connection = psycopg2.connect(
             user=user,
             password=password,
             host=host,
             port=port,
-            database="postgres"  # نحتاج إلى قاعدة بيانات موجودة مسبقًا لإنشاء قاعدة جديدة
+            database="postgres"  # الاتصال بقاعدة postgres الافتراضية
         )
+        
+        # ✅ تفعيل autocommit لمنع تشغيل CREATE DATABASE داخل معاملة
+        connection.autocommit = True
 
         # إنشاء كائن cursor لتنفيذ الاستعلامات
         cursor = connection.cursor()
         
-        # التحقق من وجود قاعدة البيانات قبل إنشائها لتجنب الأخطاء
+        # التحقق مما إذا كانت قاعدة البيانات موجودة مسبقًا
         cursor.execute(f"SELECT 1 FROM pg_database WHERE datname = '{db_name}';")
         exists = cursor.fetchone()
 
@@ -27,11 +30,12 @@ def create_database(db_name, user, password, host='localhost', port='5432'):
         else:
             print(f"⚠ قاعدة البيانات '{db_name}' موجودة بالفعل.")
 
-        # إغلاق الاتصال
         return True
+
     except Exception as error:
         print(f"❌ حدث خطأ: {error}")
         return False
+
     finally:
         # إغلاق الاتصال بأمان إذا كان مفتوحًا
         if cursor is not None:
