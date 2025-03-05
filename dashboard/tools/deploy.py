@@ -35,6 +35,11 @@ def set_permissions(working_directory):
     run_command(f"sudo chown -R www-data:www-data {working_directory}")
     run_command(f"sudo chmod -R 755 {working_directory}")
 
+def set_gunicorn_permissions(working_directory, subdomain):
+    working_directory = Path(working_directory).resolve()
+    run_command(f"sudo chown www-data:www-data {working_directory}/{subdomain}.sock")
+    run_command(f"sudo chmod 660 {working_directory}/{subdomain}.sock")
+
 def create_nginx_config(working_directory, static_folder_name, subdomain, domain, port=80):
     working_directory = Path(working_directory).resolve()
     nginx_config = f"""server {{
@@ -84,6 +89,7 @@ def deploy(subdomain, working_directory, env_directory, wsgi_module, static_fold
     create_gunicorn_service(working_directory, env_directory, wsgi_module, gunicorn_service_name, subdomain)
     create_nginx_config(working_directory, static_folder_name, subdomain, domain, port)
     restart_services(gunicorn_service_name)
+    set_gunicorn_permissions(working_directory, subdomain)
     return True
 
 # if __name__ == "__main__":
