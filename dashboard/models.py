@@ -110,13 +110,13 @@ class UserServiceModel(models.Model):
         دالة للتحقق مما إذا كان الـ subdomain موجودًا بالفعل في قاعدة البيانات.
         إذا كان موجودًا، سيتم إرجاع قيمة فريدة بتعديل الاسم.
         """
-        subdomain = 'panel_' + subdomain.replace(" ", "")
+        subdomain = 'ppp' + subdomain.replace(" ", "")
         original_subdomain = subdomain
         counter = 1
 
         # التحقق من وجود الـ subdomain في قاعدة البيانات
         while UserServiceModel.objects.filter(subdomain=subdomain).exists():
-            subdomain = f"{original_subdomain}_{counter}"  # إضافة رقم لتمييز الـ subdomain
+            subdomain = f"{original_subdomain}{counter}"  # إضافة رقم لتمييز الـ subdomain
             counter += 1
 
         return subdomain
