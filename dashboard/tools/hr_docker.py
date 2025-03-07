@@ -41,9 +41,9 @@ def add_hr_service(app_name, app_port):
     app_conf['container_name'] = app_name
     app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5432/{app_name}"
     app_conf['volumes'] = [
-                f"./horilla:/{app_name}/horilla",
-                f"/var/www/horilla/{app_name}/staticfiles:/{app_name}/staticfiles",
-                f"/var/www/horilla/{app_name}/media:/{app_name}/media",
+                f"./horilla:/app/horilla",
+                # f"/var/www/horilla/{app_name}/staticfiles:/{app_name}/staticfiles",
+                # f"/var/www/horilla/{app_name}/media:/{app_name}/media",
             ]
     # Merge the new data
     data['services'][app_name] = app_conf
