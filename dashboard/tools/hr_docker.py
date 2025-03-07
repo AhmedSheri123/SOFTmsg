@@ -104,23 +104,28 @@ def run_container(app_name, app_port):
     )
 
 
+
 def compose_up(app_name):
     try:
+        # Make sure the --no-deps option is placed correctly
         result = subprocess.run(
-            ["docker-compose", "up", "-d", app_name, "--no-deps"],
-            cwd=HR_MANAGEMENT_SYSTEM_SRC_PATH,  # تأكد من أن المسار صحيح
-            check=True
+            ["docker-compose", "up", "-d", "--no-deps", app_name],  # Correct order
+            cwd=HR_MANAGEMENT_SYSTEM_SRC_PATH,  # Ensure the path is correct
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE  # Capture the output and error
         )
 
         if result.returncode == 0:
-            print(result.stdout)
+            print(result.stdout.decode())  # Print the stdout
             return True  # Success
         else:
-            print(f"Error: {result.stderr}")
+            print(f"Error: {result.stderr.decode()}")
             return False  # Failure
         
-    except subprocess.CalledProcessError:
-        return False  # ❌ فشل العملية
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e.stderr.decode()}")
+        return False  # ❌ Failed execution
 
 
 def exec_command_on_container(app_name, command):
