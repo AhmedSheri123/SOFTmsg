@@ -16,6 +16,8 @@
 
     <form class="bg-body-tertiary p-4 rounded needs-validation" novalidate id="project_form" method="post">
         {% csrf_token %}
+
+        
         <div class="row row-cols-1 row-cols-md-2">
             <div class="mb-3 col">
                 <label for="exampleFormControlInput1" class="form-label">
@@ -84,19 +86,6 @@
             </div>
             <div class="mb-3 col">
                 <label for="exampleFormControlInput1" class="form-label">
-                    <i class="bi bi-hospital"></i>
-                    {% trans "Organization Name" %}
-                </label>
-                {{form.organization_name}}
-                <div class="valid-feedback">
-                    {% trans "Looks good!" %}
-                  </div>
-                  <div class="invalid-feedback">
-                    {% trans "Please fill a Organization name." %}
-                  </div>
-            </div>
-            <div class="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
                     <i class="bi bi-telephone"></i>
                     {% trans "Phone number" %}
                 </label>
@@ -109,23 +98,13 @@
                   </div>
             </div>
             
-            <div class="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
-                    <i class="bi bi-translate"></i>
-                    {% trans "Language" %}
-                </label>
-                {{form.lang}}
-                <div class="valid-feedback">
-                    {% trans "Looks good!" %}
-                </div>
-                <div class="invalid-feedback">
-                    {% trans "Please select a language." %}
-                </div>
-            </div>
-
         </div>
 
-
+        <div id="loadingSpinner" style="display: none; text-align: center; margin-top: 20px;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">جارٍ التحميل...</span>
+            </div>
+        </div>
         <!-- Progress -->
         <div class="mb-3">
             <h5>{% trans "Progress" %}</h5>
@@ -167,7 +146,7 @@
         <!-- End Progress -->
 
 
-        <button type="submit" class="btn bg-light-orange">{% trans "Next" %}
+        <button id="nextBtn" type="submit" class="btn bg-light-orange">{% trans "Next" %}
             <i class="bi bi-caret-right-fill"></i>
         </button>
     </form>
@@ -175,6 +154,51 @@
 <!-- End Project Form -->
 <div class="py-4"></div>
 
+<script>
+document.getElementById("project_form").addEventListener("submit", function (event) {
+    event.preventDefault();  // منع الإرسال الفوري للنموذج
 
+    // إظهار دائرة التحميل
+    let loadingSpinner = document.getElementById("loadingSpinner");
+    let nextBtn = document.getElementById("nextBtn");
+    nextBtn.classList.add('disabled')
+    loadingSpinner.style.display = "block";
+
+    // إعداد البيانات لتكون جزءًا من الطلب
+    let formData = new FormData(this);
+
+    // إرسال الطلب باستخدام Fetch API
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())  // استلام البيانات المرسلة من الخادم
+    .then(data => {
+        // إذا كان الطلب ناجحًا، يمكنك القيام بشيء مثل إعادة التوجيه أو عرض رسالة النجاح
+        if (data.success) {
+            window.location.href = data.redirect_url;  // أو أي شيء آخر
+        } else {
+            nextBtn.classList.remove('disabled')
+             // في حالة وجود خطأ، يمكنك إظهار الأخطاء من الخادم
+             if (data.errors) {
+                alert("حدث خطأ: " + data.errors);
+             }
+             
+         }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        nextBtn.classList.remove('disabled')
+        alert("حدث خطأ. الرجاء المحاولة مرة أخرى.");
+    })
+    .finally(() => {
+        // إخفاء دائرة التحميل بعد إتمام الطلب
+        loadingSpinner.style.display = "none";
+        
+    });
+});
+
+
+</script>
 
 {% endblock %}

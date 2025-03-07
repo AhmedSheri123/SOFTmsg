@@ -60,6 +60,4 @@ class HRManagementProfile(forms.Form):
     username = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
     email = forms.EmailField(widget=forms.TextInput({'class':'form-control'}))
     password = forms.CharField(label='password', max_length=254, widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Password'}))
-    organization_name = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
     number = forms.CharField(max_length=254, widget=forms.TextInput({'class':'form-control'}))
-    lang = forms.ChoiceField(choices=SchoolManagementLANGUAGES, widget=forms.Select({'class':'form-select'}))

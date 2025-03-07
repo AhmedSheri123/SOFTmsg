@@ -25,4 +25,8 @@ urlpatterns = [
     path('MyOrders', views.MyOrders, name='MyOrders'),
     path('DeleteOrder/<str:orderID>', views.DeleteOrder, name='DeleteOrder'),
     path('CancellingOrder/<str:orderID>', views.CancellingOrder, name='CancellingOrder'),
+    
+    
+    path('buliding_waiting_page/<int:user_service_id>', views.buliding_waiting_page, name='buliding_waiting_page'),
+    path('check_is_deployed/<int:user_service_id>', views.check_is_deployed, name='check_is_deployed'),
 ]

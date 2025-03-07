@@ -13,7 +13,7 @@ from django.shortcuts import render
 from paypal.standard.forms import PayPalPaymentsForm
 from decimal import Decimal
 from subscriptions.models import HRSubscriptionsModel
-from .tools import create_data_base, deploy, extract_zip, copy
+from .tools import data_base, hr_docker, deploy
 from .projects_setting import hr_setting
 import os
 
@@ -22,10 +22,8 @@ PatientManagementURL = settings.PATIENT_MANAGEMENT_WEB_SERVER_URL
 SchoolManagementURL = settings.SCHOOL_MANAGEMENT_WEB_SERVER_URL
 HRManagementURL = settings.HR_MANAGEMENT_WEB_SERVER_URL
 HR_MANAGEMENT_SYSTEM_SRC_PATH = settings.HR_MANAGEMENT_SYSTEM_SRC_PATH
-HR_MANAGEMENT_SYSTEM_PROJECTS_PATH = settings.HR_MANAGEMENT_SYSTEM_PROJECTS_PATH
-HR_MANAGEMENT_SYSTEM_ENV_PATH = settings.HR_MANAGEMENT_SYSTEM_ENV_PATH
-DEFAULT_DB_USER = settings.DEFAULT_DB_USER
-DEFAULT_DB_PASS = settings.DEFAULT_DB_PASS
+DEFAULT_HR_DB_USER = settings.DEFAULT_HR_DB_USER
+DEFAULT_HR_DB_PASS = settings.DEFAULT_HR_DB_PASS
 PAYPAL_RECIVVER_EMAIL = settings.PAYPAL_RECIVVER_EMAIL
 
 def Home(request):
@@ -77,14 +75,14 @@ def DeleteSchoolManagementService(request, id):
 def DeleteHRManagementService(request, id):
     user_services = UserServiceModel.objects.get(id=id)
     service_user_id = user_services.service_user_id
+    app_name = user_services.subdomain
     if service_user_id:
-        res = requests.get(f'{HRManagementURL}/api/base/DeleteHRManagementAPI/{service_user_id}')
-
-        if res.status_code == 200:
-            data = res.json()
-            if data.get('status'):
-                user_services.delete()
+        hr_docker.remove_container(app_name)
+        data_base.remove_database(db_name=app_name, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5433')
+        hr_docker.remove_hr_service(app_name)
+        user_services.delete()
     else:user_services.delete()
+    messages.success(request, 'Project has been removed')
     return redirect('MyServices')
 
 def DeleteService(request, id):
@@ -110,6 +108,7 @@ def ResetPasswordService(request, id):
             data = {
                 'password':password
             }
+            res_data = {}
             user_services = UserServiceModel.objects.get(id=id)
             service_user_id = user_services.service_user_id
             selected_service = user_services.service.service
@@ -121,51 +120,65 @@ def ResetPasswordService(request, id):
                 elif selected_service == '2':
                     res = requests.post(f'{SchoolManagementURL}/en/ResetPasswordAPI/{service_user_id}', data=data)
                 elif selected_service == '3':
-                    res = requests.post(f'{HRManagementURL}/api/base/ResetPasswordAPI/{service_user_id}', data=data)
+                    response_data, exit_code = hr_docker.change_user_password(user_services.subdomain, service_user_id, password)
+                    if exit_code == 0:
+                        res_data['status'] = True
+                    else:
+                        res_data['status'] = False
 
-                if res.status_code == 200:
-                    data = res.json()
-                    if data.get('status'):
-                        messages.success(request, 'Password has been changed successfully')
-                else:messages.error(request, 'error on trying connect to server please call support')
+                if not res_data:
+                    if res.status_code == 200:
+                        res_data = res.json()
+                    else:messages.error(request, 'error on trying connect to server please call support')
+
+                if res_data.get('status'):
+                    messages.success(request, 'Password has been changed successfully')
+                else:
+                    messages.error(request, 'Password not changed got some errors, please call support')
             else:messages.error(request, 'error on changing password please call support')
         else:messages.error(request, 'new password field and repeat new password field not same')
     return redirect('ViewService', id)
 
+def check_is_deployed(request, user_service_id):
+    user_service = UserServiceModel.objects.get(id=user_service_id)
+    r = hr_docker.check_migrations(user_service.subdomain)
+    return JsonResponse({'success':r}, safe=False)
+
+def buliding_waiting_page(request, user_service_id):
+    check_is_deployed_url = reverse('check_is_deployed', kwargs={'user_service_id':user_service_id})
+    success_page = reverse('AddHRManagementSettings', kwargs={'id':user_service_id})
+    return render(request, 'dashboard/bulding/buliding_waiting_page.html', {'check_is_deployed_url':check_is_deployed_url, 'success_page':success_page})
+
 def DeployHRSystem(request, user_service):
+    if user_service.system_progress == '3':
+        return redirect('buliding_waiting_page', user_service.id)
+
     project_name = 'horilla'
     domain = 'softmsg.com'
-    subdomain = user_service.get_unique_subdomain(user_service.project_name)
+    subdomain = user_service.subdomain if user_service.subdomain else user_service.get_unique_subdomain(user_service.project_name)
+    port = user_service.system_port if user_service.system_port else user_service.get_avarible_port
     user_service.subdomain = subdomain
-
-    working_dir = os.path.join(HR_MANAGEMENT_SYSTEM_PROJECTS_PATH, subdomain)
-    env_dir = HR_MANAGEMENT_SYSTEM_ENV_PATH
-    wsgi_module = f'{project_name}.wsgi'
+    user_service.system_port = port
+    # working_dir = os.path.join(HR_MANAGEMENT_SYSTEM_PROJECTS_PATH, subdomain)
     static_folder_name = 'staticfiles'
 
-    if not os.path.exists(working_dir):
-        os.makedirs(working_dir)
-    deploy.set_permissions(working_dir)
-
-    # extract project src
-    copying = copy.copy_folder(HR_MANAGEMENT_SYSTEM_SRC_PATH, working_dir)
-
     #create database for project
-    creating_database = create_data_base.create_database(db_name=subdomain, user=DEFAULT_DB_USER, password=DEFAULT_DB_PASS)
+    creating_database = data_base.create_database(db_name=subdomain, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5433')
+    print('adding service')
+    hr_docker.add_hr_service(subdomain, port)
+    print('runing container')
+    hr_docker.compose_up(subdomain)
+    # hr_docker.run_container(subdomain, port)
+    print('success')
     
-    #create project settings
-    proj_settings = hr_setting.get_hr_setting(subdomain, domain, subdomain, DEFAULT_DB_USER, DEFAULT_DB_PASS)
-    with open(os.path.join(working_dir, 'settings.json'), 'w') as file:
-        file.write(proj_settings)
-        file.close()
+    if os.name == "posix":
+        #create nginx for app
+        deploying = deploy.create_nginx_config(static_folder_name, subdomain, port, domain)
 
-    #create server for project
-    deploying = deploy.deploy(subdomain, working_dir, env_dir, wsgi_module, static_folder_name, domain)
-    print(copying, creating_database, deploying)
-    if copying and creating_database and deploying:
+    if creating_database:
         user_service.system_progress = '3'
         user_service.save()
-        return redirect('AddHRManagementSettings', user_service.id)
+        return redirect('buliding_waiting_page', user_service.id)
     else:
         user_service.system_progress = '4'
         user_service.save()
@@ -421,23 +434,16 @@ def HRManagementRenewSubscription(request, orderID):
     post_data['subscription_id'] = order.subscription_id
     post_data['subscription_scope'] = order.progress_paid_plan_scope
 
-    res = requests.post(f'{HRManagementURL}/api/base/RenewSubscription/{user_service.service_user_id}', data=post_data)
+    hr_docker.add_subscription(user_service.subdomain, user_service.plan_scope, HRSubscriptionsModel.objects.get(id=user_service.service_subscription_id))
 
-    if res.status_code == 200:
-        res_data = res.json()
-        if res_data.get('status'):
-            user_service.service_subscription_id = order.subscription_id
-            user_service.plan_scope = order.progress_paid_plan_scope
-            order.progress = '3'
-            user_service.save()
-            order.save()
-            messages.success(request, 'تم تجديد الاشتراك بنجاح')
-            return redirect('UserServiceCreationProgress', user_service.id)
-        else:
-            error_msgs = res_data.get('msgs')
-            if error_msgs:
-                for msg in error_msgs:
-                    messages.error(request, msg)
+    user_service.service_subscription_id = order.subscription_id
+    user_service.plan_scope = order.progress_paid_plan_scope
+    order.progress = '3'
+    user_service.save()
+    order.save()
+    messages.success(request, 'تم تجديد الاشتراك بنجاح')
+    return redirect('UserServiceCreationProgress', user_service.id)
+
     return
 
 def AddPatientManagementSettings(request, id):
@@ -516,28 +522,24 @@ def AddHRManagementSettings(request, id):
     form.initial['last_name'] = user.last_name
     form.initial['number'] = user.userprofile.phone_number
     form.initial['email'] = user.email
-
+    
     if request.method == 'POST':
         form = HRManagementProfile(data=request.POST)
         if form.is_valid():
             post_data = form.cleaned_data
             post_data['subscription_id'] = user_service.service_subscription_id
             post_data['subscription_scope'] = user_service.plan_scope
-
-            res = requests.post(f'{HRManagementURL}/api/base/AddHRByAPI', data=post_data)
-            if res.status_code == 200:
-                res_data = res.json()
-                if res_data.get('status'):
-                    service_user_id = res_data.get('user_id')
-                    user_service.service_user_id=service_user_id
-                    user_service.progress = '4'
-                    user_service.save()
-                    return redirect('UserServiceCreationProgress', user_service.id)
-                else:
-                    error_msgs = res_data.get('msgs')
-                    if error_msgs:
-                        for msg in error_msgs:
-                            messages.error(request, msg)
+            hr_docker.add_subscription(user_service.subdomain, user_service.plan_scope, HRSubscriptionsModel.objects.get(id=user_service.service_subscription_id))
+            add_user = hr_docker.add_user(user_service.subdomain, post_data['first_name'], post_data['last_name'], post_data['username'], post_data['password'], post_data['email'], post_data['number'])
+            data, exit_code = add_user
+            if exit_code != 0:
+                return JsonResponse({'success': False, 'errors': data})
+            user_id = data.get('user_id')
+            user_service.service_user_id=user_id
+            user_service.progress = '4'
+            user_service.save()
+            return JsonResponse({'success': True, 'redirect_url': reverse('UserServiceCreationProgress', kwargs={'id':user_service.id})})
+        return JsonResponse({'success': False, 'errors': None})
     return render(request, 'dashboard/services/AddServiceSettings/AddHRManagementSettings.html', {'form':form})
 
 def ViewPatientManagementService(request, id):
@@ -573,15 +575,16 @@ def ViewSchoolManagementService(request, id):
 def ViewHRManagementService(request, id):
     user_service = UserServiceModel.objects.get(id=id)
     plans_data = []
-    res = requests.get(f'{HRManagementURL}/api/base/GetHRManagementInfo/{user_service.service_user_id}')
-    plans_res = requests.get(f'{HRManagementURL}/api/base/GetSubscriptionsPlanInfoAPI?id={user_service.service_subscription_id}')
-    if plans_res.status_code == 200:
-        plans_data = plans_res.json()
-    if res.status_code == 200:
-        data = res.json()
-        if data:
-            data['user_service'] = user_service
-            return render(request, 'dashboard/services/viewService/ViewHRManagementService.html', {'data':data, 'plans_data':plans_data, 'HRManagementURL':HRManagementURL})
+    data = {}
+    
+    plans_data = HRSubscriptionsModel.get_plans_Info(id=user_service.service_subscription_id)
+    res, exit_code = hr_docker.get_system_info(user_service.subdomain, user_service.service_user_id)
+    if exit_code == 0:
+        data = res
+    else:
+        messages.error(request, res)
+    data['user_service'] = user_service
+    return render(request, 'dashboard/services/viewService/ViewHRManagementService.html', {'data':data, 'plans_data':plans_data, 'HRManagementURL':HRManagementURL})
     return redirect('MyServices')
 
 
