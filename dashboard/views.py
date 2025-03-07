@@ -159,7 +159,6 @@ def DeployHRSystem(request, user_service):
     port = user_service.system_port if user_service.system_port else user_service.get_avarible_port
     user_service.subdomain = subdomain
     user_service.system_port = port
-    # working_dir = os.path.join(HR_MANAGEMENT_SYSTEM_PROJECTS_PATH, subdomain)
     static_folder_name = 'staticfiles'
 
     #create database for project
