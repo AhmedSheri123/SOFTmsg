@@ -17,7 +17,7 @@ app_conf = {
         "ports": ["8000:8000"],
         "restart": "unless-stopped",
         "environment": {
-            "DATABASE_URL": "postgres://postgres:postgres@db:5433/app",
+            "DATABASE_URL": "postgres://postgres:postgres@db:5432/app",
         },
         "command": "./entrypoint.sh",
         "volumes": [
@@ -39,7 +39,7 @@ def add_hr_service(app_name, app_port):
 
     app_conf['ports'] = [f"{app_port}:8000"]
     app_conf['container_name'] = app_name
-    app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5433/{app_name}"
+    app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5432/{app_name}"
     app_conf['volumes'] = [
                 f"./horilla:/{app_name}/horilla",
                 f"/var/www/horilla/{app_name}/staticfiles:/{app_name}/staticfiles",
@@ -96,7 +96,7 @@ def run_container(app_name, app_port):
         detach=True,  # Run in detached mode
         ports={f"8000/tcp": app_port},  # Map port 8000 on host to 8000 in container
         environment={
-            "DATABASE_URL": f"postgres://postgres:postgres@db:5433/{app_name}",
+            "DATABASE_URL": f"postgres://postgres:postgres@db:5432/{app_name}",
             "ANOTHER_ENV": "value"
         },
         volumes={"./horilla": {"bind": "/app/horilla", "mode": "rw"}},  # Mount volume

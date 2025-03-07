@@ -78,7 +78,7 @@ def DeleteHRManagementService(request, id):
     app_name = user_services.subdomain
     if service_user_id:
         hr_docker.remove_container(app_name)
-        data_base.remove_database(db_name=app_name, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5433')
+        data_base.remove_database(db_name=app_name, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5434')
         hr_docker.remove_hr_service(app_name)
         user_services.delete()
     else:user_services.delete()
@@ -162,7 +162,7 @@ def DeployHRSystem(request, user_service):
     static_folder_name = 'staticfiles'
 
     #create database for project
-    creating_database = data_base.create_database(db_name=subdomain, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5433')
+    creating_database = data_base.create_database(db_name=subdomain, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5434')
     print('adding service')
     hr_docker.add_hr_service(subdomain, port)
     print('runing container')
