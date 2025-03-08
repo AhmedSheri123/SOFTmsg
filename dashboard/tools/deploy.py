@@ -36,3 +36,17 @@ def create_nginx_config(static_folder_name, subdomain, proxy_port, domain, port=
 def restart_services():
     run_command("sudo nginx -s reload")
 
+
+def remove_file(file_path):
+    """Removes a file safely if it exists."""
+    try:
+        if os.path.exists(file_path):  # Check if the file exists
+            os.remove(file_path)  # Delete the file
+            print(f"✅ File '{file_path}' removed successfully.")
+            return True
+        else:
+            print(f"⚠️ File '{file_path}' not found.")
+            return False
+    except Exception as e:
+        print(f"❌ Error removing file: {e}")
+        return False

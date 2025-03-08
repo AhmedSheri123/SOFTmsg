@@ -80,6 +80,8 @@ def DeleteHRManagementService(request, id):
         hr_docker.remove_container(app_name)
         data_base.remove_database(db_name=app_name, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, port='5434')
         hr_docker.remove_hr_service(app_name)
+        if os.name == "posix":
+            deploy.remove_file(f'/etc/nginx/sites-enabled/{app_name}.conf')
         user_services.delete()
     else:user_services.delete()
     messages.success(request, 'Project has been removed')
