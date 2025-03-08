@@ -11,15 +11,15 @@ def create_nginx_config(static_folder_name, subdomain, proxy_port, domain, port=
     server_name {subdomain}.{domain};
 
     location /static/ {{
-        alias /var/www/horilla/{subdomain}/{static_folder_name}/;
+        alias /var/www/hr-original/{static_folder_name}/;
     }}
 
-    location /media/ {{
-        alias /var/www/horilla/{subdomain}/media/;
-    }}
+    # location /media/ {{
+    #     alias /var/www/horilla/{subdomain}/media/;
+    # }}
 
     location / {{
-        proxy_pass http://{subdomain}:{proxy_port};
+        proxy_pass http://127.0.0.1:{proxy_port};
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
