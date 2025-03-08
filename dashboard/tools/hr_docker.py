@@ -63,27 +63,29 @@ def remove_hr_service(app_name):
 
 
 
+import subprocess
+
 def remove_container(app_name):
     try:
-        # Stopping and removing the container
+        # Stop and remove a single container
         result = subprocess.run(
-            ["docker-compose", "down", app_name],  # 'down' will stop and remove the container
-            cwd=HR_MANAGEMENT_SYSTEM_SRC_PATH,  # Make sure the path is correct
+            ["docker", "rm", "-f", app_name],  # Correct way to remove a single container
             check=True,
-            stdout=subprocess.PIPE,  # Capture standard output
-            stderr=subprocess.PIPE   # Capture standard error
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
         )
 
         if result.returncode == 0:
-            print(result.stdout.decode())  # Print the output of the command
+            print(result.stdout.decode())
             return True  # Success
         else:
-            print(f"Error: {result.stderr.decode()}")  # Print any errors
+            print(f"Error: {result.stderr.decode()}")
             return False  # Failure
         
     except subprocess.CalledProcessError as e:
-        print(f"Error: {e.stderr.decode()}")  # Print the error message if the command fails
+        print(f"Error: {e.stderr.decode()}")
         return False  # ❌ Operation failed
+
 
 
 def run_container(app_name, app_port):
