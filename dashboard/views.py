@@ -588,7 +588,7 @@ def ViewHRManagementService(request, id):
     data = {}
     
     plans_data = HRSubscriptionsModel.get_plans_Info(id=user_service.service_subscription_id)
-    res, exit_code = hr_docker.get_system_info(user_service.subdomain, user_service.service_user_id)
+    res, exit_code = hr_docker.get_system_info(user_service, user_service.service_user_id)
     if exit_code == 0:
         data = res
     else:

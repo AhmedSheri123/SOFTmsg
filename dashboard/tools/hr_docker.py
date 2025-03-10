@@ -1,7 +1,7 @@
 import yaml
 from django.conf import settings
 import docker
-import subprocess, json
+import subprocess, json, requests
 
 HR_MANAGEMENT_SYSTEM_SRC_PATH = settings.HR_MANAGEMENT_SYSTEM_SRC_PATH
 compose_path = f'{HR_MANAGEMENT_SYSTEM_SRC_PATH}/docker-compose.yaml'
@@ -187,13 +187,21 @@ def change_user_password(app_name, user_id, pwd):
 
     return response_data, r.exit_code
 
-def get_system_info(app_name, user_id):
-    command = f"python manage.py get_system_info {user_id}"
-    r = exec_command_on_container(app_name, command)
-    response_data = r.output.decode()
-    if r.exit_code == 0:
-        response_data = json.loads(r.output.decode())
-    return response_data, r.exit_code
+def get_system_info(user_service, user_id):
+    url = f'http://77.37.122.10:{user_service.system_port}/get_system_info/{user_id}/'
+    try:
+        r = requests.get(url)
+        return r.json(), 0
+    except: return {}, 1
+# def get_system_info(app_name, user_id):
+#     command = f"python manage.py get_system_info {user_id}"
+#     r = exec_command_on_container(app_name, command)
+#     response_data = r.output.decode()
+#     if r.exit_code == 0:
+#         response_data = json.loads(r.output.decode())
+#     return response_data, r.exit_code
+
+
 
 def check_migrations(app_name):
     command = 'python manage.py check_migrations'
