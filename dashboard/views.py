@@ -185,15 +185,15 @@ def DeployHRSystem(request, user_service):
         #create nginx for app
         deploying = deploy.create_nginx_config(static_folder_name, subdomain, port, domain)
         deploy.restart_services()
-    if creating_database:
-        user_service.system_progress = '3'
-        user_service.save()
-        return redirect('buliding_waiting_page', user_service.id)
-    else:
-        user_service.system_progress = '4'
-        user_service.save()
-        messages.error(request, 'حدث خطاء اثناء بناء النظام')
-        return redirect('MyServices')
+    # if creating_database:
+    user_service.system_progress = '3'
+    user_service.save()
+    return redirect('buliding_waiting_page', user_service.id)
+    # else:
+    #     user_service.system_progress = '4'
+    #     user_service.save()
+    #     messages.error(request, 'حدث خطاء اثناء بناء النظام')
+    #     return redirect('MyServices')
     
     
     
