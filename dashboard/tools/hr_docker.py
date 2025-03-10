@@ -195,7 +195,7 @@ def get_system_info(user_service, user_id):
     url = f'http://77.37.122.10:{user_service.system_port}/get_system_info/{user_id}/'
     try:
         r = requests.get(url)
-        return r.json(), 0
+        return json.loads(r.json()), 0
     except: return {}, 1
 # def get_system_info(app_name, user_id):
 #     command = f"python manage.py get_system_info {user_id}"
