@@ -46,11 +46,14 @@ def add_hr_service(app_name, app_port):
     # app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5432/{app_name}"
     app_conf['volumes'] = [
                 f"./horilla:/app/horilla",
+                f"{app_name}_volume:/app/db.sqlite3",
+                
                 # f"/var/www/horilla/{app_name}/staticfiles:/{app_name}/staticfiles",
                 # f"/var/www/horilla/{app_name}/media:/{app_name}/media",
             ]
     # Merge the new data
     data['services'][app_name] = app_conf
+    data['volumes'][f'{app_name}_volume'] = None
 
     # Write back to the YAML file
     with open(compose_path, "w") as file:
