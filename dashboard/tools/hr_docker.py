@@ -6,6 +6,10 @@ import subprocess, json
 HR_MANAGEMENT_SYSTEM_SRC_PATH = settings.HR_MANAGEMENT_SYSTEM_SRC_PATH
 compose_path = f'{HR_MANAGEMENT_SYSTEM_SRC_PATH}/docker-compose.yaml'
 
+REMOTE_DOCKER_HOST = "tcp://77.37.122.10:2375"
+
+client = docker.DockerClient(base_url=REMOTE_DOCKER_HOST)
+
 # Define the new data to append
 app_conf = {
         "image": "hr",
@@ -63,33 +67,23 @@ def remove_hr_service(app_name):
 
 
 
-import subprocess
 
 def remove_container(app_name):
     try:
-        # Stop and remove a single container
-        result = subprocess.run(
-            ["docker", "rm", "-f", app_name],  # Correct way to remove a single container
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-
-        if result.returncode == 0:
-            print(result.stdout.decode())
-            return True  # Success
-        else:
-            print(f"Error: {result.stderr.decode()}")
-            return False  # Failure
-        
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e.stderr.decode()}")
-        return False  # ❌ Operation failed
+        container = client.containers.get(app_name)  # Get the container by name
+        container.remove(force=True)  # Remove the container (force stops it first)
+        print(f"Container '{app_name}' removed successfully.")
+        return True
+    except docker.errors.NotFound:
+        print(f"Error: Container '{app_name}' not found.")
+        return False
+    except docker.errors.APIError as e:
+        print(f"Error: {str(e)}")
+        return False
 
 
 
 def run_container(app_name, app_port):
-    client = docker.from_env()
 
     # Run the container
     container = client.containers.run(
@@ -111,7 +105,7 @@ def compose_up(app_name):
     try:
         # Make sure the --no-deps option is placed correctly
         result = subprocess.run(
-            ["docker-compose", "up", "-d", "--no-deps", app_name],  # Correct order
+            ["docker --context remote compose", "up", "-d", "--no-deps", app_name],  # Correct order
             cwd=HR_MANAGEMENT_SYSTEM_SRC_PATH,  # Ensure the path is correct
             check=True,
             stdout=subprocess.PIPE,
@@ -132,7 +126,6 @@ def compose_up(app_name):
 
 def exec_command_on_container(app_name, command):
     # الاتصال بـ Docker
-    client = docker.from_env()
     # تنفيذ الأمر داخل الحاوية باستخدام اسم الخدمة
     result = client.containers.get(app_name).exec_run(command)
     # عرض النتيجة

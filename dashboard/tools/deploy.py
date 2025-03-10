@@ -19,7 +19,7 @@ def create_nginx_config(static_folder_name, subdomain, proxy_port, domain, port=
     # }}
 
     location / {{
-        proxy_pass http://127.0.0.1:{proxy_port};
+        proxy_pass http://77.37.122.10:{proxy_port};
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
