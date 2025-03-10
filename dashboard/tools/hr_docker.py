@@ -105,7 +105,7 @@ def compose_up(app_name):
     try:
         # Make sure the --no-deps option is placed correctly
         result = subprocess.run(
-            ["docker --context remote compose", "up", "-d", "--no-deps", app_name],  # Correct order
+            ["docker", "--context", "remote", "compose", "up", "-d", "--no-deps", app_name],  # Correct order
             cwd=HR_MANAGEMENT_SYSTEM_SRC_PATH,  # Ensure the path is correct
             check=True,
             stdout=subprocess.PIPE,
