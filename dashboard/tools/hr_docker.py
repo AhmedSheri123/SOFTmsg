@@ -127,7 +127,7 @@ def compose_up(app_name):
 def exec_command_on_container(app_name, command):
     # الاتصال بـ Docker
     # تنفيذ الأمر داخل الحاوية باستخدام اسم الخدمة
-    result = client.containers.get(app_name).exec_run(command)
+    result = client.containers.get(app_name).exec_run(command+' --skip-checks --verbosity=0')
     # عرض النتيجة
     print(result.output.decode())
     return result
