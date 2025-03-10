@@ -175,7 +175,7 @@ def DeployHRSystem(request, user_service):
     if os.name == "posix":
         #create nginx for app
         deploying = deploy.create_nginx_config(static_folder_name, subdomain, port, domain)
-
+        deploy.restart_services()
     if creating_database:
         user_service.system_progress = '3'
         user_service.save()
