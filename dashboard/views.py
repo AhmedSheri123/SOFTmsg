@@ -74,9 +74,9 @@ def DeleteSchoolManagementService(request, id):
 
 def DeleteHRManagementService(request, id):
     user_services = UserServiceModel.objects.get(id=id)
-    service_user_id = user_services.service_user_id
+    # service_user_id = user_services.service_user_id
     app_name = user_services.subdomain
-    if service_user_id:
+    if app_name:
         hr_docker.remove_container(app_name)
         # data_base.remove_database(db_name=app_name, user=DEFAULT_HR_DB_USER, password=DEFAULT_HR_DB_PASS, host='77.37.122.10', port='5434')
         hr_docker.remove_hr_service(app_name)
@@ -148,7 +148,7 @@ def check_is_deployed(request, user_service_id):
     url = f'http://77.37.122.10:{user_service.system_port}/'
     r = False
     try:
-        res = requests.get(url)
+        res = requests.get(url, timeout=4)
         if res.status_code == 200 or res.status_code == 301 or res.status_code == 302:
             r = True
     except:
@@ -591,7 +591,6 @@ def ViewHRManagementService(request, id):
     res, exit_code = hr_docker.get_system_info(user_service, user_service.service_user_id)
     if exit_code == 0:
         data = res
-        print(data)
     else:
         messages.error(request, res)
     data['user_service'] = user_service
