@@ -29,11 +29,11 @@ app_conf = {
             # "/var/www/horilla/app/staticfiles:/app/staticfiles",
             # "/var/www/horilla/app/media:/app/media"
             ],
-        "depends_on": {
-            "db": {
-                "condition": "service_healthy",
-            }
-        }
+        # "depends_on": {
+        #     "db": {
+        #         "condition": "service_healthy",
+        #     }
+        # }
     }
 
 def add_hr_service(app_name, app_port):
