@@ -141,9 +141,18 @@ def ResetPasswordService(request, id):
         else:messages.error(request, 'new password field and repeat new password field not same')
     return redirect('ViewService', id)
 
+
 def check_is_deployed(request, user_service_id):
     user_service = UserServiceModel.objects.get(id=user_service_id)
-    r = hr_docker.check_migrations(user_service.subdomain)
+    # r = hr_docker.check_migrations(user_service.subdomain)
+    url = f'http://77.37.122.10:{user_service.system_port}/'
+    r = False
+    try:
+        res = requests.get(url)
+        if res.status_code == 200 or res.status_code == 301 or res.status_code == 302:
+            r = True
+    except:
+        pass
     return JsonResponse({'success':r}, safe=False)
 
 def buliding_waiting_page(request, user_service_id):
