@@ -20,14 +20,14 @@ app_conf = {
         },
         "ports": ["8000:8000"],
         "restart": "unless-stopped",
-        "environment": {
-            "DATABASE_URL": "postgres://postgres:postgres@db:5432/app",
-        },
+        # "environment": {
+        #     "DATABASE_URL": "postgres://postgres:postgres@db:5432/app",
+        # },
         "command": "./entrypoint.sh",
         "volumes": [
             "./horilla:/app/horilla"
-            "/var/www/horilla/app/staticfiles:/app/staticfiles",
-            "/var/www/horilla/app/media:/app/media"
+            # "/var/www/horilla/app/staticfiles:/app/staticfiles",
+            # "/var/www/horilla/app/media:/app/media"
             ],
         "depends_on": {
             "db": {
@@ -43,7 +43,7 @@ def add_hr_service(app_name, app_port):
 
     app_conf['ports'] = [f"{app_port}:8000"]
     app_conf['container_name'] = app_name
-    app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5432/{app_name}"
+    # app_conf['environment']['DATABASE_URL'] = f"postgres://postgres:postgres@db:5432/{app_name}"
     app_conf['volumes'] = [
                 f"./horilla:/app/horilla",
                 # f"/var/www/horilla/{app_name}/staticfiles:/{app_name}/staticfiles",
