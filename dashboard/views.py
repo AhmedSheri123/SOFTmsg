@@ -591,6 +591,7 @@ def ViewHRManagementService(request, id):
     res, exit_code = hr_docker.get_system_info(user_service, user_service.service_user_id)
     if exit_code == 0:
         data = res
+        print(data)
     else:
         messages.error(request, res)
     data['user_service'] = user_service
